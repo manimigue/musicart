@@ -1,0 +1,34 @@
+@charset "UTF-8";
+.tab-content {
+  font-family: "HiraKakuProN-W6", "ヒラギノ角ゴ ProN W6",  Meiryo, 'メイリオ', sans-serif;
+}
+.tab-content h1,
+.tab-content h2,
+.tab-content h3,
+.tab-content h4 {
+  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
+  margin-top: 20px;
+}
+.tab-content a {
+  color: #4183C4 !important;
+}
+.tab-content a:hover {
+  cursor: pointer;
+}
+
+.link-button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  text-decoration: underline;
+  display: inline;
+  margin: 0;
+  padding: 0;
+}
+
+.link-button:hover,
+.link-button:focus {
+text-decoration: none;
+}
+
+/*# sourceMappingURL=members.css.map */
