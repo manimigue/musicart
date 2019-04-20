@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "741d8315bb8ad9a55722",
+    "revision": "a9bf42044936c32c8018",
     "url": "/musicart/static/css/main.1f44ac4a.chunk.css"
   },
   {
-    "revision": "741d8315bb8ad9a55722",
-    "url": "/musicart/static/js/main.001ab064.chunk.js"
+    "revision": "a9bf42044936c32c8018",
+    "url": "/musicart/static/js/main.b5d25dbd.chunk.js"
   },
   {
     "revision": "860e5fbde7abc46781d8",
     "url": "/musicart/static/js/runtime~main.5127693b.js"
   },
   {
-    "revision": "bb466d186fe5961abc94",
-    "url": "/musicart/static/js/2.7bb87cdf.chunk.js"
+    "revision": "38dcd02e9d4e42c746e3",
+    "url": "/musicart/static/js/2.a2ea7b2c.chunk.js"
   },
   {
     "revision": "0b3a4461f43fd5b628b469d3b0a8bfba",
@@ -284,7 +284,7 @@ self.__precacheManifest = [
     "url": "/musicart/static/media/400.27b47b8f.woff"
   },
   {
-    "revision": "4c53a9fd4bb9d30a2511fd2c80a4384d",
+    "revision": "5f2b8a52200b4b634b859d9c137e31db",
     "url": "/musicart/index.html"
   }
 ];
