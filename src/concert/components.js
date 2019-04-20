@@ -4,11 +4,11 @@ import { default as israel } from "./articles/israel.jsx";
 const concert =
 [
   {
-    title: "AI",
-    url: "ai",
+    title: "Test",
+    url: "israel",
     date: "2019-04-21",
     author: "三石ミゲール",
-    component: ai
+    component: israel
   }
 ]
 
