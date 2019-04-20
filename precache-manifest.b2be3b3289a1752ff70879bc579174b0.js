@@ -1,19 +1,19 @@
 self.__precacheManifest = [
   {
-    "revision": "741d8315bb8ad9a55722",
+    "revision": "dbfe3e0bfb4a482c04bb",
     "url": "/musicart/static/css/main.1f44ac4a.chunk.css"
   },
   {
-    "revision": "741d8315bb8ad9a55722",
-    "url": "/musicart/static/js/main.001ab064.chunk.js"
+    "revision": "dbfe3e0bfb4a482c04bb",
+    "url": "/musicart/static/js/main.0a8764dd.chunk.js"
   },
   {
     "revision": "860e5fbde7abc46781d8",
     "url": "/musicart/static/js/runtime~main.5127693b.js"
   },
   {
-    "revision": "bb466d186fe5961abc94",
-    "url": "/musicart/static/js/2.7bb87cdf.chunk.js"
+    "revision": "10a77ed06509335ea75f",
+    "url": "/musicart/static/js/2.f582e196.chunk.js"
   },
   {
     "revision": "0b3a4461f43fd5b628b469d3b0a8bfba",
@@ -276,15 +276,15 @@ self.__precacheManifest = [
     "url": "/musicart/static/media/700i.4f21f865.woff"
   },
   {
-    "revision": "27b47b8f1ad5f3b1855708f146818661",
-    "url": "/musicart/static/media/400.27b47b8f.woff"
-  },
-  {
     "revision": "26b4e459a175e46603d374787d72b7e2",
     "url": "/musicart/static/media/700.26b4e459.woff"
   },
   {
-    "revision": "4c53a9fd4bb9d30a2511fd2c80a4384d",
+    "revision": "27b47b8f1ad5f3b1855708f146818661",
+    "url": "/musicart/static/media/400.27b47b8f.woff"
+  },
+  {
+    "revision": "940434f47176a6002ef33b890a665a5e",
     "url": "/musicart/index.html"
   }
 ];
