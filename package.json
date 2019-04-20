@@ -1,6 +1,7 @@
 {
   "name": "musicart",
   "version": "0.1.0",
+  "homepage": "https://manimigue.github.io/musicart/",
   "private": true,
   "dependencies": {
     "@nteract/markdown": "^4.0.0",
