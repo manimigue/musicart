@@ -48,7 +48,7 @@ class Header extends Component {
     return (
       <Navbar className={classHide} collapseOnSelect expand="md" bg={this.props.concert? 'dark':'white' } variant={this.props.concert? 'dark':"light"} sticky='top'>
         <Navbar.Brand href="#home">
-          <img src={HeaderLogo} alt='Mμsicart' width='200' onClick={() => this.props.linkToPage('Route','/mu-app')}/>
+          <img src={HeaderLogo} alt='Mμsicart' width='200' onClick={() => this.props.linkToPage('Route','/')}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
