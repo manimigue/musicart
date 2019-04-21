@@ -1,3 +1,4 @@
+import { default as ai } from "./articles/ai.jsx";
 import { default as israel } from "./articles/israel.jsx";
 import { default as settings } from "./articles/settings.jsx";
 
@@ -16,6 +17,13 @@ const news =
     date: "2019-04-21",
     author: "三石ミゲール",
     component: settings
+  },
+  {
+    title: "Test",
+    url: "ai",
+    date: "2019-04-21",
+    author: "三石ミゲール",
+    component: ai
   }
 ]
 
