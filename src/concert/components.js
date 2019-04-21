@@ -9,6 +9,13 @@ const concert =
     date: "2019-04-21",
     author: "三石ミゲール",
     component: ai
+  },
+  {
+    title: "Test",
+    url: "israel",
+    date: "2019-04-21",
+    author: "三石ミゲール",
+    component: israel
   }
 ]
 
