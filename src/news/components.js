@@ -7,7 +7,7 @@ const news =
   {
     title: "初期設定",
     url: "settings",
-    date: "2019-04-21",
+    date: "2019-04-23",
     author: "三石ミゲール",
     component: settings
   },

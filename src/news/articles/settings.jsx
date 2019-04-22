@@ -1,8 +1,8 @@
-import I0 from 'assets/スクリーンショット 2019-04-13 22.55.51.png'
-import I1 from 'assets/スクリーンショット 2019-04-13 23.10.07.png'
-import I2 from 'assets/スクリーンショット 2019-04-13 23.14.33.png'
-import I3 from 'assets/スクリーンショット 2019-04-14 21.45.37.png'
-import I4 from 'assets/スクリーンショット 2019-04-14 22.39.24.png'
+import I0 from './assets/スクリーンショット2019-04-13225551.png'
+import I1 from './assets/スクリーンショット2019-04-13231007.png'
+import I2 from './assets/スクリーンショット2019-04-13231433.png'
+import I3 from './assets/スクリーンショット2019-04-14214537.png'
+import I4 from './assets/スクリーンショット2019-04-14223924.png'
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
 
@@ -18,7 +18,7 @@ class settings extends Component {
 
    App StoreからXcodeを検索しインストール。
 
-   ![スクリーンショット 2019-04-13 22.55.51](./assets/スクリーンショット 2019-04-13 22.55.51.png)
+   ![スクリーンショット 2019-04-13 22.55.51](assets/スクリーンショット 2019-04-13 22.55.51.png)
 
 2. GitHubに登録
 
@@ -26,11 +26,11 @@ class settings extends Component {
 
    1. ユーザーネーム，メールアドレス，パスワードを設定
 
-      ![スクリーンショット 2019-04-13 23.10.07](./assets/スクリーンショット 2019-04-13 23.10.07.png)
+      ![スクリーンショット 2019-04-13 23.10.07](assets/スクリーンショット 2019-04-13 23.10.07.png)
 
    2. Freeのアカウントを選択
 
-      ![スクリーンショット 2019-04-13 23.14.33](./assets/スクリーンショット 2019-04-13 23.14.33.png)
+      ![スクリーンショット 2019-04-13 23.14.33](assets/スクリーンショット 2019-04-13 23.14.33.png)
 
    3. いくつか質問に答える(スキップ可)
 
@@ -42,7 +42,7 @@ class settings extends Component {
 
       以下の画面が出たら「インストール」をクリックしてください。
 
-      ![スクリーンショット 2019-04-14 21.45.37](./assets/スクリーンショット 2019-04-14 21.45.37.png)
+      ![スクリーンショット 2019-04-14 21.45.37](assets/スクリーンショット 2019-04-14 21.45.37.png)
 
    2. 「SSH-KEYがコピーされました」と表示されたら，そのSSH-KEYをGitHubに登録します。
 
@@ -50,7 +50,7 @@ class settings extends Component {
 
          既にSSH-KEYはコピーされているので，Key欄にペーストしてください。Titleは'SSH'など，適当で構いません。
 
-         ![スクリーンショット 2019-04-14 22.39.24](./assets/スクリーンショット 2019-04-14 22.39.24.png)
+         ![スクリーンショット 2019-04-14 22.39.24](assets/スクリーンショット 2019-04-14 22.39.24.png)
 
       2. 「Add SSH key」を押して登録を完了します。
 
