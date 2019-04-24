@@ -1,20 +1,5 @@
 [
   {
-    "url": "typora",
-    "title": "Typoraの使い方",
-    "date": "2019-04-23",
-    "author": "三石ミゲール",
-    "copied": [
-      "./assets/typora_download.png",
-      "./assets/typora_setting1.png",
-      "./assets/typora_setting2.png",
-      "./assets/typora_setting3.png",
-      "./assets/typora_setting5.png",
-      "./assets/typora_setting4.png",
-      ""
-    ]
-  },
-  {
     "url": "settings",
     "title": "初期設定",
     "date": "2019-04-23",
