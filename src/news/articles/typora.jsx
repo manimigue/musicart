@@ -170,12 +170,14 @@ Typoraで書くときによく使う機能やショートカットです。Mac�
 | イタリック体 | Ctrl + I | Command + I |
 | 下線 | Ctrl + U | Command + U |
 | リンク | Ctrl + K | Command + K |
+`
 .replace('./assets/typora_download.png',I1TyporaDownload)
 .replace('./assets/typora_setting1.png',I2TyporaSettings)
 .replace('./assets/typora_setting2.png',I3TyporaSettings)
 .replace('./assets/typora_setting3.png',I4Addcssthemes)
 .replace('./assets/typora_setting5.png',I5PathSetting)
 .replace('./assets/typora_setting4.png',I6ThemeSetting)
+
     return(
       <MarkdownRender className='article news' source={source} escapeHtml={false}/>
     )
