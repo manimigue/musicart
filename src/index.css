@@ -27,7 +27,7 @@ footer {
   flex-flow: column;
   color: #fff;
   margin-top: 20;
-  height: 200px;
+  height: 280px;
   width: 100%;
   line-height: 1.625rem;
 }
@@ -64,6 +64,12 @@ footer .links img {
 
 footer .links ul {
   list-style: none;
+  display: grid;
+  justify-content: space-around;
+  grid-template-columns:  150px 150px;
+  grid-template-rows: auto;
+  grid-row-gap: 10px;
+  grid-auto-flow: row;
 }
 
 footer .links ul >*{
@@ -127,32 +133,67 @@ footer .links ul >*{
 }
 
 .twitter {
-  width: 400px;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
   height: 420px;
 }
 
-@media only screen and (min-width:768px) {
+@media only screen and (max-width:1018px) and (min-width:850px) {
+  footer {
+    height: 200px;
+  }
+
+  footer .links ul {
+    grid-template-columns: repeat(5, 150px);
+  }
+}
+
+@media only screen and (min-width:1018px) {
   footer {
     height: 150px;
+  }
+  footer .links ul{
+    display: flex;
+  }
+  footer .links ul >*{
+    width: 150px;
+  }
+
+}
+
+@media only screen and (min-width:732px) and (max-width:850px) {
+  footer {
+    height: 200px;
+  }
+
+  footer .links ul {
+    grid-template-columns: repeat(4, 150px);
+  }
+}
+
+@media only screen and (min-width:732px){
+  .twitter{
+    width: 700px;
   }
   .contact-form input, textarea{
     width : 400px;
     display: block;
     margin-left: 0;
   }
-  .twitter{
-    width: 700px;
-  }
 }
 
-@media only screen and (max-width:460px) {
+@media only screen and (min-width:460px) and (max-width:732px){
   footer {
-    height: 250px;
+    height: 240px;
   }
+
+  footer .links ul {
+    grid-template-columns: 150px 150px 150px;
+  }
+
   .twitter {
-    width: 100%;
+    width: 400px;
   }
 }
 
