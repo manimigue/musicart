@@ -22,8 +22,6 @@ import './static/css/concert.css'
 import concertRoutes from './concert';
 import newsRoutes from './news';
 
-console.log('public url: ', process.env.PUBLIC_URL)
-
 class App extends Component {
   constructor(props) {
     super(props);

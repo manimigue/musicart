@@ -5,7 +5,6 @@ const routes = (articles, path) => {
   return (
     articles.map((article,i) => {
       const url = path + '/' + article.url;
-      console.log(url);
       return (
         <Route exact path={url} component={article.component} key={i+'rout'}/>
       );
