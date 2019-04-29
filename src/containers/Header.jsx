@@ -12,27 +12,35 @@ class Header extends Component {
     super(props);
     this.state = {
       isHide: false,
+      navExpanded: false
     }
   }
 
   hideBar = () => {
-       const isHide = this.state.isHide
+     const isHide = this.state.isHide
 
-       window.scrollY > this.prev ?
-       !isHide && this.setState({ isHide: true })
-       :
-       isHide && this.setState({ isHide: false });
+     window.scrollY > this.prev ?
+     !isHide && this.setState({ isHide: true })
+     :
+     isHide && this.setState({ isHide: false });
 
-       this.prev = window.scrollY;
-    }
+     this.prev = window.scrollY;
+  }
 
-    componentDidMount(){
-        window.addEventListener('scroll', this.hideBar);
-    }
+  setNavExpanded = (expanded) => {
+    this.setState({ navExpanded: expanded });
+  }
+  closeNav = () => {
+    this.setState({ navExpanded: false });
+  }
 
-    componentWillUnmount(){
-         window.removeEventListener('scroll', this.hideBar);
-    }
+  componentDidMount(){
+      window.addEventListener('scroll', this.hideBar);
+  }
+
+  componentWillUnmount(){
+       window.removeEventListener('scroll', this.hideBar);
+  }
 
   render() {
     const classHide = this.state.isHide ? 'hide' : '';
@@ -40,19 +48,28 @@ class Header extends Component {
       return (
         <Nav.Link
           key={link.text}
-          onClick={() => this.props.linkToPage(link.type,link.url)}
+          onClick={() => {this.props.linkToPage(link.type,link.url);this.closeNav()}}
           >{link.text}
         </Nav.Link>
       );
     });
     return (
-      <Navbar className={classHide} collapseOnSelect expand="md" bg={this.props.concert? 'dark':'white' } variant={this.props.concert? 'dark':"light"} sticky='top'>
+      <Navbar
+        className={classHide}
+        collapseOnSelect
+        expand="md"
+        bg={this.props.concert? 'dark':'white' }
+        variant={this.props.concert? 'dark':"light"}
+        sticky='top'
+        onToggle={this.setNavExpanded}
+        expanded={this.state.navExpanded}
+      >
         <Navbar.Brand href="#home">
           <img src={HeaderLogo} alt='Mμsicart' width='200' onClick={() => this.props.linkToPage('Route','/')}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">
-          <Nav>
+          <Nav onSelect={this.closeNav}>
             {lists}
           </Nav>
         </Navbar.Collapse>
