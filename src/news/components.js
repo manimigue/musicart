@@ -2,9 +2,17 @@ import { default as israel } from "./articles/israel.jsx";
 import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
 import { default as test2 } from "./articles/test2.jsx";
+import { default as test3 } from "./articles/test3.jsx";
 
 const news =
 [
+  {
+    title: "Test3",
+    url: "test3",
+    date: "2019-04-29",
+    author: "三石ミゲール",
+    component: test3
+  },
   {
     title: "Test2",
     url: "test2",
