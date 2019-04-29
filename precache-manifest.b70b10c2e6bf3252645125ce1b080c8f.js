@@ -312,12 +312,12 @@ self.__precacheManifest = [
     "url": "/musicart/static/media/スクリーンショット2019-04-14223924.99cd8ac0.png"
   },
   {
-    "revision": "e0217edfd64fcf067f36233bb300b8fc",
-    "url": "/musicart/static/media/400i.e0217edf.woff"
-  },
-  {
     "revision": "4f21f865f4c8ca08a7868bd819a2fd21",
     "url": "/musicart/static/media/700i.4f21f865.woff"
+  },
+  {
+    "revision": "e0217edfd64fcf067f36233bb300b8fc",
+    "url": "/musicart/static/media/400i.e0217edf.woff"
   },
   {
     "revision": "26b4e459a175e46603d374787d72b7e2",
