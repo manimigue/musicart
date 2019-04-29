@@ -3,9 +3,17 @@ import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
 import { default as test2 } from "./articles/test2.jsx";
 import { default as test3 } from "./articles/test3.jsx";
+import { default as test4 } from "./articles/test4.jsx";
 
 const news =
 [
+  {
+    title: "Test4",
+    url: "test4",
+    date: "2019-04-30",
+    author: "三石ミゲール",
+    component: test4
+  },
   {
     title: "Test3",
     url: "test3",

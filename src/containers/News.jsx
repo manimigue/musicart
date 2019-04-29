@@ -7,9 +7,8 @@ class News extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
-  
+
   render() {
-    console.log(this.props);
     return (
       <Articles title='News' log={log} type='news'/>
     );
