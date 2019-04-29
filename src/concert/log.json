@@ -1,5 +1,13 @@
 [
   {
+    "url": "delete",
+    "title": "記事の削除",
+    "date": "2019-04-29",
+    "file": "記事の削除.md",
+    "author": "三石ミゲール",
+    "copied": []
+  },
+  {
     "url": "typora",
     "title": "Typora",
     "date": "2019-04-28",
