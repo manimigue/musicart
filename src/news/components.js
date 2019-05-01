@@ -1,4 +1,5 @@
 import { default as israel } from "./articles/israel.jsx";
+import { default as release } from "./articles/release.jsx";
 import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
 import { default as test2 } from "./articles/test2.jsx";
@@ -7,6 +8,13 @@ import { default as test4 } from "./articles/test4.jsx";
 
 const news =
 [
+  {
+    title: "ホームページリリース",
+    url: "release",
+    date: "2019-05-02",
+    author: "三石ミゲール",
+    component: release
+  },
   {
     title: "Test4",
     url: "test4",
