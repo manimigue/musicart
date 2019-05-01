@@ -1,4 +1,3 @@
-import { default as homepageRelease } from "./articles/homepageRelease.jsx";
 import { default as israel } from "./articles/israel.jsx";
 import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
@@ -8,13 +7,6 @@ import { default as test4 } from "./articles/test4.jsx";
 
 const news =
 [
-  {
-    title: "Home Page release",
-    url: "homepageRelease",
-    date: "2019-05-02",
-    author: "三石ミゲール",
-    component: homepageRelease
-  },
   {
     title: "Test4",
     url: "test4",
