@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "9fd407dce04324cb2ca1c97029b9b04c",
+    "revision": "0da545b91132d70969b0719ef038a098",
     "url": "/musicart/index.html"
   },
   {
-    "revision": "d9b7f544f85214186fec",
+    "revision": "3d6b034b6f9cf586f2b9",
     "url": "/musicart/static/css/main.248ebed6.chunk.css"
   },
   {
-    "revision": "162c0e7b2aa9ed9fa246",
-    "url": "/musicart/static/js/2.035f4023.chunk.js"
+    "revision": "b1897dd6b941eec3437a",
+    "url": "/musicart/static/js/2.9cde1c65.chunk.js"
   },
   {
-    "revision": "d9b7f544f85214186fec",
-    "url": "/musicart/static/js/main.90213cc7.chunk.js"
+    "revision": "3d6b034b6f9cf586f2b9",
+    "url": "/musicart/static/js/main.af6032c1.chunk.js"
   },
   {
     "revision": "860e5fbde7abc46781d8",
