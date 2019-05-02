@@ -29,13 +29,26 @@ class Articles extends Component {
       } else {
         this.state.nextBut = true;
       }
-      
+
     } else {
       this.state.nextBut = false;
       this.state.end = props.log.length;
     }
   }
 
+  first = (range) => {
+    this.setState({
+      start: 0,
+      end: range
+    })
+  }
+
+  previous = (start, range) => {
+    this.setState({
+      end: start,
+      start: start - range
+    })
+  }
 
   next = (end, range) => {
     this.setState({
@@ -70,13 +83,6 @@ class Articles extends Component {
   componentWillUnmount() {
     this.props.saveStart(this.state.start, this.props.type)
   }
-  previous = (start, range) => {
-    this.setState({
-      end: start,
-      start: start - range
-    })
-  }
-
 
   render() {
     const {log, type, title, range} = this.props;
@@ -101,12 +107,20 @@ class Articles extends Component {
     (
       <div className='articleButton' height='50px'>
         <Button
+          className='articleFirst'
+          variant="secondary"
+          style={{display : start!==0 ? 'block' : 'none'}}
+          onClick={()=>this.first(range)}
+        >
+          &laquo; 最新へ
+        </Button>
+        <Button
           className='articlePrev'
           variant="dark"
           style={{display : prevBut ? 'block' : 'none'}}
           onClick={()=>this.previous(start,range)}
         >
-          &#8249;
+          &#8249; 戻る
         </Button>
         <Button
           className='articleNext'
@@ -114,7 +128,7 @@ class Articles extends Component {
           style={{display : nextBut ? 'block' : 'none'}}
           onClick={()=>this.next(end,range)}
         >
-          &#8250;
+          次へ &#8250;
         </Button>
       </div>
     )
