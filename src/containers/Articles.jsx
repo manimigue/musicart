@@ -15,18 +15,21 @@ class Articles extends Component {
     this.state = {
       start : props.start[props.type]
     }
-    if (this.state.start < props.range){
-      this.state.prevBut = false;
-    } else {
-      this.state.prevBut = true;
-    }
     if (props.range !== false) {
+      if (this.state.start < props.range){
+        this.state.prevBut = false;
+      } else {
+        this.state.prevBut = true;
+      }
+
       this.state.end = this.state.start+props.range;
+
       if (this.state.end >= props.log.length){
         this.state.nextBut = false;
       } else {
         this.state.nextBut = true;
       }
+      
     } else {
       this.state.nextBut = false;
       this.state.end = props.log.length;
