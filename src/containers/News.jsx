@@ -10,7 +10,7 @@ class News extends Component {
 
   render() {
     return (
-      <Articles title='News' log={log} type='news'/>
+      <Articles title='News' log={log} type='news' range={5}/>
     );
   }
 }

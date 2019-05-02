@@ -131,6 +131,20 @@ footer .links ul >*{
   cursor: pointer;
 }
 
+.articleButton {
+  width: 100%;
+  display: block;
+  height: 50px;
+}
+
+.articlePrev{
+  float: left;
+}
+
+.articleNext{
+  float: right;
+}
+
 .twitter {
   width: 100%;
   margin-left: auto;
@@ -176,6 +190,9 @@ footer .links ul >*{
 }
 
 @media only screen and (min-width:732px){
+  .main {
+    padding: 0px 30px;
+  }
   .twitter{
     width: 700px;
   }
@@ -187,6 +204,10 @@ footer .links ul >*{
 }
 
 @media only screen and (min-width:460px) and (max-width:732px){
+  .main {
+    padding: 0px 20px;
+  }
+
   footer {
     height: 240px;
   }
@@ -201,5 +222,5 @@ footer .links ul >*{
 }
 
 .article {
-  margin: 10px 30px
+  margin: 10px 0px
 }
