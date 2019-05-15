@@ -6,9 +6,17 @@ import { default as test3 } from "./articles/test3.jsx";
 import { default as test4 } from "./articles/test4.jsx";
 import { default as test5 } from "./articles/test5.jsx";
 import { default as test6 } from "./articles/test6.jsx";
+import { default as test7 } from "./articles/test7.jsx";
 
 const news =
 [
+  {
+    title: "Test7",
+    url: "test7",
+    date: "2019-05-15",
+    author: "三石ミゲール",
+    component: test7
+  },
   {
     title: "test6",
     url: "test6",
