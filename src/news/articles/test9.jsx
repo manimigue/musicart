@@ -1,9 +1,8 @@
-up to date in 25.018s
 
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
 
-class test8 extends Component {
+class test9 extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
@@ -98,120 +97,4 @@ deep is bette
   }
 }
 
-export default test8;
-[
-  {
-    "url": "test8",
-    "title": "test8",
-    "date": "2019-05-15",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test7",
-    "title": "Test7",
-    "date": "2019-05-15",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test6",
-    "title": "test6",
-    "date": "2019-05-15",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test5",
-    "title": "Test5",
-    "date": "2019-05-07",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "release",
-    "title": "ホームページリリース",
-    "date": "2019-05-02",
-    "file": "Home Page release Article.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test4",
-    "title": "Test4",
-    "date": "2019-04-30",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test3",
-    "title": "Test3",
-    "date": "2019-04-29",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test2",
-    "title": "Test2",
-    "date": "2019-04-29",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "test",
-    "title": "Test",
-    "date": "2019-04-29",
-    "file": "0.md",
-    "author": "三石ミゲール",
-    "copied": []
-  },
-  {
-    "url": "settings",
-    "title": "初期設定",
-    "date": "2019-04-23",
-    "author": "三石ミゲール",
-    "copied": [
-      "./assets/スクリーンショット2019-04-13225551.png",
-      "./assets/スクリーンショット2019-04-13231007.png",
-      "./assets/スクリーンショット2019-04-13231433.png",
-      "./assets/スクリーンショット2019-04-14214537.png",
-      "./assets/スクリーンショット2019-04-14223924.png",
-      ""
-    ]
-  }
-]
-[master cf8bd2f] added test8 as test8
- 5 files changed, 314 insertions(+)
- create mode 100644 .log/20190515160138_test8
- create mode 100644 .log/id_rsa_log.pub.pem
- create mode 100644 src/news/articles/test8.jsx
-Creating an optimized production build...
-Compiled successfully.
-
-File sizes after gzip:
-
-  110.29 KB (+135 B)  build/static/js/main.e0de35c3.chunk.js
-  89.14 KB            build/static/js/2.6b90049b.chunk.js
-  3.14 KB             build/static/css/main.47e77d5a.chunk.css
-  770 B               build/static/js/runtime~main.5127693b.js
-
-The project was built assuming it is hosted at /musicart/.
-You can control this with the homepage field in your package.json.
-
-The build folder is ready to be deployed.
-To publish it at https://manimigue.github.io/musicart/ , run:
-
-  yarn run deploy
-
-Find out more about deployment here:
-
-  https://bit.ly/CRA-deploy
-
-Published
+export default test9;
