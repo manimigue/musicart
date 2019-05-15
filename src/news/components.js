@@ -3,6 +3,7 @@ import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
 import { default as test10 } from "./articles/test10.jsx";
 import { default as test11 } from "./articles/test11.jsx";
+import { default as test12 } from "./articles/test12.jsx";
 import { default as test2 } from "./articles/test2.jsx";
 import { default as test3 } from "./articles/test3.jsx";
 import { default as test4 } from "./articles/test4.jsx";
@@ -14,6 +15,13 @@ import { default as test9 } from "./articles/test9.jsx";
 
 const news =
 [
+  {
+    title: "Test12",
+    url: "test12",
+    date: "2019-05-15",
+    author: "三石ミゲール",
+    component: test12
+  },
   {
     title: "Test11",
     url: "test11",
