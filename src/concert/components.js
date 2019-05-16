@@ -34,3 +34,5 @@ const concert =
     component: israel2
   }
 ]
+
+export default concert
