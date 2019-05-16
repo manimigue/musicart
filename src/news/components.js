@@ -1,3 +1,4 @@
+import { default as atest } from "./articles/atest.jsx";
 import { default as release } from "./articles/release.jsx";
 import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
@@ -15,6 +16,13 @@ import { default as test9 } from "./articles/test9.jsx";
 
 const news =
 [
+  {
+    title: "aTest",
+    url: "atest",
+    date: "2019-05-16",
+    author: "三石ミゲール",
+    component: atest
+  },
   {
     title: "Test12",
     url: "test12",
