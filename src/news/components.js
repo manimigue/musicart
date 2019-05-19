@@ -1,5 +1,6 @@
 import { default as atest } from "./articles/atest.jsx";
 import { default as nTest2 } from "./articles/nTest2.jsx";
+import { default as nTest3 } from "./articles/nTest3.jsx";
 import { default as release } from "./articles/release.jsx";
 import { default as settings } from "./articles/settings.jsx";
 import { default as test } from "./articles/test.jsx";
@@ -17,6 +18,13 @@ import { default as test9 } from "./articles/test9.jsx";
 
 const news =
 [
+  {
+    title: "Ntest3",
+    url: "nTest3",
+    date: "2019-05-20",
+    author: "三石ミゲール",
+    component: nTest3
+  },
   {
     title: "NTEST",
     url: "nTest2",
