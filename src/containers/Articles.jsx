@@ -3,17 +3,21 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Button from 'react-bootstrap/Button';
 import Twitter from '../components/twitter';
-import { saveStart } from '../actions/articlesAction'
+import { saveStart, saveTag } from '../actions/articlesAction'
 
 class Articles extends Component {
   static defaultProps = {
-    range: false
+    range: false,
+    tags: false
   }
 
   constructor(props) {
     super(props);
     this.state = {
-      start : props.start[props.type]
+      start : props.start[props.type],
+      selectedTag : props.selectedTag[props.type],
+      tagDisp : props.tagDisp[props.type],
+      logPart : (props.logPart[props.type] === null ? props.log : props.logPart[props.type])
     }
     if (props.range !== false) {
       if (this.state.start < props.range){
@@ -24,7 +28,7 @@ class Articles extends Component {
 
       this.state.end = this.state.start+props.range;
 
-      if (this.state.end >= props.log.length){
+      if (this.state.end >= this.state.logPart.length){
         this.state.nextBut = false;
       } else {
         this.state.nextBut = true;
@@ -32,7 +36,11 @@ class Articles extends Component {
 
     } else {
       this.state.nextBut = false;
-      this.state.end = props.log.length;
+      this.state.end = this.state.logPart.length;
+    }
+
+    if (props.tags !== false){
+
     }
   }
 
@@ -57,8 +65,30 @@ class Articles extends Component {
     })
   }
 
+  selectTag = (tag, range, selectedTag) => {
+    const nTag = tag === selectedTag ? null : tag;
+    const logPart = nTag !== null ?
+     this.props.log.filter(l => l.tag.includes(nTag)) :
+     this.props.log;
+
+    this.setState({
+      selectedTag: nTag,
+      logPart: logPart
+    })
+
+    this.first(range)
+  }
+
+  switchTagDisp = (tagDisp) => {
+    this.setState({
+      tagDisp: !tagDisp,
+      selectedTag: null,
+      logPart: this.props.log
+    });
+  }
+
   componentWillUpdate(nextProps, nextState) {
-    if ((nextProps.range !== false) && (nextState.prevBut || nextState.nextBut)){
+    if (nextProps.range !== false){
       if (nextState.start < nextProps.range){
         if (nextState.prevBut){
           this.setState({prevBut:false})
@@ -68,7 +98,7 @@ class Articles extends Component {
           this.setState({prevBut:true})
         }
       }
-      if (nextState.end >= nextProps.log.length){
+      if (nextState.end >= nextState.logPart.length){
         if (nextState.nextBut){
           this.setState({nextBut:false})
         }
@@ -82,14 +112,16 @@ class Articles extends Component {
 
   componentWillUnmount() {
     this.props.saveStart(this.state.start, this.props.type)
+    this.props.saveTag(this.state.selectedTag, this.state.tagDisp, this.state.logPart, this.props.type)
   }
 
   render() {
-    const {log, type, title, range} = this.props;
-    const {start, end, prevBut, nextBut} = this.state;
-    const logPart = log.slice(start,end)
+    const {type, title, range, tags} = this.props;
+    const {start, end, prevBut, nextBut, selectedTag, tagDisp, logPart} = this.state;
 
-    const lists = logPart.map(article => {
+    const logSlice = logPart.slice(start,end);
+
+    const lists = logSlice.map(article => {
       return (
         <li key={article.url}>
           <button
@@ -133,9 +165,39 @@ class Articles extends Component {
       </div>
     )
     : null;
+
+    const tagSearch = tags !== false ?
+    (
+      <Button
+        className='tagSearch'
+        onClick={() => this.switchTagDisp(tagDisp)}
+      >
+        タグ検索
+      </Button>
+    ) :
+    null;
+
+    const tagSelectors = tags !== false && tagDisp !== false ?
+    (
+      tags.map(tag => {
+        return (<Button
+          className='tagSelector'
+          variant={tag === selectedTag ? "secondary" : "outline-secondary"}
+          onClick={()=>this.selectTag(tag, range, selectedTag)}
+          key={tag}
+        >
+          {tag}
+        </Button>)
+      })
+    )
+    : null;
+
+
     return (
       <div>
         <h2 className='title'>{title}</h2>
+        {tagSearch}
+        {tagSelectors}
         <ul className='articles'>{lists}</ul>
         {button}
         <Twitter />
@@ -145,7 +207,10 @@ class Articles extends Component {
 }
 
 const mapStateToProps = ({articles}) => ({
-  start: articles.start
+  start: articles.start,
+  selectedTag: articles.selectedTag,
+  tagDisp: articles.tagDisp,
+  logPart: articles.logPart
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -166,6 +231,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     saveStart(start, type){
       dispatch(saveStart(start, type))
+    },
+    saveTag(selectedTag, tagDisp, logPart, type){
+      dispatch(saveTag(selectedTag, tagDisp, logPart, type))
     }
   };
 };
