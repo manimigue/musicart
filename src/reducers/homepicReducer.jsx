@@ -8,7 +8,7 @@ const initialState = {
       link : {
         text : 'concert logo',
         type : 'Route',
-        url : '/concert'
+        url : '/concert/home'
       }
     },
     {
@@ -22,11 +22,11 @@ const initialState = {
   ],
 };
 
-function linksReducer(state = initialState, action = {}) {
+function homepicReducer(state = initialState, action = {}) {
   switch (action.type) {
     default:
       return state;
   }
 }
 
-export default linksReducer;
+export default homepicReducer;

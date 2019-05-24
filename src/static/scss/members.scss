@@ -1,6 +1,4 @@
 .tab-content {
-  font-family: "HiraKakuProN-W6", "ヒラギノ角ゴ ProN W6",  Meiryo, 'メイリオ', sans-serif;
-
   h1,
   h2,
   h3,
@@ -10,6 +8,16 @@
   }
   a {
     color: #4183C4 !important;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  button.link-button{
+    color: #4183C4 !important;
+    background: none;
+    border: none;
+    border-bottom: 1px solid;
     &:hover {
       cursor: pointer;
     }

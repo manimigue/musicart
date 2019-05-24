@@ -35,8 +35,8 @@ class Pictures extends Component {
   }
 }
 
-const mapStateToProps = ({footer}) => ({
-  pictures: footer.pictures
+const mapStateToProps = ({homepic}) => ({
+  pictures: homepic.pictures
 });
 
 const mapDispatchToProps = (dispatch) => {

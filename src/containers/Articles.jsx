@@ -13,13 +13,18 @@ class Articles extends Component {
 
   constructor(props) {
     super(props);
+    this.listRef = React.createRef()
     this.state = {
       start : props.start[props.type],
       selectedTag : props.selectedTag[props.type],
       tagDisp : props.tagDisp[props.type],
-      logPart : (props.logPart[props.type] === null ? props.log : props.logPart[props.type])
+      logPart : (props.logPart[props.type] === null ? props.log : props.logPart[props.type]),
+      listTag : true
     }
     if (props.range !== false) {
+      for (var i = 0; i < props.range; i++) {
+        this[`tagRef${i}`] = React.createRef()
+      }
       if (this.state.start < props.range){
         this.state.prevBut = false;
       } else {
@@ -39,16 +44,23 @@ class Articles extends Component {
       this.state.end = this.state.logPart.length;
     }
 
-    if (props.tags !== false){
+    this.state.logSlice = this.state.logPart.slice(this.state.start,this.state.end);
 
-    }
   }
 
-  first = (range) => {
+  setSlice = (start, end, logPart) => {
+    this.setState({
+      logSlice : logPart.slice(start,end),
+      listTag : true
+    })
+  }
+
+  first = (range, logPart=this.state.logPart) => {
     this.setState({
       start: 0,
       end: range
     })
+    this.setSlice(0, range, logPart)
   }
 
   previous = (start, range) => {
@@ -56,6 +68,7 @@ class Articles extends Component {
       end: start,
       start: start - range
     })
+    this.setSlice(start-range, start, this.state.logPart)
   }
 
   next = (end, range) => {
@@ -63,9 +76,22 @@ class Articles extends Component {
       start: end,
       end: end + range,
     })
+    this.setSlice(end, end+range, this.state.logPart)
   }
 
-  selectTag = (tag, range, selectedTag) => {
+  toUrl = (url, range, logPart) => {
+    const index = logPart.findIndex((l) => {
+      return l.url === url
+    })
+    const start = Math.floor(index / range) * 5;
+    this.setState({
+      start,
+      end: start+range
+    })
+    this.setSlice(start, start+range,logPart)
+  }
+
+  selectTag = (tag, range, selectedTag, toFirst=true,url=null) => {
     const nTag = tag === selectedTag ? null : tag;
     const logPart = nTag !== null ?
      this.props.log.filter(l => l.tag.includes(nTag)) :
@@ -75,16 +101,34 @@ class Articles extends Component {
       selectedTag: nTag,
       logPart: logPart
     })
-
-    this.first(range)
+    if (toFirst || url === null){
+      this.first(range, logPart)
+    } else {
+      this.toUrl(url, range, logPart)
+    }
   }
 
   switchTagDisp = (tagDisp) => {
     this.setState({
-      tagDisp: !tagDisp,
-      selectedTag: null,
-      logPart: this.props.log
+      tagDisp: !tagDisp
     });
+  }
+
+  componentDidMount() {
+    if (this.props.tags !== false){
+      const listWidth = this.listRef.current.offsetWidth
+      if (this.state.listTag){
+        for (var i = 0; i < this.state.logSlice.length; i++) {
+          try {
+            if (listWidth-this[`tagRef${i}`].current.offsetWidth < 170){
+              this.setState({ listTag : false })
+            }
+          } catch (e) {
+            console.log(e);
+          }
+        }
+      }
+    }
   }
 
   componentWillUpdate(nextProps, nextState) {
@@ -110,28 +154,63 @@ class Articles extends Component {
     }
   }
 
+  componentDidUpdate(prevProps, prevState) {
+    if (this.props.tags !== false){
+      const listWidth = this.listRef.current.offsetWidth
+      if (this.state.listTag){
+        for (var i = 0; i < this.state.logSlice.length; i++) {
+          try {
+            if (listWidth-this[`tagRef${i}`].current.offsetWidth < 170){
+              this.setState({ listTag : false })
+            }
+          } catch (e) {
+            console.log(e);
+          }
+        }
+      }
+    }
+  }
+
   componentWillUnmount() {
     this.props.saveStart(this.state.start, this.props.type)
     this.props.saveTag(this.state.selectedTag, this.state.tagDisp, this.state.logPart, this.props.type)
   }
 
+
+
   render() {
     const {type, title, range, tags} = this.props;
-    const {start, end, prevBut, nextBut, selectedTag, tagDisp, logPart} = this.state;
+    const {start, end, prevBut, nextBut, selectedTag, tagDisp, logSlice, listTag} = this.state;
 
-    const logSlice = logPart.slice(start,end);
+    const lists = logSlice.map((article, i) => {
+      const articleTags = tags !== false &&  listTag ?
+        article.tag.map(tag => {
+          const tagSelector = (
+            <Button
+              className='tagSelector'
+              variant={tag === selectedTag ? "secondary" : "outline-secondary"}
+              onClick={()=>this.selectTag(tag, range, selectedTag,false,article.url)}
+              key={article.url + tag}
+            >
+              {tag}
+            </Button>
+          )
+          return tagSelector
+        })
+        : null;
 
-    const lists = logSlice.map(article => {
+      const tagDiv = <div display="inline-block" className="tagDiv" key={i} ref={this[`tagRef${i}`]}>{articleTags}</div>
+
       return (
         <li key={article.url}>
-          <button
-          key={article.url+'button'}
-          className='article-list'
-          onClick={()=>this.props.linkToPage('Route','/' +type +'/' + article.url)}
-          >
-            <h3 key={article.url+'h2'} className='article-title'>{article.title}</h3>
-            <p key={article.url+'p'} className='article-date'>更新日:{article.date}</p>
-          </button>
+          <div　className='article-list'>
+            <button
+            key={article.url+'button'}
+            onClick={()=>this.props.linkToPage('Route','/' +type +'/' + article.url)}
+            >
+              <h3 key={article.url+'h2'} className='article-title'>{article.title}</h3>
+          </button></div>
+        <div key={article.url+'p'} className='article-date'><span>更新日:{article.date}</span>{tagDiv}</div>
         </li>
       );
     });
@@ -139,20 +218,20 @@ class Articles extends Component {
     (
       <div className='articleButton' height='50px'>
         <Button
-          className='articleFirst'
-          variant="secondary"
-          style={{display : start!==0 ? 'block' : 'none'}}
-          onClick={()=>this.first(range)}
-        >
-          &laquo; 最新へ
-        </Button>
-        <Button
           className='articlePrev'
           variant="dark"
           style={{display : prevBut ? 'block' : 'none'}}
           onClick={()=>this.previous(start,range)}
         >
           &#8249; 戻る
+        </Button>
+        <Button
+          className="articleFirst"
+          variant="secondary"
+          style={{display : start!==0 ? 'inline-block' : 'none'}}
+          onClick={()=>this.first(range)}
+        >
+          &laquo; 最新へ
         </Button>
         <Button
           className='articleNext'
@@ -172,7 +251,7 @@ class Articles extends Component {
         className='tagSearch'
         onClick={() => this.switchTagDisp(tagDisp)}
       >
-        タグ検索
+        <i className="material-icons">search</i>
       </Button>
     ) :
     null;
@@ -194,14 +273,15 @@ class Articles extends Component {
 
 
     return (
-      <div>
-        <h2 className='title'>{title}</h2>
-        {tagSearch}
-        {tagSelectors}
-        <ul className='articles'>{lists}</ul>
-        {button}
+      <React.Fragment>
+        <div className={"articleSec articleSec-"+type}>
+          <h2 className='title'>{title}{tagSearch}</h2>
+          {tagSelectors}
+          <ul className='articles' ref={this.listRef}>{lists}</ul>
+          {button}
+        </div>
         <Twitter />
-      </div>
+      </React.Fragment>
     );
   }
 }

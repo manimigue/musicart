@@ -21,7 +21,7 @@ class Members extends Component {
   render() {
     const tabs = this.props.tabs.map(tab => {
       return (
-        <Tab eventKey={tab.tab} color={tab.color} title={tab.tab}>
+        <Tab eventKey={tab.tab} color={tab.color} title={tab.tab} key={tab.tab}>
           <h2>{tab.head}</h2>
           <p><i className="material-icons" color={tab.color}>{tab.icon}</i>{tab.sub}</p>
           {tab.text}
