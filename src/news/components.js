@@ -8,6 +8,7 @@ import { default as test10 } from "./articles/test10.jsx";
 import { default as test11 } from "./articles/test11.jsx";
 import { default as test12 } from "./articles/test12.jsx";
 import { default as test2 } from "./articles/test2.jsx";
+import { default as test2m } from "./articles/test2m.jsx";
 import { default as test3 } from "./articles/test3.jsx";
 import { default as test4 } from "./articles/test4.jsx";
 import { default as test5 } from "./articles/test5.jsx";
@@ -18,6 +19,13 @@ import { default as test9 } from "./articles/test9.jsx";
 
 const news =
 [
+  {
+    title: "Test2M",
+    url: "test2m",
+    date: "2019-05-25",
+    author: "前田皓生",
+    component: test2m
+  },
   {
     title: "Ntest3",
     url: "nTest3",
