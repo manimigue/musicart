@@ -3,6 +3,7 @@ import { default as nTest2 } from "./articles/nTest2.jsx";
 import { default as nTest3 } from "./articles/nTest3.jsx";
 import { default as release } from "./articles/release.jsx";
 import { default as settings } from "./articles/settings.jsx";
+import { default as t3m } from "./articles/t3m.jsx";
 import { default as test } from "./articles/test.jsx";
 import { default as test10 } from "./articles/test10.jsx";
 import { default as test11 } from "./articles/test11.jsx";
@@ -19,6 +20,13 @@ import { default as test9 } from "./articles/test9.jsx";
 
 const news =
 [
+  {
+    title: "Test3m",
+    url: "t3m",
+    date: "2019-05-25",
+    author: "前田皓生",
+    component: t3m
+  },
   {
     title: "Test2M",
     url: "test2m",
