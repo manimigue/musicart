@@ -131,6 +131,39 @@ footer .links ul >*{
   cursor: pointer;
 }
 
+.tickets-form button {
+  margin: 3px;
+  margin-top: 5px;
+}
+
+.tickets-form h5{
+  margin-top: 20px;
+}
+
+.tickets-form input,textarea, select{
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top : 10px;
+  margin-bottom : 30px;
+  padding : 18px;
+  font-size : 18px;
+  border : 1px solid #dee7ec;
+}
+
+.tickets-form .submit{
+  background-color : #dee7ec;
+  color : #889eab;
+  transition: .3s ease;
+
+}
+
+.tickets-form .submit:hover{
+  background-color : #b7d4e4;
+  color: rgb(136, 86, 223);
+  cursor: pointer;
+}
+
 .articleButton {
   width: 100%;
   display: block;
@@ -222,6 +255,11 @@ footer .links ul >*{
   }
   .contact-form input, textarea{
     width : 400px;
+    display: block;
+    margin-left: 0;
+  }
+  .tickets-form input, textarea, select{
+    width : 400px !important;
     display: block;
     margin-left: 0;
   }

@@ -4,6 +4,7 @@ import linksReducer from '../reducers/linksReducer';
 import homepicReducer from '../reducers/homepicReducer';
 import concertReducer from '../reducers/concertReducer';
 import articlesReducer from '../reducers/articlesReducer';
+import ticketsReducer from '../reducers/ticketsReducer'
 
 
 function createStore(history) {
@@ -13,7 +14,8 @@ function createStore(history) {
       homepic: homepicReducer,
       router:routerReducer,
       concert:concertReducer,
-      articles:articlesReducer
+      articles:articlesReducer,
+      tickets:ticketsReducer
     }),
     applyMiddleware(
       //ReduxのAction使ってrouter制御できるようになる

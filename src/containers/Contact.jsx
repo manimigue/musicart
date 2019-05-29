@@ -4,12 +4,13 @@ class Contact extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
-  
+
   render(){
+    const mail = "manimigue0701@gmail.com";
     return (
       <div className="contact-form">
         <h2 className="title">お問い合わせ</h2>
-        <form method="POST" action="https://formspree.io/manimigue0701@gmail.com">
+        <form method="POST" action={"https://formspree.io/" + mail} >
           <p>お名前</p>
           <input type='text' name='お名前' placeholder="佐藤　太郎" />
           <p>メールアドレス</p>

@@ -8,7 +8,8 @@ import { saveStart, saveTag } from '../actions/articlesAction'
 class Articles extends Component {
   static defaultProps = {
     range: false,
-    tags: false
+    tags: false,
+    twitter : true
   }
 
   constructor(props) {
@@ -280,7 +281,7 @@ class Articles extends Component {
           <ul className='articles' ref={this.listRef}>{lists}</ul>
           {button}
         </div>
-        <Twitter />
+        {this.props.twitter ? <Twitter /> : null}
       </React.Fragment>
     );
   }
