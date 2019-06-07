@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "a4570d81dbff48829c2ab6ad0b840b22",
+    "revision": "16fc21048adc333b74efabc7ee964a97",
     "url": "/musicart/index.html"
   },
   {
-    "revision": "0802cb69aaa5a5de8c07",
-    "url": "/musicart/static/css/main.7e926acb.chunk.css"
+    "revision": "6f6d66d7841266823bcd",
+    "url": "/musicart/static/css/main.331febd1.chunk.css"
   },
   {
-    "revision": "28c2d83635d0398dbcf5",
-    "url": "/musicart/static/js/2.05115d97.chunk.js"
+    "revision": "591b794dd498a763eaf9",
+    "url": "/musicart/static/js/2.fc4a7f92.chunk.js"
   },
   {
-    "revision": "0802cb69aaa5a5de8c07",
-    "url": "/musicart/static/js/main.c3ce5184.chunk.js"
+    "revision": "6f6d66d7841266823bcd",
+    "url": "/musicart/static/js/main.e445c0c0.chunk.js"
   },
   {
     "revision": "860e5fbde7abc46781d8",
@@ -268,16 +268,36 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/musicart/static/media/classical-music-1838390_1280.d0a3cc84.jpg"
   },
   {
+    "revision": "d924895a6a08f852e7cb3e99a661b818",
+    "url": "/musicart/static/media/coming-soon.d924895a.png"
+  },
+  {
     "revision": "0b3a4461f43fd5b628b469d3b0a8bfba",
     "url": "/musicart/static/media/concert2019_logo.0b3a4461.png"
   },
   {
-    "revision": "d28a7e16f67e5e9720bbb4cf1009d986",
-    "url": "/musicart/static/media/header_logo.d28a7e16.png"
+    "revision": "9103aa93b8c7d04fe855076cb200d68b",
+    "url": "/musicart/static/media/footer_logo.9103aa93.png"
   },
   {
-    "revision": "ad01d70007a0c9861db6427c9f67b7dd",
-    "url": "/musicart/static/media/mu-logo.ad01d700.png"
+    "revision": "78e8b73ba03f4dd5c684283dbbd9a466",
+    "url": "/musicart/static/media/headerlogo01.78e8b73b.png"
+  },
+  {
+    "revision": "af491961f9542405de916f9604161418",
+    "url": "/musicart/static/media/headerlogo02.af491961.png"
+  },
+  {
+    "revision": "076fae563bbc0c739fc2225b4013cc95",
+    "url": "/musicart/static/media/member01.076fae56.png"
+  },
+  {
+    "revision": "426fd527b044a95928df56f353c17ab2",
+    "url": "/musicart/static/media/member02.426fd527.png"
+  },
+  {
+    "revision": "e9d6090dcad38c4041c9eba9336cd78a",
+    "url": "/musicart/static/media/member03.e9d6090d.png"
   },
   {
     "revision": "66853aecb8637d2967cd52780c52ba3b",
