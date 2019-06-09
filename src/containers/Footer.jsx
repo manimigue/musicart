@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import '../index.css';
 
-import Logo from '../img/mu-logo.png'
+import Logo from '../img/footer_logo.png'
 import twitter from '../img/twitter-64.png'
 
 class Footer extends Component {

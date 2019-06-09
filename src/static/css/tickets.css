@@ -1,0 +1,15 @@
+.tickets-info h5 {
+  margin: 11px 0; }
+.tickets-info b {
+  font-size: 1.1em; }
+.tickets-info p {
+  margin-bottom: 30px; }
+
+.ticketpay h5,
+.livepocket h5 {
+  margin: 11px 0; }
+
+.tickets-form select {
+  margin-bottom: 20px; }
+
+/*# sourceMappingURL=tickets.css.map */

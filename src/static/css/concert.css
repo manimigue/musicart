@@ -1,6 +1,10 @@
-@media only screen and (min-width: 732px) {
-  .articleSec-concert {
-    margin: 0 15%; } }
+.concertAbout.concert2019 p,
+.concertAbout.concert2019 h1, .concertAbout.concert2019 h2, .concertAbout.concert2019 h3, .concertAbout.concert2019 h4, .concertAbout.concert2019 h5 {
+  font-family: "Sawarabi Mincho" !important; }
+.concertAbout.concert2019 img {
+  margin-bottom: 20px; }
+.concertAbout.concert2019 h4 {
+  font-size: 1.5em !important; }
 
 .body.concert {
   -webkit-text-size-adjust: 100%;
@@ -18,6 +22,35 @@
     .body.concert .main textarea {
       color: #b8bfc6;
       border-color: transparent; }
+    .body.concert .main .concertLinks {
+      display: block;
+      width: 100%;
+      height: auto; }
+      .body.concert .main .concertLinks .concertLink {
+        display: block;
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 0px; }
+        @media only screen and (min-width: 576px) and (max-width: 768px) {
+          .body.concert .main .concertLinks .concertLink {
+            padding: 0 20px; } }
+        .body.concert .main .concertLinks .concertLink h5 {
+          font-size: 1.4em;
+          margin-bottom: 0.5em; }
+          @media only screen and (min-width: 576px) {
+            .body.concert .main .concertLinks .concertLink h5 {
+              font-size: 0.95em; } }
+        .body.concert .main .concertLinks .concertLink img {
+          cursor: pointer; }
+    .body.concert .main .concertAbout {
+      clear: both; }
+    .body.concert .main .Map {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 420px; }
     .body.concert .main button,
     .body.concert .main input,
     .body.concert .main select,
@@ -115,7 +148,7 @@
         margin-left: auto;
         margin-right: auto; }
     @media screen and (min-width: 768px) {
-      .body.concert .main img {
+      .body.concert .main img :not(.title-logo) {
         width: 80%;
         margin-left: auto;
         margin-right: auto; }
@@ -145,6 +178,29 @@
       /* 30px */ }
     .body.concert .main ul {
       list-style: square; }
+    .body.concert .main ul.articles {
+      padding: 0;
+      list-style: none; }
+      .body.concert .main ul.articles li {
+        height: auto;
+        clear: both; }
+        .body.concert .main ul.articles li h3 {
+          font-family: "Sawarabi Mincho";
+          margin-top: 15px;
+          margin-left: 20%;
+          font-size: 2em; }
+        .body.concert .main ul.articles li .article-more {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          height: 40px; }
+          .body.concert .main ul.articles li .article-more button {
+            font-size: 1.5em;
+            background-color: #363B40;
+            display: inline;
+            float: right;
+            border: none;
+            text-decoration: underline; }
     .body.concert .main ol {
       list-style: decimal; }
     .body.concert .main ul ul,

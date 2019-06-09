@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
-import HeaderLogo from '../img/header_logo.png'
+import WhiteLogo from '../img/headerlogo01.png';
+import DarkLogo from '../img/headerlogo02.png'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar'
 import '../index.css';
@@ -65,7 +66,8 @@ class Header extends Component {
         expanded={this.state.navExpanded}
       >
         <Navbar.Brand href="#home">
-          <img src={HeaderLogo} alt='Mμsicart' width='200' onClick={() => this.props.linkToPage('Route','/')}/>
+          <img src={DarkLogo} alt='Mμsicart' width='200' hidden={!this.props.concert} onClick={() => this.props.linkToPage('Route','/')}/>
+          <img src={WhiteLogo} alt='Mμsicart' width='200' hidden={this.props.concert} onClick={() => this.props.linkToPage('Route','/')}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">

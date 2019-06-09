@@ -2,7 +2,7 @@ const initialState = {
   ticketTypes : [
     "大人",
     "学生",
-    "子供"
+    "小人"
   ],
   ticketMax : 5
 };

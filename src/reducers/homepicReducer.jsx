@@ -8,7 +8,7 @@ const initialState = {
       link : {
         text : 'concert logo',
         type : 'Route',
-        url : '/concert/home'
+        url : '/concert/light_and_magic'
       }
     },
     {

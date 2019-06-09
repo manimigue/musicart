@@ -6,7 +6,7 @@ class Contact extends Component {
   }
 
   render(){
-    const mail = "manimigue0701@gmail.com";
+    const mail = "orchestra.musicart.contact@gmail.com";
     return (
       <div className="contact-form">
         <h2 className="title">お問い合わせ</h2>

@@ -1,0 +1,27 @@
+.tickets-info {
+  h5{
+    margin: 11px 0;
+  }
+  b {
+    font-size: 1.1em;
+  }
+  p{
+    margin-bottom: 30px;
+  }
+}
+
+.ticketpay,
+.livepocket {
+  h5{
+    margin: 11px 0;
+  }
+}
+
+.tickets-form {
+  select{
+    margin-bottom: 20px;
+  }
+  button.add-ticketTypes,
+  button.reduce-ticketTypes {
+  }
+}

@@ -198,6 +198,17 @@ footer .links ul >*{
   float: left;
 }
 
+button.link-button{
+  color: #4183C4 !important;
+  background: none;
+  border: none;
+  border-bottom: 1px solid;
+}
+
+button.link-button:hover {
+  cursor: pointer;
+}
+
 .tagSelector:focus, .tagSearch:focus {
   outline: 0;
 }

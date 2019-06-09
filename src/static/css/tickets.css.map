@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AACE,gBAAE;EACA,MAAM,EAAE,MAAM;AAEhB,eAAE;EACA,SAAS,EAAE,KAAK;AAElB,eAAC;EACC,aAAa,EAAE,IAAI;;AAMrB;cAAE;EACA,MAAM,EAAE,MAAM;;AAKhB,oBAAM;EACJ,aAAa,EAAE,IAAI",
+"sources": ["../scss/tickets.scss"],
+"names": [],
+"file": "tickets.css"
+}

@@ -1,9 +1,18 @@
 $bg-color:  #363B40;
 $break-middle: 768px;
 
-.articleSec-concert {
-  @media only screen and (min-width: 732px){
-    margin: 0 15%;
+.concertAbout {
+  &.concert2019{
+    p,
+    h1,h2,h3,h4,h5{
+      font-family: "Sawarabi Mincho" !important;
+    }
+    img {
+      margin-bottom: 20px;
+    }
+    h4 {
+      font-size: 1.5em !important;
+    }
   }
 }
 
@@ -24,6 +33,45 @@ $break-middle: 768px;
       color: #b8bfc6;
       border-color: transparent;
     }
+
+    .concertLinks {
+      .concertLink  {
+        display: block;
+        float: left;
+        margin-top: 5px;
+        margin-bottom: 15px;
+        padding-left: 5px;
+        padding-right: 0px;
+        @media only screen  and (min-width: 576px)and ( max-width: 768px) {
+          padding: 0 20px;
+        }
+        h5 {
+          font-size: 1.4em;
+          margin-bottom: 0.5em;
+          @media only screen  and (min-width: 576px) {
+            font-size: 0.95em;
+          }
+        }
+        img {
+          cursor: pointer;
+        }
+      }
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+    .concertAbout {
+      clear: both;
+    }
+
+    .Map {
+      margin-left: auto;
+      margin-right: auto;
+      width: 100%;
+      height: 420px;
+
+    }
+
 
     button,
     input,
@@ -154,7 +202,7 @@ $break-middle: 768px;
     }
 
     @media screen and (min-width: $break-middle){
-      img {
+      img :not(.title-logo){
         width: 80%;
         margin-left: auto;
         margin-right: auto;
@@ -199,6 +247,37 @@ $break-middle: 768px;
     ul {
         list-style: square;
     }
+
+    ul.articles {
+      padding: 0;
+      list-style: none;
+      li {
+        height: auto;
+        clear: both;
+        h3 {
+          font-family: "Sawarabi Mincho";
+          margin-top: 15px;
+          margin-left: 20%;
+          font-size: 2em;
+        }
+        .article-more{
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+          height: 40px;
+          button {
+            font-size: 1.5em;
+            background-color: $bg-color;
+            display: inline;
+            float: right;
+            border: none;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+
+
 
     ol {
         list-style: decimal;

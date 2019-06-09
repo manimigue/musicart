@@ -1,5 +1,8 @@
 // import * as types from '../actions/links';
 import React from 'react';
+import OrchestrImage from '../img/member01.png'
+import ArtistImage from '../img/member03.png'
+import ConcertImage from '../img/member02.png'
 
 const initialState = {
   headerLinks:[
@@ -47,15 +50,13 @@ const initialState = {
       head: 'オーケストラ',
       icon: 'music_note',
       sub: 'Orchestra Member',
+      img: OrchestrImage,
       text : <div>
-        <p>Orchestra Mμsicart では演奏会毎に新規団員を募集しております。<br/>楽器にブランクがある方、初心者という方もお気軽にご連絡ください。また、募集パートは随時変更しますので予めご了承ください。</p>
+        <p>Orchestra Mμsicart では演奏会毎に新規団員を募集しております。<br/>楽器にブランクがある方、初心者という方もお気軽にご連絡ください。</p>
         <ul>
-          <li>ファゴット×1名</li>
-          <li>ヴァイオリン×若干名</li>
-          <li>ヴィオラ×若干名</li>
-          <li>チェロ×若干名</li>
-          <li>コントラバス×若干名</li>
+          <li>各パート若干名</li>
         </ul>
+        <p>募集パートは随時変更しますので，予めご了承ください。</p>
         <ol>
         <li><p>活動内容及び練習日程</p>
         <ul>
@@ -111,6 +112,7 @@ const initialState = {
       head: 'アーティスト',
       icon: 'brush',
       sub: 'Artist',
+      img: ArtistImage,
       text : <div>
         <p>Orchestra Mμsicart では一緒に作品を作り上げるあらゆるジャンルのアーティストを募集しています。</p>
         <ul>
@@ -177,6 +179,7 @@ const initialState = {
       head: 'スタッフ',
       icon: 'people',
       sub: 'Concert Staff',
+      img: ConcertImage,
       text : <div>
         <p>Orchestra Mμsicart では一緒にコンサートを作り上げるスタッフを募集しています。</p>
         <ul>

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import Fade from 'react-reveal/Fade';
 import Button from 'react-bootstrap/Button';
 import Twitter from '../components/twitter';
 import { saveStart, saveTag } from '../actions/articlesAction'
@@ -9,7 +10,9 @@ class Articles extends Component {
   static defaultProps = {
     range: false,
     tags: false,
-    twitter : true
+    twitter : true,
+    date : true,
+    more : false
   }
 
   constructor(props) {
@@ -180,7 +183,7 @@ class Articles extends Component {
 
 
   render() {
-    const {type, title, range, tags} = this.props;
+    const {type, title, range, tags, date, more} = this.props;
     const {start, end, prevBut, nextBut, selectedTag, tagDisp, logSlice, listTag} = this.state;
 
     const lists = logSlice.map((article, i) => {
@@ -210,8 +213,17 @@ class Articles extends Component {
             onClick={()=>this.props.linkToPage('Route','/' +type +'/' + article.url)}
             >
               <h3 key={article.url+'h2'} className='article-title'>{article.title}</h3>
-          </button></div>
-        <div key={article.url+'p'} className='article-date'><span>更新日:{article.date}</span>{tagDiv}</div>
+            </button>
+          </div>
+          { date ?
+            <div key={article.url+'p'} className='article-date'><span>更新日:{article.date}</span>{tagDiv}</div>
+           : null
+          }
+          {
+            more ?
+            <div key={article.url+'more'} className='article-more'><button>→ more</button></div>
+             : null
+          }
         </li>
       );
     });
@@ -257,27 +269,24 @@ class Articles extends Component {
     ) :
     null;
 
-    const tagSelectors = tags !== false && tagDisp !== false ?
-    (
+    const tagSelectors = tags !== false ? (
       tags.map(tag => {
-        return (<Button
-          className='tagSelector'
+        return (<button
+          className='tagSelector btn btn-outline-secondary'
           variant={tag === selectedTag ? "secondary" : "outline-secondary"}
           onClick={()=>this.selectTag(tag, range, selectedTag)}
           key={tag}
         >
           {tag}
-        </Button>)
+        </button>)
       })
-    )
-    : null;
-
+    ) : null;
 
     return (
       <React.Fragment>
         <div className={"articleSec articleSec-"+type}>
           <h2 className='title'>{title}{tagSearch}</h2>
-          {tagSelectors}
+          <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} />
           <ul className='articles' ref={this.listRef}>{lists}</ul>
           {button}
         </div>

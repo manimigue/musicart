@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import Link from '../components/Link'
 import '../index.css';
 import '../static/css/members.css'
 
@@ -21,11 +22,13 @@ class Members extends Component {
   render() {
     const tabs = this.props.tabs.map(tab => {
       return (
-        <Tab eventKey={tab.tab} color={tab.color} title={tab.tab} key={tab.tab}>
-          <h2>{tab.head}</h2>
-          <p><i className="material-icons" color={tab.color}>{tab.icon}</i>{tab.sub}</p>
-          {tab.text}
-          <p>ご連絡は<button className='link-button' onClick={()=>this.props.linkToPage(tab.type,tab.url)}>お問い合わせフォーム</button>まで</p>
+        <Tab className="Tab" eventKey={tab.tab} color={tab.color} title={tab.tab} key={tab.tab} style={{backgroundImage: `url(${tab.img})`}}>
+          <div className="Tab-mask">
+            <h2>{tab.head}</h2>
+            <p>{tab.sub}</p>
+            {tab.text}
+            <p>ご連絡は<Link type={tab.type} url={tab.url}>お問い合わせフォーム</Link>まで</p>
+          </div>
         </Tab>
       );
     });

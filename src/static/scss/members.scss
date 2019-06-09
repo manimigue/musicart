@@ -13,13 +13,28 @@
     }
   }
 
-  button.link-button{
-    color: #4183C4 !important;
-    background: none;
-    border: none;
-    border-bottom: 1px solid;
-    &:hover {
-      cursor: pointer;
+  .Tab{
+    background-repeat: no-repeat;
+    background-position: 90% 0%;
+    background-size: 100px;
+    @media only screen and (min-width:732px){
+      background-position: 95% 0%;
+    }
+    @media only screen and (min-width:732px)and(max-width: 1130px){
+      .Tab-mask{
+        height: 100%;
+        background: rgba(255,255,255,0.5);
+      }
+    }
+    @media only screen and (min-width:732px)and(max-width: 980px){
+      background-size:150px;
+    }
+    @media only screen and (min-width:980px)and(max-width: 1130px){
+      background-size:190px;
+    }
+    @media only screen and (min-width:1130px){
+      background-position: 95% 0%;
+      background-size:auto;
     }
   }
 }

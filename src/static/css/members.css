@@ -9,12 +9,26 @@
   color: #4183C4 !important; }
   .tab-content a:hover {
     cursor: pointer; }
-.tab-content button.link-button {
-  color: #4183C4 !important;
-  background: none;
-  border: none;
-  border-bottom: 1px solid; }
-  .tab-content button.link-button:hover {
-    cursor: pointer; }
+.tab-content .Tab {
+  background-repeat: no-repeat;
+  background-position: 90% 0%;
+  background-size: 100px; }
+  @media only screen and (min-width: 732px) {
+    .tab-content .Tab {
+      background-position: 95% 0%; } }
+  @media only screen and (min-width: 732px) and (max-width: 1130px) {
+    .tab-content .Tab .Tab-mask {
+      height: 100%;
+      background: rgba(255, 255, 255, 0.5); } }
+  @media only screen and (min-width: 732px) and (max-width: 980px) {
+    .tab-content .Tab {
+      background-size: 150px; } }
+  @media only screen and (min-width: 980px) and (max-width: 1130px) {
+    .tab-content .Tab {
+      background-size: 190px; } }
+  @media only screen and (min-width: 1130px) {
+    .tab-content .Tab {
+      background-position: 95% 0%;
+      background-size: auto; } }
 
 /*# sourceMappingURL=members.css.map */

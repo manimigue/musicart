@@ -12,11 +12,13 @@ import About from './containers/About';
 import Members from './containers/Members';
 import Concert from './containers/Concert';
 import Tickets from './containers/Tickets.jsx';
-import {Concert_home} from './containers/Concert';
+import Concert_home from './containers/Concert_home';
+import Concert_2019 from './containers/Concert_2019'
 import Error from './components/Error';
 import Footer from './containers/Footer';
 import './static/css/concert.css'
 import './static/css/articles.css'
+import './static/css/tickets.css'
 import './static/css/github1.css'
 import './static/css/concert.css'
 
@@ -43,9 +45,10 @@ class App extends Component {
               <Route exact path='/about' component={About} />
               <Route exact path='/contact' component={Contact} />
               <Route exact path='/members' component={Members} />
-              <Route path='/concert' component={Concert} />
               <Route exact path='/tickets' component={Tickets} />
+              <Route path='/concert' component={Concert} />
               <Route exact path='/concert/home' component={Concert_home}/>
+              <Route exact path='/concert/light_and_magic' component={Concert_2019}/>
               <Route path='/error' component={Error} />
               {newsRoutes()}
               {concertRoutes()}
