@@ -1,19 +1,19 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "cf38b96231ece9c28dacbc5be7118251",
+    "revision": "af1d757f49ffc15f414a875ceb5bbce5",
     "url": "/musicart/index.html"
   },
   {
-    "revision": "c222ea764a7795a652a2",
-    "url": "/musicart/static/css/main.79ed0ebb.chunk.css"
+    "revision": "7e651410a9188df1a639",
+    "url": "/musicart/static/css/main.165f182d.chunk.css"
   },
   {
-    "revision": "a3beb9e628d2a9321e04",
-    "url": "/musicart/static/js/2.beb2d30f.chunk.js"
+    "revision": "ac13bb54bd1a855e52df",
+    "url": "/musicart/static/js/2.bd4bee06.chunk.js"
   },
   {
-    "revision": "c222ea764a7795a652a2",
-    "url": "/musicart/static/js/main.d0a5ae10.chunk.js"
+    "revision": "7e651410a9188df1a639",
+    "url": "/musicart/static/js/main.758bfc87.chunk.js"
   },
   {
     "revision": "860e5fbde7abc46781d8",
@@ -264,12 +264,12 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/musicart/static/media/TanakaMasato.ac57321c.png"
   },
   {
-    "revision": "d0a3cc8437f8535df44ce77f03796266",
-    "url": "/musicart/static/media/classical-music-1838390_1280.d0a3cc84.jpg"
+    "revision": "78e8b73ba03f4dd5c684283dbbd9a466",
+    "url": "/musicart/static/media/aboutlogo.78e8b73b.png"
   },
   {
-    "revision": "d924895a6a08f852e7cb3e99a661b818",
-    "url": "/musicart/static/media/coming-soon.d924895a.png"
+    "revision": "9c905099b9fb2b69c363c83360bce3f1",
+    "url": "/musicart/static/media/coming-soon.9c905099.png"
   },
   {
     "revision": "0b3a4461f43fd5b628b469d3b0a8bfba",
