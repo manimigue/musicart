@@ -1,5 +1,8 @@
 $bg-color:  #363B40;
 $break-middle: 768px;
+$home-title-breack-min: 576px;
+$home-title-breack-max: 937px;
+$home-title-breack-middle: 697px;
 
 .concertAbout {
   &.concert2019{
@@ -48,7 +51,17 @@ $break-middle: 768px;
         h5 {
           font-size: 1.4em;
           margin-bottom: 0.5em;
-          @media only screen  and (min-width: 576px) {
+          @media only screen  and (min-width: $home-title-breack-min) and (max-width: $home-title-breack-middle){
+            font-size: 0.74em;
+          }
+          @media only screen  and (min-width: $break-middle) and (max-width: $home-title-breack-max){
+            font-size: 0.76em;
+          }
+
+          @media only screen  and (min-width: $home-title-breack-middle) and (max-width: $break-middle) {
+            font-size: 0.95em;
+          }
+          @media only screen  and (min-width: $home-title-breack-max) {
             font-size: 0.95em;
           }
         }

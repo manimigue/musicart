@@ -39,7 +39,16 @@
         .body.concert .main .concertLinks .concertLink h5 {
           font-size: 1.4em;
           margin-bottom: 0.5em; }
-          @media only screen and (min-width: 576px) {
+          @media only screen and (min-width: 576px) and (max-width: 697px) {
+            .body.concert .main .concertLinks .concertLink h5 {
+              font-size: 0.74em; } }
+          @media only screen and (min-width: 768px) and (max-width: 937px) {
+            .body.concert .main .concertLinks .concertLink h5 {
+              font-size: 0.76em; } }
+          @media only screen and (min-width: 697px) and (max-width: 768px) {
+            .body.concert .main .concertLinks .concertLink h5 {
+              font-size: 0.95em; } }
+          @media only screen and (min-width: 937px) {
             .body.concert .main .concertLinks .concertLink h5 {
               font-size: 0.95em; } }
         .body.concert .main .concertLinks .concertLink img {

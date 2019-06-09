@@ -15,11 +15,11 @@ class Concert_home extends Component {
       <div className='concert'>
         <h2 className='title'>Concerts</h2>
         <div className='concertLinks'>
-          <div className="concertLink concert2019 col-xs-6 col-sm-5 col-md-4 col-lg-4">
+          <div className="concertLink concert2019 col-xs-6 col-sm-6 col-md-4 col-lg-4">
             <h5>光と魔法のコンサート in 森のホール 21</h5>
             <img src={ConcertLogo} alt="コンサートロゴ" onClick={() => this.props.linkToPage('Route','/concert/light_and_magic')} />
           </div>
-          <div className="concertLink concert2019 col-xs-6 col-sm-5 col-md-4 col-lg-4">
+          <div className="concertLink concert2019 col-xs-6 col-sm-6 col-md-4 col-lg-4">
             <h5>Coming Soon!</h5>
             <img src={ComingSoon} alt='Coming Soon' style={{cursor:'auto'}}/>
           </div>

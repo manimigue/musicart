@@ -1,0 +1,27 @@
+.font-test {
+  height: 20px; }
+  .font-test button {
+    float: left;
+    margin: 0px 10px; }
+
+.plan1 .title {
+  font-family: Futura,Trebuchet MS,Arial,sans-serif !important; }
+.plan1 p, .plan1 h5 {
+  font-family: "Yu Gothic", "YuGothic", "Univers-Light"; }
+
+.plan2 .title {
+  font-family: "Univers Bold" !important; }
+.plan2 p, .plan2 h5 {
+  font-family: "Yu Gothic", "YuGothic", "Univers-Light"; }
+
+.plan3 .title {
+  font-family: "Avenir-Medium" !important; }
+.plan3 p, .plan3 h5 {
+  font-family: "Yu Gothic", "YuGothic", "Avenir-Light"; }
+
+.plan4 .title {
+  font-family: "Avenir-Heavy" !important; }
+.plan4 p, .plan4 h5 {
+  font-family: "Yu Gothic", "YuGothic", "Avenir-Light"; }
+
+/*# sourceMappingURL=about.css.map */

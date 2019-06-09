@@ -1,0 +1,6 @@
+@import "./mixin/fonts";
+@include font-face("Univers-Light","./static/css/fonts/UNIVERS2.ttf",null,null,"ttf");
+@include font-face("Univers Bold","./static/css/fonts/UNVR65W.TTF",null,null,"ttf");
+@include font-face("Avenir-Heavy","./static/css/fonts/AvenirLTStd-Heavy.otf",null,null,"otf");
+@include font-face("Avenir-Light","./static/css/fonts/AvenirLTStd-Light.otf",null,null,"otf");
+@include font-face("Avenir-Medium","./static/css/fonts/AvenirLTStd-Medium.otf",null,null,"otf");

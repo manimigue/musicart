@@ -1,0 +1,17 @@
+@font-face {
+  font-family: "Univers-Light";
+  src: url("./static/css/fonts/UNIVERS2.ttf") format("truetype"); }
+@font-face {
+  font-family: "Univers Bold";
+  src: url("./static/css/fonts/UNVR65W.TTF") format("truetype"); }
+@font-face {
+  font-family: "Avenir-Heavy";
+  src: url("./static/css/fonts/AvenirLTStd-Heavy.otf") format("opentype"); }
+@font-face {
+  font-family: "Avenir-Light";
+  src: url("./static/css/fonts/AvenirLTStd-Light.otf") format("opentype"); }
+@font-face {
+  font-family: "Avenir-Medium";
+  src: url("./static/css/fonts/AvenirLTStd-Medium.otf") format("opentype"); }
+
+/*# sourceMappingURL=style.css.map */

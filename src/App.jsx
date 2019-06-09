@@ -18,6 +18,7 @@ import Error from './components/Error';
 import Footer from './containers/Footer';
 import './static/css/concert.css'
 import './static/css/articles.css'
+import './static/css/about.css'
 import './static/css/tickets.css'
 import './static/css/github1.css'
 import './static/css/concert.css'

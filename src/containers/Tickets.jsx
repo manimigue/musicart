@@ -54,8 +54,7 @@ class Tickets extends Component {
   }
 
   render() {
-    const mail = "manimigue0701@gmail.com";
-    const tel = "0312345678"
+    const mail = "orchestra.musicart.ticket@gmail.com";
     const ticketTypeNum = this.state.ticketTypeNum;
     const {ticketTypes, ticketMax} = this.props;
     const ticketSelect = (type) => (
@@ -132,13 +131,6 @@ class Tickets extends Component {
             <h5>ライブポケットでのチケット予約</h5>
             {this.onWhich(this.state.on.livepocket,LivePocket)}
           </div>
-
-          <div className='tickets-tel'>
-            <h5>電話で予約する</h5>
-            <p >電話番号 <a href={"tel:"+tel}>{tel}</a></p>
-          </div>
-
-
         </div>
       </React.Fragment>
 
