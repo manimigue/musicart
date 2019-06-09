@@ -113,8 +113,20 @@ class Tickets extends Component {
       <React.Fragment>
         <h2 className='title'>Tickets</h2>
         <Info />
+        <div className='tickets-how'>
+          <h4>チケット予約方法</h4>
+          <h5>ホームページでのチケット予約（第1次）</h5>
+          <p>6月20日より開始</p>
+          <h5>ホームページでのチケット予約（第2次）</h5>
+          <p>9月上旬頃開始</p>
+          <h5>チケットペイでのチケット予約</h5>
+          <p>8月上旬頃開始</p>
+          <h5>livepocketでのチケット予約</h5>
+          <p>8月上旬頃開始</p>
+          <p>チケット予約が開始しましたら、ホームページ、SNS等でアナウンスさせて頂きます。<br/>各チケット予約方法にて、予約が定員に達し次第、受付を終了させていただきます。予めご了承ください。</p>
+        </div>
         <div className='tickets-buy' >
-          <h4>予約方法</h4>
+          <h4>チケット予約</h4>
           <div className='tickets-form'>
             <h5>ホームページでのチケット予約(第 1 次)</h5>
             {this.onWhich(this.state.on.form1,ticketForm())}

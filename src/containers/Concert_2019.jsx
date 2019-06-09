@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import ConcertLogo from '../img/concert2019_logo.png'
+import Access from '../img/access1.png'
 import Articles from './Articles'
 import Map from './Map'
 import log from '../concert/log.json'
@@ -46,6 +47,7 @@ export default class Concert_2019 extends Component {
             title="concert2019"
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d103656.22389024516!2d139.81812048776266!3d35.71989757693368!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018837c8a1e51d5%3A0x44934c52d49d6541!2sHall+of+the+Forest+21+(Matsudo+City+Cultural+Hall)!5e0!3m2!1sen!2sjp!4v1559288431468!5m2!1sen!2sjp"
             />
+          <img className="access" src={Access} alt="access"/>
           <Info />
           <p>詳しくは<Link type="Route" url="/tickets" >チケット情報</Link>をご覧ください</p>
         </div>

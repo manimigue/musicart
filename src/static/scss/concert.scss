@@ -4,21 +4,6 @@ $home-title-breack-min: 576px;
 $home-title-breack-max: 937px;
 $home-title-breack-middle: 697px;
 
-.concertAbout {
-  &.concert2019{
-    p,
-    h1,h2,h3,h4,h5{
-      font-family: "Sawarabi Mincho" !important;
-    }
-    img {
-      margin-bottom: 20px;
-    }
-    h4 {
-      font-size: 1.5em !important;
-    }
-  }
-}
-
 .body.concert {
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -28,7 +13,7 @@ $home-title-breack-middle: 697px;
   font-style: normal;
   line-height: 1.625rem;
   .main {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: "Sawarabi Mincho" !important;
     button,
     input,
     select,
@@ -92,7 +77,6 @@ $home-title-breack-middle: 697px;
     textarea {
         font-style: normal;
         line-height: 1.625rem;
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     }
 
     hr {
@@ -108,7 +92,6 @@ $home-title-breack-middle: 697px;
     h4,
     h5,
     h6 {
-        font-family: "Lucida Grande", "Corbel", sans-serif;
         font-weight: normal;
         clear: both;
         -ms-word-wrap: break-word;
@@ -268,7 +251,6 @@ $home-title-breack-middle: 697px;
         height: auto;
         clear: both;
         h3 {
-          font-family: "Sawarabi Mincho";
           margin-top: 15px;
           margin-left: 20%;
           font-size: 2em;
@@ -420,6 +402,30 @@ $home-title-breack-middle: 697px;
     td {
         border: solid 1px #474d54;
         /* variable */
+    }
+  }
+}
+
+.concertAbout {
+  &.concert2019{
+    p,
+    h1,h2,h3,h4,h5{
+      font-family: "Sawarabi Mincho" !important;
+    }
+    img {
+      margin-bottom: 20px;
+      &.access {
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        background: white;
+        @media only screen and (min-width: 816px){
+          width: 70%;
+        }
+      }
+    }
+    h4 {
+      font-size: 1.5em !important;
     }
   }
 }

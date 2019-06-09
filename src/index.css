@@ -5,8 +5,16 @@
   box-sizing: border-box;
 }
 
+.title > *{
+  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
+}
+b, strong, .bold{
+ font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif;
+}
+
 .main{
   flex: 1;
+  font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
   margin: 0 10px;
 }
 
@@ -27,7 +35,7 @@ footer {
   flex-flow: column;
   color: #fff;
   margin-top: 20;
-  height: 280px;
+  height: 300px;
   width: 100%;
   line-height: 1.625rem;
 }
@@ -99,7 +107,7 @@ footer .links ul >*{
 
 .title {
   padding: 20px 0px 0px;
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
+  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
 }
 
 .musicart {
@@ -222,7 +230,7 @@ button.link-button:hover {
 
 @media only screen and (min-width:1018px) {
   footer {
-    height: 150px;
+    height: 170px;
   }
   footer .links ul{
     display: flex;
@@ -238,7 +246,7 @@ button.link-button:hover {
 
 @media only screen and (max-width:1018px) and (min-width:850px) {
   footer {
-    height: 200px;
+    height: 220px;
   }
 
   footer .links ul {
@@ -249,7 +257,7 @@ button.link-button:hover {
 
 @media only screen and (min-width:732px) and (max-width:850px) {
   footer {
-    height: 200px;
+    height: 220px;
   }
 
   footer .links ul {
@@ -299,7 +307,7 @@ button.link-button:hover {
   }
 
   footer {
-    height: 240px;
+    height: 260px;
   }
 
   footer .links ul {

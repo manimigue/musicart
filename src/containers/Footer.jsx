@@ -22,7 +22,7 @@ class Footer extends Component {
     return (
       <footer>
         <div className='footer-main'>
-          <h2><span className='musicart' >M&mu;sicart</span></h2>
+          <div className="title"><h2>Mµsicart</h2></div>
         </div>
         <div className='links'>
           <ul>{lists}</ul>

@@ -16,7 +16,6 @@ import Concert_home from './containers/Concert_home';
 import Concert_2019 from './containers/Concert_2019'
 import Error from './components/Error';
 import Footer from './containers/Footer';
-import './static/css/concert.css'
 import './static/css/articles.css'
 import './static/css/about.css'
 import './static/css/tickets.css'
