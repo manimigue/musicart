@@ -1,7 +1,0 @@
-{
-"version": 3,
-"mappings": "AAaE,UAKC;EAJC,WAAW,ECbI,cAAc;EDgB7B,GAAG,EAPG,kEAA6D",
-"sources": ["../scss/mixin/_fonts.scss","../scss/style.scss"],
-"names": [],
-"file": "style.css"
-}

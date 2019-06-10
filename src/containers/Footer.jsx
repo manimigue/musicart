@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import '../index.css';
-
 import Logo from '../img/footer_logo.png'
 import twitter from '../img/twitter-64.png'
 
@@ -24,12 +23,16 @@ class Footer extends Component {
         <div className='footer-main'>
           <div className="title"><h2>Mµsicart</h2></div>
         </div>
-        <div className='links'>
+        <div className='footer-links'>
           <ul>{lists}</ul>
-          <img src={Logo} alt='Mμsicart' size='60%' onClick={() => this.props.linkToPage('Route','/')}/>
-          <a href='https://twitter.com/orch_musicart'>
-            <img className='twitter' src={twitter} alt='twitter' width='5%'/>
-          </a>
+
+            <img src={Logo} alt='Mμsicart' size='60%' onClick={() => this.props.linkToPage('Route','/')}/>
+            <a href='https://twitter.com/orch_musicart'>
+              <img className='twitter' src={twitter} alt='twitter' width='5%'/>
+            </a>
+        </div>
+        <div className="copyright">
+          <p>Ⓒ 2019 Orchestra Mµsicart</p>
         </div>
       </footer>
     );

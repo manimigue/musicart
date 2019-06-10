@@ -9,7 +9,7 @@ class Twitter extends Component {
         <TwitterTimelineEmbed
         sourceType="profile"
         screenName="orch_musicart"
-        options={{width: '100%',height: 400}}
+        options={{width: '100%',height: 500}}
         theme={this.props.concert ? 'dark': 'light'}
         transparent
         noFooter

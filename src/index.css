@@ -1,363 +1,271 @@
-.body{
+@charset "UTF-8";
+.body {
   display: flex;
   flex-flow: column;
   min-height: 100vh;
-  box-sizing: border-box;
-}
-
-.title > *{
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
-}
-b, strong, .bold{
- font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif;
-}
-
-.main{
-  flex: 1;
-  font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
-  margin: 0 10px;
-}
-
-.app {
-  margin-left: 30px;
-  margin-top: 0px;
-}
-
-.appMain {
-  background-color: rgba(210, 235, 13, 0.31) ;
-  min-height: 500px;
-}
+  box-sizing: border-box; }
+  .body .title {
+    padding: 20px 0px 0px;
+    font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
+    .body .title > * {
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif; }
+  .body .main {
+    flex: 1;
+    font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
+    margin: 0 10px; }
+    @media only screen and (min-width: 460px) and (max-width: 732px) {
+      .body .main {
+        padding: 0px 20px; } }
+    @media only screen and (min-width: 732px) {
+      .body .main {
+        padding: 0px 30px; }
+        .body .main .aboutMain, .body .main .concertAbout {
+          width: 70%;
+          margin-left: auto;
+          margin-right: auto; }
+        .body .main .about .title {
+          margin-left: 8%;
+          margin-bottom: 10px; }
+        .body .main .aboutMain h5 {
+          margin: 20px 0px; } }
+    .body .main :not(.tiltle) > b, .body .main strong, .body .main .bold {
+      font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif; }
+    .body .main button.link-button {
+      color: #4183C4 !important;
+      background: none;
+      border: none;
+      border-bottom: 1px solid; }
+      .body .main button.link-button:hover {
+        cursor: pointer; }
+    .body .main .slides {
+      position: relative; }
+      .body .main .slides .slick-prev, .body .main .slides .slick-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        z-index: 1 !important; }
+      .body .main .slides .slick-prev {
+        left: 5% !important; }
+      .body .main .slides .slick-next {
+        right: 5% !important; }
+    .body .main .contact-form input, .body .main .contact-form textarea {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding: 18px;
+      font-size: 18px;
+      border: 1px solid #dee7ec; }
+    .body .main .contact-form textarea {
+      height: 150px; }
+    .body .main .contact-form .submit {
+      background-color: #dee7ec;
+      color: #889eab;
+      transition: .3s ease; }
+      .body .main .contact-form .submit:hover {
+        background-color: #b7d4e4;
+        color: #8856df;
+        cursor: pointer; }
+    @media only screen and (min-width: 732px) {
+      .body .main .contact-form {
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto; }
+        .body .main .contact-form input, .body .main .contact-form textarea {
+          width: 400px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+    .body .main .tickets .tickets-form button {
+      margin: 3px;
+      margin-top: 5px; }
+    .body .main .tickets .tickets-form h5 {
+      margin-top: 20px; }
+    .body .main .tickets .tickets-form input, .body .main .tickets .tickets-form textarea, .body .main .tickets .tickets-form select {
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 10px;
+      margin-bottom: 30px;
+      padding: 18px;
+      font-size: 18px;
+      border: 1px solid #dee7ec; }
+    .body .main .tickets .tickets-form .submit {
+      background-color: #dee7ec;
+      color: #889eab;
+      transition: .3s ease; }
+      .body .main .tickets .tickets-form .submit:hover {
+        background-color: #b7d4e4;
+        color: #8856df;
+        cursor: pointer; }
+    @media only screen and (min-width: 732px) {
+      .body .main .tickets {
+        margin-left: auto;
+        margin-right: auto; }
+        .body .main .tickets > * {
+          margin-left: auto;
+          margin-right: auto; }
+        .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select, .body .main .tickets .title {
+          display: block;
+          margin-left: auto;
+          margin-right: auto; } }
+    @media only screen and (min-width: 732px) and (max-width: 1018px) {
+      .body .main .tickets > * {
+        width: 80%; }
+      .body .main .tickets .title {
+        width: 90%; }
+      .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
+        width: 72%; } }
+    @media only screen and (min-width: 1018px) {
+      .body .main .tickets > * {
+        width: 680px; }
+      .body .main .tickets .title {
+        width: 750px; }
+      .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
+        width: 580px; } }
+    .body .main .articleSec .article {
+      margin: 10px 0px; }
+    @media only screen and (min-width: 732px) {
+      .body .main .articleSec.articleSec-news {
+        width: 750px;
+        margin-left: auto;
+        margin-right: auto; } }
+    .body .main .articleSec .tagSelector, .body .main .articleSec .tagSearch {
+      margin: 0 8px 3px 0; }
+      .body .main .articleSec .tagSelector:focus, .body .main .articleSec .tagSearch:focus {
+        outline: 0; }
+    .body .main .articleSec .tagSearch {
+      float: right;
+      padding-bottom: 0px;
+      padding-top: 9px; }
+    .body .main .articleSec .tagSelector {
+      float: left; }
+    .body .main .articleSec .articleButton {
+      width: 100%;
+      display: block;
+      height: 50px; }
+      .body .main .articleSec .articleButton .articleFirst {
+        float: left; }
+      .body .main .articleSec .articleButton .articlePrev {
+        float: left; }
+      .body .main .articleSec .articleButton .articleNext {
+        float: right; }
+    .body .main .twitter {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 520px; }
+      @media only screen and (min-width: 460px) and (max-width: 732px) {
+        .body .main .twitter {
+          width: 400px; } }
+      @media only screen and (min-width: 732px) {
+        .body .main .twitter {
+          width: 680px; } }
 
 footer {
+  height: 312px;
   background-color: #000;
   align-items: flex-start;
   display: flex;
   flex-flow: column;
   color: #fff;
-  margin-top: 20;
-  height: 300px;
   width: 100%;
-  line-height: 1.625rem;
-}
+  line-height: 1.625rem; }
+  footer .footer-main {
+    height: 66px; }
+  footer .footer-links {
+    height: 224px; }
+  footer .copyright {
+    height: 22px; }
+  footer .footer-main {
+    margin-left: 50px;
+    width: auto; }
+  footer .footer-links {
+    width: 100%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif; }
+    footer .footer-links img {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      height: 40px;
+      width: auto; }
+      footer .footer-links img:hover {
+        cursor: pointer; }
+    footer .footer-links ul {
+      list-style: none;
+      display: grid;
+      justify-content: center;
+      grid-template-columns: repeat(2, 100px);
+      grid-template-rows: auto;
+      grid-column-gap: 70px;
+      grid-row-gap: 10px;
+      grid-auto-flow: row;
+      padding-inline-start: 0px; }
+      footer .footer-links ul > * {
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px solid white; }
+  footer .copyright {
+    clear: both;
+    width: 100%;
+    color: #fff;
+    line-height: 22px;
+    font-size: 0.7em;
+    text-align: center; }
+    footer .copyright p {
+      float: left;
+      margin: 0 0 0 10px; }
+  @media only screen and (min-width: 460px) and (max-width: 732px) {
+    footer {
+      height: 273px; }
+      footer .footer-main {
+        height: 66px; }
+      footer .footer-links {
+        height: 185px; }
+      footer .copyright {
+        height: 22px; }
+      footer .footer-links ul {
+        grid-template-columns: repeat(3, 100px); } }
+  @media only screen and (min-width: 732px) and (max-width: 850px) {
+    footer {
+      height: 236px; }
+      footer .footer-main {
+        height: 66px; }
+      footer .footer-links {
+        height: 148px; }
+      footer .copyright {
+        height: 22px; }
+      footer .footer-links ul {
+        grid-template-columns: repeat(4, 100px); } }
+  @media only screen and (min-width: 850px) and (max-width: 1018px) {
+    footer {
+      height: 236px; }
+      footer .footer-main {
+        height: 66px; }
+      footer .footer-links {
+        height: 148px; }
+      footer .copyright {
+        height: 22px; }
+      footer .footer-links ul {
+        grid-template-columns: repeat(5, 100px); } }
+  @media only screen and (min-width: 1018px) {
+    footer {
+      height: 193px; }
+      footer .footer-main {
+        height: 66px; }
+      footer .footer-links {
+        height: 105px; }
+      footer .copyright {
+        height: 22px; }
+      footer .footer-links ul {
+        display: flex;
+        margin: 0px 20px 10px 20px; }
+        footer .footer-links ul > * {
+          width: 100px;
+          margin-left: auto;
+          margin-right: auto; } }
 
-.footer-main {
-  margin-left: 50px;
-  width: auto;
-}
-
-footer .footer-main a{
-  color: #fff;
-}
-
-footer .footer-main h2{
-  text-align: left;
-}
-
-footer .links {
-  width: 100%;
-  height: 135px;
-  text-align: center;
-  font-family: 'Josefin Sans', sans-serif;
-}
-
-footer .links img {
-  cursor: pointer;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: 20px;
-  height: 30%;
-  width: auto;
-
-}
-
-footer .links ul {
-  list-style: none;
-  display: grid;
-  justify-content: center;
-  grid-template-columns:  repeat(2,100px);
-  grid-template-rows: auto;
-  grid-column-gap: 70px;
-  grid-row-gap: 10px;
-  grid-auto-flow: row;
-  padding-inline-start: 0px;
-}
-
-footer .links ul >*{
-  cursor: pointer;
-  display: inline-block;
-  border-bottom: 1px solid white;
-}
-
-.slides {
-
-  position: relative;
-  .slick-prev, .slick-next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    z-index: 1 !important;
-  }
-  .slick-prev {
-    left: 5% !important;
-  }
-  .slick-next {
-    right: 5% !important;
-  }
-}
-
-.title {
-  padding: 20px 0px 0px;
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
-}
-
-.musicart {
-  font-family: Futura,Trebuchet MS,Arial,sans-serif;
-  font-style: italic;
-}
-
-.contact-form input,textarea{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top : 10px;
-  margin-bottom : 30px;
-  padding : 18px;
-  font-size : 18px;
-  border : 1px solid #dee7ec;
-}
-
-.contact-form textarea{
-  height: 150px;
-}
-
-.contact-form .submit{
-  background-color : #dee7ec;
-  color : #889eab;
-  transition: .3s ease;
-}
-
-.contact-form .submit:hover{
-  background-color : #b7d4e4;
-  color: rgb(136, 86, 223);
-  cursor: pointer;
-}
-
-.tickets-form button {
-  margin: 3px;
-  margin-top: 5px;
-}
-
-.tickets-form h5{
-  margin-top: 20px;
-}
-
-.tickets-form input,textarea, select{
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto;
-  margin-top : 10px;
-  margin-bottom : 30px;
-  padding : 18px;
-  font-size : 18px;
-  border : 1px solid #dee7ec;
-}
-
-.tickets-form .submit{
-  background-color : #dee7ec;
-  color : #889eab;
-  transition: .3s ease;
-
-}
-
-.tickets-form .submit:hover{
-  background-color : #b7d4e4;
-  color: rgb(136, 86, 223);
-  cursor: pointer;
-}
-
-.articleButton {
-  width: 100%;
-  display: block;
-  height: 50px;
-}
-
-.article-list p
-
-.articleFirst {
-  float: right;
-}
-
-.articlePrev{
-  float: left;
-}
-
-.articleNext{
-  float: right;
-}
-
-.tagSelector,.tagSearch {
-  margin: 0 8px 3px 0;
-}
-
-.tagSearch {
-  float: right;
-  padding-bottom: 0px;
-  padding-top: 9px;
-}
-
-.tagSelector{
-  float: left;
-}
-
-button.link-button{
-  color: #4183C4 !important;
-  background: none;
-  border: none;
-  border-bottom: 1px solid;
-}
-
-button.link-button:hover {
-  cursor: pointer;
-}
-
-.tagSelector:focus, .tagSearch:focus {
-  outline: 0;
-}
-
-.twitter {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  height: 420px;
-}
-
-@media only screen and (max-width:1018px) and (min-width:850px) {
-  footer {
-    height: 220px;
-  }
-
-  footer .links ul {
-    grid-template-columns: repeat(5, 100px);
-  }
-}
-
-
-@media only screen and (min-width:732px) and (max-width:850px) {
-  footer {
-    height: 220px;
-  }
-
-  footer .links ul {
-    grid-template-columns: repeat(4, 100px);
-  }
-}
-
-@media only screen and (min-width:732px){
-  .main {
-    padding: 0px 30px;
-  }
-  .twitter{
-    width: 700px;
-  }
-  .tickets > :not(.title){
-    width: 80%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .contact-form{
-    width: 580px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .contact-form input,.contact-form textarea{
-    width : 400px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tickets-form input, .tickets-form textarea, .tickets-form select{
-    width : 74%;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tickets .title{
-    display: block;
-    width: 90%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .about .title {
-    margin-left: 8%;
-    margin-bottom: 10px;
-  }
-  .aboutMain {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .aboutMain h5{
-    margin: 20px 0px;
-  }
-  .concertAbout {
-    width: 70%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-@media only screen and (min-width:1018px) {
-  footer {
-    height: 170px;
-  }
-  footer .links ul{
-    display: flex;
-    margin: 0px 20px 10px 20px;
-  }
-  footer .links ul >*{
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-  .tickets > :not(.title){
-    width: 680px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tickets-form input, .tickets-form textarea, .tickets-form select{
-    width : 580px;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-  }
-  .tickets .title{
-    display: block;
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
-@media only screen and (min-width:460px) and (max-width:732px){
-  .main {
-    padding: 0px 20px;
-  }
-
-  footer {
-    height: 260px;
-  }
-
-  footer .links ul {
-    grid-template-columns: repeat(3,100px);
-  }
-
-  .twitter {
-    width: 400px;
-  }
-}
-
-.article {
-  margin: 10px 0px
-}
+/*# sourceMappingURL=index.css.map */

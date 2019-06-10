@@ -283,15 +283,13 @@ class Articles extends Component {
     ) : null;
 
     return (
-      <React.Fragment>
-        <div className={"articleSec articleSec-"+type}>
-          <h2 className='title'>{title}{tagSearch}</h2>
-          <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} />
-          <ul className='articles' ref={this.listRef}>{lists}</ul>
-          {button}
-        </div>
+      <div className={"articleSec articleSec-"+type}>
+        <h2 className='title'>{title}{tagSearch}</h2>
+        <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} />
+        <ul className='articles' ref={this.listRef}>{lists}</ul>
+        {button}
         {this.props.twitter ? <Twitter /> : null}
-      </React.Fragment>
+      </div>
     );
   }
 }

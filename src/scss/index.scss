@@ -1,0 +1,366 @@
+@import './mixin/media.scss';
+
+$small: 460px;
+$middle: 732px;
+$big: 850px;
+$max: 1018px;
+
+@mixin setFooterHeight($main,$links,$cr){
+  height: $main + $links + $cr;
+  .footer-main {
+    height: $main;
+  }
+  .footer-links {
+    height: $links;
+  }
+  .copyright {
+    height: $cr;
+  }
+}
+
+.body{
+  display: flex;
+  flex-flow: column;
+  min-height: 100vh;
+  box-sizing: border-box;
+  .title {
+    padding: 20px 0px 0px;
+    font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+
+    & > *{
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
+    }
+  }
+
+  .main{
+    flex: 1;
+    font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
+    margin: 0 10px;
+
+    @include mediaminmax($small,$middle){
+      padding: 0px 20px;
+    }
+
+    @include mediamin($middle){
+      padding: 0px 30px;
+      .aboutMain,.concertAbout{
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .about .title {
+        margin-left: 8%;
+        margin-bottom: 10px;
+      }
+      .aboutMain h5{
+        margin: 20px 0px;
+      }
+    }
+
+    :not(.tiltle) > b, strong, .bold{
+     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif;
+    }
+
+    button.link-button{
+      color: #4183C4 !important;
+      background: none;
+      border: none;
+      border-bottom: 1px solid;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .slides {
+      position: relative;
+      .slick-prev, .slick-next {
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        z-index: 1 !important;
+      }
+      .slick-prev {
+        left: 5% !important;
+      }
+      .slick-next {
+        right: 5% !important;
+      }
+    }
+
+    .contact-form {
+      input,textarea{
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top : 10px;
+        margin-bottom : 30px;
+        padding : 18px;
+        font-size : 18px;
+        border : 1px solid #dee7ec;
+      }
+      textarea{
+        height: 150px;
+      }
+      .submit{
+        background-color : #dee7ec;
+        color : #889eab;
+        transition: .3s ease;
+        &:hover{
+          background-color : #b7d4e4;
+          color: rgb(136, 86, 223);
+          cursor: pointer;
+        }
+      }
+
+      @include mediamin($middle){
+        width: 580px;
+        margin-left: auto;
+        margin-right: auto;
+        input,textarea {
+          width : 400px;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+    }
+
+    .tickets{
+      .tickets-form{
+        button {
+          margin: 3px;
+          margin-top: 5px;
+        }
+        h5{
+          margin-top: 20px;
+        }
+        input,textarea, select{
+          width: 90%;
+          margin-left: auto;
+          margin-right: auto;
+          margin-top : 10px;
+          margin-bottom : 30px;
+          padding : 18px;
+          font-size : 18px;
+          border : 1px solid #dee7ec;
+        }
+        .submit{
+          background-color : #dee7ec;
+          color : #889eab;
+          transition: .3s ease;
+          &:hover{
+            background-color : #b7d4e4;
+            color: rgb(136, 86, 223);
+            cursor: pointer;
+          }
+        }
+      }
+
+      @include mediamin($middle){
+        margin-left: auto;
+        margin-right: auto;
+        & > * {
+          margin-left: auto;
+          margin-right: auto;
+        }
+        input,textarea,select,.title {
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      @include mediaminmax($middle,$max){
+        &> *{
+          width: 80%;
+        }
+        .title{
+          width: 90%
+        }
+        input,textarea,select{
+          width : 72%;
+        }
+      }
+
+      @include mediamin($max){
+        &> *{
+          width: 680px;
+        }
+        .title{
+          width: 750px;
+        }
+        input,textarea,select{
+          width : 580px;
+        }
+      }
+    }
+
+    .articleSec{
+      .article {
+        margin: 10px 0px
+      }
+
+      @include mediamin($middle){
+        &.articleSec-news{
+          width: 750px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      .tagSelector,.tagSearch {
+        margin: 0 8px 3px 0;
+        &:focus {
+          outline: 0;
+        }
+      }
+
+      .tagSearch {
+        float: right;
+        padding-bottom: 0px;
+        padding-top: 9px;
+      }
+
+      .tagSelector{
+        float: left;
+      }
+
+      .articleButton {
+        width: 100%;
+        display: block;
+        height: 50px;
+
+        .articleFirst {
+          float: left;
+        }
+
+        .articlePrev{
+          float: left;
+        }
+
+        .articleNext{
+          float: right;
+        }
+      }
+    }
+
+    .twitter {
+      width: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      height: 520px;
+
+      @include mediaminmax($small,$middle){
+        width: 400px;
+      }
+      @include mediamin($middle) {
+        width: 680px;
+      }
+    }
+  }
+}
+
+footer {
+  $main : 66px;
+  $links : 224px;
+  $cr : 22px;
+
+  @include setFooterHeight($main,$links,$cr);
+
+  background-color: #000;
+  align-items: flex-start;
+  display: flex;
+  flex-flow: column;
+  color: #fff;
+  width: 100%;
+  line-height: 1.625rem;
+
+  .footer-main {
+    margin-left: 50px;
+    width: auto;
+  }
+
+  .footer-links {
+    width: 100%;
+    text-align: center;
+    font-family: 'Josefin Sans', sans-serif;
+
+    img {
+      margin-top: 20px;
+      margin-left: auto;
+      margin-right: 20px;
+      margin-bottom: 10px;
+      height: 40px;
+      width: auto;
+
+      &:hover{
+        cursor: pointer;
+      }
+    }
+
+    ul {
+      list-style: none;
+      display: grid;
+      justify-content: center;
+      grid-template-columns:  repeat(2,100px);
+      grid-template-rows: auto;
+      grid-column-gap: 70px;
+      grid-row-gap: 10px;
+      grid-auto-flow: row;
+      padding-inline-start: 0px;
+
+      &>*{
+        cursor: pointer;
+        display: inline-block;
+        border-bottom: 1px solid white;
+      }
+    }
+  }
+
+  .copyright {
+    clear: both;
+    width: 100%;
+    color: #fff;
+    line-height: $cr;
+    font-size: 0.7em;
+    text-align: center;
+    p {
+      float: left;
+      margin: 0 0 0 10px;
+    }
+  }
+
+  @include mediaminmax($small,$middle){
+    $links: 185px;
+    @include setFooterHeight($main,$links,$cr);
+    .footer-links ul {
+      grid-template-columns: repeat(3,100px);
+    }
+  }
+  @include mediaminmax($middle,$big){
+    $links: 148px;
+    @include setFooterHeight($main,$links,$cr);
+    .footer-links ul {
+      grid-template-columns: repeat(4, 100px);
+    }
+  }
+  @include mediaminmax($big,$max){
+    $links: 148px;
+    @include setFooterHeight($main,$links,$cr);
+    .footer-links ul {
+      grid-template-columns: repeat(5, 100px);
+    }
+  }
+  @include mediamin($max){
+    $links: 105px;
+    @include setFooterHeight($main,$links,$cr);
+    .footer-links ul{
+      display: flex;
+      margin: 0px 20px 10px 20px;
+      &> *{
+        width: 100px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+}
