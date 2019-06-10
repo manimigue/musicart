@@ -15,6 +15,8 @@ class Contact extends Component {
           <input type='text' name='お名前' placeholder="佐藤　太郎" />
           <p>メールアドレス</p>
           <input type="email" name="返信先" placeholder="you@example.com"/>
+            <p>件名</p>
+            <input type='text' name='件名' />
           <p>お問い合わせ内容</p>
           <textarea name='お問い合わせ内容'></textarea>
           <input className='submit' type="submit" value='Send'/>

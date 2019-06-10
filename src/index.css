@@ -126,11 +126,14 @@ footer .links ul >*{
   border : 1px solid #dee7ec;
 }
 
+.contact-form textarea{
+  height: 150px;
+}
+
 .contact-form .submit{
   background-color : #dee7ec;
   color : #889eab;
   transition: .3s ease;
-
 }
 
 .contact-form .submit:hover{
@@ -228,22 +231,6 @@ button.link-button:hover {
   height: 420px;
 }
 
-@media only screen and (min-width:1018px) {
-  footer {
-    height: 170px;
-  }
-  footer .links ul{
-    display: flex;
-    margin: 0px 20px 10px 20px;
-  }
-  footer .links ul >*{
-    width: 100px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
-}
-
 @media only screen and (max-width:1018px) and (min-width:850px) {
   footer {
     height: 220px;
@@ -272,15 +259,33 @@ button.link-button:hover {
   .twitter{
     width: 700px;
   }
-  .contact-form input, textarea{
+  .tickets > :not(.title){
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-form{
+    width: 580px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .contact-form input,.contact-form textarea{
     width : 400px;
     display: block;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
   }
-  .tickets-form input, textarea, select{
-    width : 400px !important;
+  .tickets-form input, .tickets-form textarea, .tickets-form select{
+    width : 74%;
     display: block;
-    margin-left: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tickets .title{
+    display: block;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
   }
   .about .title {
     margin-left: 8%;
@@ -299,6 +304,40 @@ button.link-button:hover {
     margin-left: auto;
     margin-right: auto;
   }
+}
+
+@media only screen and (min-width:1018px) {
+  footer {
+    height: 170px;
+  }
+  footer .links ul{
+    display: flex;
+    margin: 0px 20px 10px 20px;
+  }
+  footer .links ul >*{
+    width: 100px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .tickets > :not(.title){
+    width: 680px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tickets-form input, .tickets-form textarea, .tickets-form select{
+    width : 580px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .tickets .title{
+    display: block;
+    width: 750px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
 }
 
 @media only screen and (min-width:460px) and (max-width:732px){

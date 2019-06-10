@@ -110,8 +110,8 @@ class Tickets extends Component {
     )
 
     return (
-      <React.Fragment>
-        <h2 className='title'>Tickets</h2>
+      <div className='tickets'>
+        <div className="title"><h2 >Tickets</h2></div>
         <Info />
         <div className='tickets-how'>
           <h4>チケット予約方法</h4>
@@ -144,7 +144,7 @@ class Tickets extends Component {
             {this.onWhich(this.state.on.livepocket,LivePocket)}
           </div>
         </div>
-      </React.Fragment>
+      </div>
 
     );
   }
