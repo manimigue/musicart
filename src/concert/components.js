@@ -1,3 +1,4 @@
+import { default as Danse_macabre } from "./articles/Danse_macabre.jsx";
 import { default as Les_Biches } from "./articles/Les_Biches.jsx";
 import { default as Symphonie_Fantastique } from "./articles/Symphonie_Fantastique.jsx";
 import { default as ai } from "./articles/ai.jsx";
@@ -9,6 +10,13 @@ import { default as typora } from "./articles/typora.jsx";
 
 const concert =
 [
+  {
+    title: "交響詩「死の舞踏」 Danse macabre 作品40 / サン=サーンスSaint-Saëns, Camille",
+    url: "Danse_macabre",
+    date: "2019-06-16",
+    author: "三石ミゲール",
+    component: Danse_macabre
+  },
   {
     title: "バレエ組曲「牝鹿」 Les Biches Suite d’Orchestre  / プーランクPoulenc, Francis",
     url: "Les_Biches",

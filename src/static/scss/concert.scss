@@ -24,6 +24,12 @@ $home-title-breack-middle: 697px;
       border-color: transparent;
     }
 
+    .article {
+      &> :first-child {
+        margin-top: 15px;
+      }
+    }
+
     .concertLinks {
       .concertLink  {
         display: block;
