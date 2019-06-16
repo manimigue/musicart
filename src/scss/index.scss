@@ -209,8 +209,10 @@ $max: 1018px;
       }
       .tagSelector,.tagSearch {
         margin: 0 8px 3px 0;
-        &:focus {
+        &:focus,&:hover, &:active {
           outline: 0;
+          background-color: #007bff;
+          border-color: #007bff;
         }
       }
 
@@ -220,7 +222,7 @@ $max: 1018px;
         padding-top: 9px;
       }
 
-      .tagSelector{
+      &> .tagSelector{
         float: left;
       }
 

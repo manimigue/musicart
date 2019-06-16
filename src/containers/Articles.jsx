@@ -285,7 +285,7 @@ class Articles extends Component {
     return (
       <div className={"articleSec articleSec-"+type}>
         <h2 className='title'>{title}{tagSearch}</h2>
-        <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} />
+        <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} duration={2000}/>
         <ul className='articles' ref={this.listRef}>{lists}</ul>
         {button}
         {this.props.twitter ? <Twitter /> : null}

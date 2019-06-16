@@ -1,6 +1,6 @@
 const initialState = {
   ticketTypes : [
-    "大人",
+    "一般",
     "学生",
     "小人"
   ],

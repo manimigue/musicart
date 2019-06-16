@@ -1,6 +1,8 @@
 $bg-color:  #363B40;
 $break-middle: 768px;
-$home-title-breack-min: 576px;
+$home-title-breack-ss : 342px;
+$home-title-breack-min: 470px;
+$home-title-breack-small: 576px;
 $home-title-breack-max: 937px;
 $home-title-breack-middle: 697px;
 
@@ -34,15 +36,20 @@ $home-title-breack-middle: 697px;
           padding: 0 20px;
         }
         h5 {
-          font-size: 1.4em;
+          font-size: 1.1em;
           margin-bottom: 0.5em;
-          @media only screen  and (min-width: $home-title-breack-min) and (max-width: $home-title-breack-middle){
+          @media only screen  and (max-width: $home-title-breack-ss) {
+            font-size: 0.95em;
+          }
+          @media only screen  and (min-width: $home-title-breack-min) and (max-width: $home-title-breack-small){
+            font-size: 1.4em;
+          }
+          @media only screen  and (min-width: $home-title-breack-small) and (max-width: $home-title-breack-middle){
             font-size: 0.74em;
           }
           @media only screen  and (min-width: $break-middle) and (max-width: $home-title-breack-max){
             font-size: 0.76em;
           }
-
           @media only screen  and (min-width: $home-title-breack-middle) and (max-width: $break-middle) {
             font-size: 0.95em;
           }

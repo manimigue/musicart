@@ -1,3 +1,4 @@
+import { default as Symphonie_Fantastique } from "./articles/Symphonie_Fantastique.jsx";
 import { default as ai } from "./articles/ai.jsx";
 import { default as israel } from "./articles/israel.jsx";
 import { default as israel2 } from "./articles/israel2.jsx";
@@ -7,6 +8,13 @@ import { default as typora } from "./articles/typora.jsx";
 
 const concert =
 [
+  {
+    title: "幻想交響曲 Symphonie Fantastipue / ベルリオーズ Berlioz, Hector",
+    url: "Symphonie_Fantastique",
+    date: "2019-06-16",
+    author: "三石ミゲール",
+    component: Symphonie_Fantastique
+  },
   {
     title: "testN2",
     url: "testn2",
