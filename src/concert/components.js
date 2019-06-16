@@ -1,3 +1,4 @@
+import { default as Les_Biches } from "./articles/Les_Biches.jsx";
 import { default as Symphonie_Fantastique } from "./articles/Symphonie_Fantastique.jsx";
 import { default as ai } from "./articles/ai.jsx";
 import { default as israel } from "./articles/israel.jsx";
@@ -8,6 +9,13 @@ import { default as typora } from "./articles/typora.jsx";
 
 const concert =
 [
+  {
+    title: "バレエ組曲「牝鹿」 Les Biches Suite d’Orchestre  / プーランクPoulenc, Francis",
+    url: "Les_Biches",
+    date: "2019-06-16",
+    author: "三石ミゲール",
+    component: Les_Biches
+  },
   {
     title: "幻想交響曲 Symphonie Fantastipue / ベルリオーズ Berlioz, Hector",
     url: "Symphonie_Fantastique",
