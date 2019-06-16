@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/musicart/static/css/main.01b18927.chunk.css",
-    "main.js": "/musicart/static/js/main.1fd3dfba.chunk.js",
-    "main.js.map": "/musicart/static/js/main.1fd3dfba.chunk.js.map",
+    "main.js": "/musicart/static/js/main.fb187fdb.chunk.js",
+    "main.js.map": "/musicart/static/js/main.fb187fdb.chunk.js.map",
     "runtime~main.js": "/musicart/static/js/runtime~main.5127693b.js",
     "runtime~main.js.map": "/musicart/static/js/runtime~main.5127693b.js.map",
     "static/js/2.97af670b.chunk.js": "/musicart/static/js/2.97af670b.chunk.js",
     "static/js/2.97af670b.chunk.js.map": "/musicart/static/js/2.97af670b.chunk.js.map",
     "index.html": "/musicart/index.html",
-    "precache-manifest.b6f3af27c23871bbb36913db142284b1.js": "/musicart/precache-manifest.b6f3af27c23871bbb36913db142284b1.js",
+    "precache-manifest.92c07c6b0e11faa5ca3d8f626a6795cc.js": "/musicart/precache-manifest.92c07c6b0e11faa5ca3d8f626a6795cc.js",
     "service-worker.js": "/musicart/service-worker.js",
     "static/css/main.01b18927.chunk.css.map": "/musicart/static/css/main.01b18927.chunk.css.map",
     "static/media/12:29map.png": "/musicart/static/media/12:29map.f9ee3cb7.png",
