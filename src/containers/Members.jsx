@@ -40,7 +40,6 @@ class Members extends Component {
           <title>Mμsicart メンバー募集</title>
         </Helmet>
         <h2 className="title">Join us</h2>
-        <p>blablabla</p>
         <Tabs
           id="member-tab"
           activeKey={this.state.key}

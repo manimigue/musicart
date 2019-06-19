@@ -16,6 +16,8 @@
     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
     margin: 0 10px;
     padding-bottom: 20px; }
+    .body .main h1, .body .main h2, .body .main h3, .body .main h4, .body .main h5, .body .main h6 {
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
     @media only screen and (min-width: 460px) and (max-width: 732px) {
       .body .main {
         padding-left: 20px;
@@ -93,8 +95,6 @@
     margin-left: auto;
     margin-right: auto; } }
 
-    .body .main .tickets .title h2 {
-      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
     .body .main .tickets .tickets-form button {
       margin: 3px;
       margin-top: 5px; }
@@ -137,7 +137,8 @@
       .body .main .article-content > button.back-button {
         width: 74px; }
       .body .main .article-content .article {
-        flex-grow: 1; }
+        flex-grow: 1;
+        margin-top: 10px; }
     .body .main .articleSec .article-list :hover {
       cursor: pointer !important; }
     .body .main .articleSec .tagSelector, .body .main .articleSec .tagSearch {
@@ -167,7 +168,6 @@
       max-width: 659px; }
 
 footer {
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
   height: 312px;
   background-color: #000;
   align-items: flex-start;

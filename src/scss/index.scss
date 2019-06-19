@@ -42,6 +42,9 @@ $max: 1018px;
   .main{
     flex: 1;
     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
+    h1,h2,h3,h4,h5,h6 {
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+    }
     margin: 0 10px;
     padding-bottom: 20px;
 
@@ -153,11 +156,6 @@ $max: 1018px;
     }
 
     .tickets{
-      .title {
-        h2{
-          font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
-        }
-      }
       .tickets-form{
         button {
           margin: 3px;
@@ -220,6 +218,7 @@ $max: 1018px;
         }
       .article {
         flex-grow:  1;
+        margin-top: 10px;
       }
     }
 
@@ -287,9 +286,6 @@ footer {
   $main : 66px;
   $links : 224px;
   $cr : 22px;
-
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
-
 
   @include setFooterHeight($main,$links,$cr);
 

@@ -28,7 +28,7 @@ class Concert_home extends Component {
     })
     return (
       <div className='concert'>
-        <h2 className='title'>Concerts</h2>
+        <h2 className='title'>Concert</h2>
         <div className='concertLinks'>
           {links}
         </div>

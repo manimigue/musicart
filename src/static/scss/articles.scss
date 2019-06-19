@@ -29,10 +29,10 @@ ul.articles {
     float: right;
   }
 
-  li {
+  li.article-list {
     border: 0;
     border-bottom: 1px solid rgba(42, 44, 50, 0.54);
-    margin-top: 10px;
+    margin-top: 15px;
 
     transition: .3s ease;
 

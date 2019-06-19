@@ -3,7 +3,6 @@ import { render } from 'react-dom';
 import createStore from './store/creatStore';
 import { createBrowserHistory } from 'history';
 //import PropTypes from 'prop-types';
-import './index.css';
 import App from './App'
 
 const history = createBrowserHistory({
