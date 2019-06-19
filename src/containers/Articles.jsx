@@ -2,9 +2,10 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import Fade from 'react-reveal/Fade';
+import { Search, Cancel } from '@material-ui/icons';
 import Button from 'react-bootstrap/Button';
 import Twitter from '../components/twitter';
-import { saveStart, saveTag } from '../actions/articlesAction'
+import { saveStart, saveTag, saveHome} from '../actions/articlesAction'
 
 class Articles extends Component {
   static defaultProps = {
@@ -118,6 +119,20 @@ class Articles extends Component {
     });
   }
 
+  initializeTag = (range) => {
+    this.setState({
+      selectedTag: null,
+      logPart: this.props.log,
+      tagDisp: false
+    });
+    this.first(range,this.props.log)
+  }
+
+  linkToArticle = (url, type) => {
+    this.props.linkToPage('Route','/' +type +'/' + url);
+    this.props.saveHome(type)
+  }
+
   componentDidMount() {
     if (this.props.tags !== false){
       const listWidth = this.listRef.current.offsetWidth
@@ -196,7 +211,7 @@ class Articles extends Component {
               onClick={()=>this.selectTag(tag, range, selectedTag,false,article.url)}
               key={article.url + tag}
             >
-              {tag}
+              #{tag}
             </Button>
           )
           return tagSelector
@@ -206,22 +221,22 @@ class Articles extends Component {
       const tagDiv = <div display="inline-block" className="tagDiv" key={i} ref={this[`tagRef${i}`]}>{articleTags}</div>
 
       return (
-        <li key={article.url}>
-          <div　className='article-list'>
+        <li key={article.url} className='article-list' style={{cursor:"pointer"}}>
+          <div　className='article-list-title'>
             <button
             key={article.url+'button'}
-            onClick={()=>this.props.linkToPage('Route','/' +type +'/' + article.url)}
+            onClick={()=>this.linkToArticle(article.url,type)}
             >
               <h3 key={article.url+'h2'} className='article-title'>{article.title}</h3>
             </button>
           </div>
           { date ?
-            <div key={article.url+'p'} className='article-date'><span>更新日:{article.date}</span>{tagDiv}</div>
+            <div><div key={article.url+'p'} className='article-date' onClick={()=>this.linkToArticle(article.url,type)}><span>更新日:{article.date}</span></div>{tagDiv}</div>
            : null
           }
           {
             more ?
-            <div key={article.url+'more'} className='article-more'><button>→ more</button></div>
+            <div key={article.url+'more'} className='article-more'><button onClick={()=>this.linkToArticle(article.url,type)}>…read more</button></div>
              : null
           }
         </li>
@@ -263,23 +278,33 @@ class Articles extends Component {
       <Button
         className='tagSearch'
         onClick={() => this.switchTagDisp(tagDisp)}
+        style={{textAlign:"center"}}
       >
-        <i className="material-icons">search</i>
+        <Search />
       </Button>
     ) :
     null;
 
     const tagSelectors = tags !== false ? (
       tags.map(tag => {
-        return (<button
-          className='tagSelector btn btn-outline-secondary'
+        return (<Button
+          className='tagSelector tagSelector-main'
           variant={tag === selectedTag ? "secondary" : "outline-secondary"}
           onClick={()=>this.selectTag(tag, range, selectedTag)}
           key={tag}
         >
-          {tag}
-        </button>)
-      })
+          #{tag}
+        </Button>)
+      }).concat(
+        [<Button
+          className='tagSelector tagSelector-main'
+          variant="secondary"
+          onClick={()=>this.initializeTag(range)}
+          key="null"
+        >
+          <Cancel />
+        </Button>]
+      )
     ) : null;
 
     return (
@@ -288,6 +313,7 @@ class Articles extends Component {
         <Fade right collapse when={tags !== false && tagDisp !== false} children={<div>{tagSelectors}</div>} duration={2000}/>
         <ul className='articles' ref={this.listRef}>{lists}</ul>
         {button}
+        <br/>
         {this.props.twitter ? <Twitter /> : null}
       </div>
     );
@@ -298,7 +324,8 @@ const mapStateToProps = ({articles}) => ({
   start: articles.start,
   selectedTag: articles.selectedTag,
   tagDisp: articles.tagDisp,
-  logPart: articles.logPart
+  logPart: articles.logPart,
+  home: articles.home
 });
 
 const mapDispatchToProps = (dispatch) => {
@@ -322,6 +349,9 @@ const mapDispatchToProps = (dispatch) => {
     },
     saveTag(selectedTag, tagDisp, logPart, type){
       dispatch(saveTag(selectedTag, tagDisp, logPart, type))
+    },
+    saveHome(type){
+      dispatch(saveHome(type))
     }
   };
 };

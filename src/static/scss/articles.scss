@@ -7,9 +7,20 @@ ul.articles {
   list-style: none;
   padding-inline-start: 0px;
 
+  & > :last-child{
+    margin-bottom: 10px;
+  }
+
+  li.article-list:hover{
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+  }
+
   .article-date {
     margin: 0;
-    width: 100%;
+    width: -moz-calc(100% - 170px);
+    width: -webkit-calc(100% - 170px);
+    width: -o-calc(100% - 170px);
+    width: calc(100% - 170px);
     display: inline-block;
   }
 
@@ -24,20 +35,36 @@ ul.articles {
     margin-top: 10px;
 
     transition: .3s ease;
-    clear:both;
 
     div {
       height: 100%;
     }
 
-    .article-list {
-      cursor: pointer;
+    .article-list-title {
+      display: block;
       width:100%;
+
 
       &> button {
         width: 100%;
         height: 100%;
         border-style: none;
+        background: none;
+        padding-left: 0px;
+        text-align: left;
+
+        &:focus {
+          outline:0;
+        }
+      }
+    }
+
+    .article-more {
+      display: block;
+      width:100%;
+      font-size: 0.7em;
+
+      &> button {
         background: none;
         padding-left: 0px;
         text-align: left;
@@ -63,10 +90,6 @@ ul.articles {
       position: absolute;
       right: 0;
       bottom: 0;
-    }
-
-    &:hover {
-      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     }
   }
 }

@@ -12,23 +12,12 @@
 .tab-content .Tab {
   background-repeat: no-repeat;
   background-position: 90% 0%;
-  background-size: 100px; }
+  background-size: 90px; }
+  .tab-content .Tab .Tab-mask {
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5); }
   @media only screen and (min-width: 732px) {
     .tab-content .Tab {
-      background-position: 95% 0%; } }
-  @media only screen and (min-width: 732px) and (max-width: 1130px) {
-    .tab-content .Tab .Tab-mask {
-      height: 100%;
-      background: rgba(255, 255, 255, 0.5); } }
-  @media only screen and (min-width: 732px) and (max-width: 980px) {
-    .tab-content .Tab {
-      background-size: 150px; } }
-  @media only screen and (min-width: 980px) and (max-width: 1130px) {
-    .tab-content .Tab {
-      background-size: 190px; } }
-  @media only screen and (min-width: 1130px) {
-    .tab-content .Tab {
-      background-position: 95% 0%;
-      background-size: auto; } }
+      background-position: 90% 0%; } }
 
 /*# sourceMappingURL=members.css.map */

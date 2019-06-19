@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Link from '../components/Link'
 import Fade from 'react-reveal/Fade';
+import {Helmet} from 'react-helmet';
 import Info from '../components/ticketsInfo'
 
 class Tickets extends Component {
@@ -111,6 +112,9 @@ class Tickets extends Component {
 
     return (
       <div className='tickets'>
+        <Helmet>
+          <title>Mμsicart チケット情報</title>
+        </Helmet>
         <div className="title"><h2 >Tickets</h2></div>
         <Info />
         <div className='tickets-how'>
@@ -140,7 +144,7 @@ class Tickets extends Component {
             {this.onWhich(this.state.on.pay,TicketPay)}
           </div>
           <div className='livepocket'>
-            <h5>ライブポケットでのチケット予約</h5>
+            <h5>livepocketでのチケット予約</h5>
             {this.onWhich(this.state.on.livepocket,LivePocket)}
           </div>
         </div>

@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
 import WhiteLogo from '../img/headerlogo01.png';
-import DarkLogo from '../img/headerlogo02.png'
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar'
 import '../index.css';
@@ -18,9 +17,10 @@ class Header extends Component {
   }
 
   hideBar = () => {
-     const isHide = this.state.isHide
+     const isHide = this.state.isHide;
+     const expanded = this.state.navExpanded
 
-     window.scrollY > this.prev ?
+     window.scrollY > this.prev && expanded === false?
      !isHide && this.setState({ isHide: true })
      :
      isHide && this.setState({ isHide: false });
@@ -59,15 +59,14 @@ class Header extends Component {
         className={classHide}
         collapseOnSelect
         expand="md"
-        bg={this.props.concert? 'dark':'white' }
-        variant={this.props.concert? 'dark':"light"}
+        bg='white'
+        variant="light"
         sticky='top'
         onToggle={this.setNavExpanded}
         expanded={this.state.navExpanded}
       >
-        <Navbar.Brand href="#home">
-          <img src={DarkLogo} alt='Mμsicart' width='200' hidden={!this.props.concert} onClick={() => this.props.linkToPage('Route','/')}/>
-          <img src={WhiteLogo} alt='Mμsicart' width='200' hidden={this.props.concert} onClick={() => this.props.linkToPage('Route','/')}/>
+        <Navbar.Brand href="">
+          <img src={WhiteLogo} alt='Mμsicart' width='150' onClick={() => this.props.linkToPage('Route','/')}/>
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />
         <Navbar.Collapse id="responsive-navbar-nav" className="justify-content-end">

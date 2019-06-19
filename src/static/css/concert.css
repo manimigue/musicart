@@ -2,20 +2,23 @@
   -webkit-text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
   background-color: #363B40;
-  color: #b8bfc6;
+  color: #d9dfe6;
   border-color: transparent;
   font-style: normal;
   line-height: 1.625rem; }
   .body.concert .main {
-    font-family: "Sawarabi Mincho" !important; }
+    font-family: "Sawarabi Mincho" !important;
+    margin-top: 15px; }
     .body.concert .main button,
     .body.concert .main input,
     .body.concert .main select,
     .body.concert .main textarea {
       color: #b8bfc6;
       border-color: transparent; }
-    .body.concert .main .article > :first-child {
-      margin-top: 15px; }
+    .body.concert .main .article {
+      display: block; }
+      .body.concert .main .article > :first-child {
+        margin-top: 15px; }
     .body.concert .main .concertLinks {
       display: block;
       width: 100%;
@@ -24,33 +27,18 @@
         display: block;
         float: left;
         margin-top: 5px;
-        margin-bottom: 15px;
+        margin-bottom: 25px;
         padding-left: 5px;
         padding-right: 0px; }
-        @media only screen and (min-width: 576px) and (max-width: 768px) {
-          .body.concert .main .concertLinks .concertLink {
-            padding: 0 20px; } }
         .body.concert .main .concertLinks .concertLink h5 {
           font-size: 1.1em;
           margin-bottom: 0.5em; }
-          @media only screen and (max-width: 342px) {
+          @media only screen and (max-width: 352px) {
             .body.concert .main .concertLinks .concertLink h5 {
               font-size: 0.95em; } }
-          @media only screen and (min-width: 470px) and (max-width: 576px) {
+          @media only screen and (min-width: 992px) and (max-width: 1070px) {
             .body.concert .main .concertLinks .concertLink h5 {
-              font-size: 1.4em; } }
-          @media only screen and (min-width: 576px) and (max-width: 697px) {
-            .body.concert .main .concertLinks .concertLink h5 {
-              font-size: 0.74em; } }
-          @media only screen and (min-width: 768px) and (max-width: 937px) {
-            .body.concert .main .concertLinks .concertLink h5 {
-              font-size: 0.76em; } }
-          @media only screen and (min-width: 697px) and (max-width: 768px) {
-            .body.concert .main .concertLinks .concertLink h5 {
-              font-size: 0.95em; } }
-          @media only screen and (min-width: 937px) {
-            .body.concert .main .concertLinks .concertLink h5 {
-              font-size: 0.95em; } }
+              font-size: 1em; } }
         .body.concert .main .concertLinks .concertLink img {
           cursor: pointer; }
     .body.concert .main .concertAbout {
@@ -193,7 +181,6 @@
         clear: both; }
         .body.concert .main ul.articles li h3 {
           margin-top: 15px;
-          font-size: 1.5em;
           line-height: 1.2em; }
         .body.concert .main ul.articles li .article-more {
           width: 80%;
@@ -202,11 +189,13 @@
           height: 40px; }
           .body.concert .main ul.articles li .article-more button {
             font-size: 1.5em;
-            background-color: #363B40;
+            background-color: none;
             display: inline;
             float: right;
             border: none;
             text-decoration: underline; }
+            .body.concert .main ul.articles li .article-more button:hover {
+              color: rgba(200, 204, 174, 0.98); }
     .body.concert .main ol {
       list-style: decimal; }
     .body.concert .main ul ul,
@@ -300,7 +289,7 @@
 .concertAbout.concert2019 img {
   margin-bottom: 20px; }
   .concertAbout.concert2019 img.access {
-    width: 90%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
     background: white; }

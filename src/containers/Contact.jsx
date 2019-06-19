@@ -1,4 +1,5 @@
 import React,{ Component } from 'react';
+import {Helmet} from 'react-helmet';
 
 class Contact extends Component {
   componentDidMount() {
@@ -9,7 +10,10 @@ class Contact extends Component {
     const mail = "orchestra.musicart.contact@gmail.com";
     return (
       <div className="contact-form">
-        <h2 className="title">お問い合わせ</h2>
+        <Helmet>
+          <title>Mμsicart お問い合わせ</title>
+        </Helmet>
+        <h2 className="title">Contact</h2>
         <form method="POST" action={"https://formspree.io/" + mail} >
           <p>お名前</p>
           <input type='text' name='お名前' placeholder="佐藤　太郎" />

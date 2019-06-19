@@ -12,31 +12,43 @@
   .body .main {
     flex: 1;
     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
-    margin: 0 10px; }
+    margin: 0 10px;
+    padding-bottom: 20px; }
     @media only screen and (min-width: 460px) and (max-width: 732px) {
       .body .main {
-        padding: 0px 20px; } }
+        padding-left: 20px;
+        padding-right: 20px; } }
     @media only screen and (min-width: 732px) {
       .body .main {
-        padding: 0px 30px; }
-        .body .main .aboutMain, .body .main .concertAbout {
-          width: 70%;
-          margin-left: auto;
-          margin-right: auto; }
+        padding-left: 30px;
+        padding-right: 30px;
+        width: 70%;
+        margin-left: auto;
+        margin-right: auto; }
         .body .main .about .title {
-          margin-left: 8%;
           margin-bottom: 10px; }
         .body .main .aboutMain h5 {
           margin: 20px 0px; } }
-    .body .main :not(.tiltle) > b, .body .main strong, .body .main .bold {
+    :not(.body .main.concert), .body .main :not(.tiltle) > b, .body .main strong, .body .main .bold {
       font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif; }
     .body .main button.link-button {
       color: #4183C4 !important;
       background: none;
       border: none;
-      border-bottom: 1px solid; }
+      border-bottom: 1px solid;
+      outline: 0; }
       .body .main button.link-button:hover {
-        cursor: pointer; }
+        cursor: pointer;
+        outline: 0; }
+    .body .main button.back-button {
+      color: #5f9dda !important;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #5f9dda !important;
+      outline: 0; }
+      .body .main button.back-button:hover {
+        cursor: pointer;
+        outline: 0; }
     .body .main .slides {
       position: relative; }
       .body .main .slides .slick-prev, .body .main .slides .slick-next {
@@ -68,21 +80,24 @@
         color: #8856df;
         cursor: pointer; }
     @media only screen and (min-width: 732px) {
-      .body .main .contact-form {
-        width: 580px;
+      .body .main .contact-form input, .body .main .contact-form textarea {
+        width: 400px;
+        display: block;
         margin-left: auto;
-        margin-right: auto; }
-        .body .main .contact-form input, .body .main .contact-form textarea {
-          width: 400px;
-          display: block;
-          margin-left: auto;
-          margin-right: auto; } }
+        margin-right: auto; } }
+@media only screen and (min-width: 732px) and (min-width: 1018px) {
+  .body .main .contact-form p {
+    width: 600px;
+    margin-left: auto;
+    margin-right: auto; } }
+
     .body .main .tickets .tickets-form button {
       margin: 3px;
       margin-top: 5px; }
     .body .main .tickets .tickets-form h5 {
       margin-top: 20px; }
     .body .main .tickets .tickets-form input, .body .main .tickets .tickets-form textarea, .body .main .tickets .tickets-form select {
+      display: block;
       width: 90%;
       margin-left: auto;
       margin-right: auto;
@@ -100,49 +115,36 @@
         color: #8856df;
         cursor: pointer; }
     @media only screen and (min-width: 732px) {
-      .body .main .tickets {
-        margin-left: auto;
-        margin-right: auto; }
-        .body .main .tickets > * {
-          margin-left: auto;
-          margin-right: auto; }
-        .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select, .body .main .tickets .title {
-          display: block;
-          margin-left: auto;
-          margin-right: auto; } }
-    @media only screen and (min-width: 732px) and (max-width: 1018px) {
-      .body .main .tickets > * {
-        width: 80%; }
-      .body .main .tickets .title {
-        width: 90%; }
       .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
-        width: 72%; } }
-    @media only screen and (min-width: 1018px) {
-      .body .main .tickets > * {
-        width: 680px; }
-      .body .main .tickets .title {
-        width: 750px; }
-      .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
-        width: 580px; } }
-    .body .main .articleSec .article {
-      margin: 10px 0px; }
-    @media only screen and (min-width: 732px) {
-      .body .main .articleSec.articleSec-news {
-        width: 750px;
+        display: block;
         margin-left: auto;
         margin-right: auto; } }
+    @media only screen and (min-width: 732px) and (max-width: 1018px) {
+      .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
+        width: 60%; } }
+    @media only screen and (min-width: 1018px) {
+      .body .main .tickets input, .body .main .tickets textarea, .body .main .tickets select {
+        width: 50%; } }
+    .body .main .article-content {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .body .main .article-content > button.back-button {
+        width: 74px; }
+      .body .main .article-content .article {
+        flex-grow: 1; }
+    .body .main .articleSec .article-list :hover {
+      cursor: pointer !important; }
     .body .main .articleSec .tagSelector, .body .main .articleSec .tagSearch {
       margin: 0 8px 3px 0; }
       .body .main .articleSec .tagSelector:focus, .body .main .articleSec .tagSelector:hover, .body .main .articleSec .tagSelector:active, .body .main .articleSec .tagSearch:focus, .body .main .articleSec .tagSearch:hover, .body .main .articleSec .tagSearch:active {
-        outline: 0;
-        background-color: #007bff;
-        border-color: #007bff; }
+        outline: 0; }
+    .body .main .articleSec .tagSelector-main {
+      height: 39px; }
     .body .main .articleSec .tagSearch {
-      float: right;
-      padding-bottom: 0px;
-      padding-top: 9px; }
-    .body .main .articleSec > .tagSelector {
-      float: left; }
+      padding: 6px 8px;
+      float: right; }
     .body .main .articleSec .articleButton {
       width: 100%;
       display: block;
@@ -157,13 +159,8 @@
       width: 100%;
       margin-left: auto;
       margin-right: auto;
-      height: 520px; }
-      @media only screen and (min-width: 460px) and (max-width: 732px) {
-        .body .main .twitter {
-          width: 400px; } }
-      @media only screen and (min-width: 732px) {
-        .body .main .twitter {
-          width: 680px; } }
+      height: 520px;
+      max-width: 659px; }
 
 footer {
   height: 312px;

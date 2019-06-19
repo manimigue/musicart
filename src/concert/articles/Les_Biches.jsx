@@ -1,6 +1,5 @@
 
 import React, { Component } from 'react'
-import MarkdownRender from "@nteract/markdown";
 
 class Les_Biches extends Component {
   componentDidMount() {
@@ -16,7 +15,7 @@ class Les_Biches extends Component {
     <p>（甲斐朝花）</p>
 `
     return(
-      <dev className="article concert" dangerouslySetInnerHTML={{ __html: source }} />
+      <div className="article concert" dangerouslySetInnerHTML={{ __html: source }} />
     )
   }
 }

@@ -4,8 +4,10 @@ import { push } from 'react-router-redux';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
 import Link from '../components/Link'
+import {Helmet} from 'react-helmet';
 import '../index.css';
 import '../static/css/members.css'
+
 
 class Members extends Component {
   constructor(props) {
@@ -33,13 +35,20 @@ class Members extends Component {
       );
     });
     return (
-      <Tabs
-        id="member-tab"
-        activeKey={this.state.key}
-        onSelect={key => this.setState({ key })}
-      >
-        {tabs}
-      </Tabs>
+      <div>
+        <Helmet>
+          <title>Mμsicart メンバー募集</title>
+        </Helmet>
+        <h2 className="title">Join us</h2>
+        <p>blablabla</p>
+        <Tabs
+          id="member-tab"
+          activeKey={this.state.key}
+          onSelect={key => this.setState({ key })}
+        >
+          {tabs}
+        </Tabs>
+      </div>
     );
   }
 }

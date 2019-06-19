@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { Route} from 'react-router-dom';
+import {Helmet} from 'react-helmet';
 
 import Header from './containers/Header';
 import News from './containers/News';
@@ -37,9 +38,18 @@ class App extends Component {
       <Provider store={this.props.store} >
         <ConnectedRouter history={this.props.history}>
           <div className={this.props.concert ? 'body concert' : 'body'}>
+            <Helmet>
+              <title>{this.props.concert ? "Mμsicart Concerts" : "Mμsicart"}</title>
+              <meta name="description" content={
+                  this.props.concert ?
+                  "Orchestra Mµsicartコンサート情報 : 「光と魔法のコンサート in 森のホール 21」 2019 年 11 月 3 日(日祝)\n 2019 年 6 月 20 日 チケット予約開始" :
+                  "Orchestra Mµsicart公式ホームページ"
+                }
+                  />
+            </Helmet>
             <Header />
+            <Route exact path='/' component={Pictures} />
             <div className={`main`}>
-              <Route exact path='/' component={Pictures} />
               <Route exact path='/' component={News} />
               <Route exact path='/news' component={News} />
               <Route exact path='/about' component={About} />

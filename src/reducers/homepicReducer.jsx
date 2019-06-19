@@ -1,5 +1,5 @@
 import Concert from '../img/concert2019_logo.png';
-import About from '../img/aboutlogo.png'
+import About from '../img/wide_logo01.png'
 
 const initialState = {
   pictures: [

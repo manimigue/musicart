@@ -5,9 +5,10 @@ import Articles from './Articles'
 import Map from './Map'
 import log from '../concert/log.json'
 import Link from '../components/Link'
-import Flip from 'react-reveal/Flip';
+import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
 import Info from '../components/ticketsInfo'
+import {Helmet} from 'react-helmet';
 
 export default class Concert_2019 extends Component {
   constructor(props) {
@@ -15,22 +16,27 @@ export default class Concert_2019 extends Component {
     this.state = {};
   }
 
+  name = "light_and_magic"
+
     render () {
       return (
         <div className='concertAbout concert2019'>
+          <Helmet>
+            <title>光と魔法のコンサート</title>
+          </Helmet>
           <Zoom delay={100} duration={2000}>
             <img className="title-logo" src={ConcertLogo} alt="コンサートロゴ" />
           </Zoom>
-          <Flip bottom cascade delay={100} duration={2000}>
+          <Fade clear delay={100} duration={2000}>
             <h3>光と音楽に包まれる、それはまるで魔法のように。</h3>
             <p>オーケストラに光や映像といった演出を加えた新しいコンサート空間への挑戦。</p>
             <p>プログラムは今年没後150年を迎えるエクトル・ベルリオーズをはじめとするフランスの作曲家に焦点を当て、お届けします。ヴァイオリンを持った死神、ヴァルプルギスの夜に集まる魔女等、まさに魔法の世界を音楽で表現した作品の数々、そんな怪しくも美しい作品を光と映像で彩ります。今宵、コンサートホールは魔女の夜宴へと姿を変えるでしょう。</p>
-          </Flip>
+          </Fade>
           <Articles
             title='Program'
             log={log}
             twitter={false}
-            type='concert'
+            type={'concert/'+ this.name}
             date={false}
             more={true}
             />

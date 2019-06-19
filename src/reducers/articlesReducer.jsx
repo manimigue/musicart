@@ -1,19 +1,23 @@
 const initialState = {
   start :{
-    'concert': 0,
+    'concert/light_and_magic': 0,
     'news': 0
   },
   selectedTag : {
-    'concert' : null,
+    'concert/light_and_magic' : null,
     'news' : null
   },
   tagDisp : {
-    'concert' : false,
+    'concert/light_and_magic' : false,
     'news' : false
   },
   logPart : {
-    'concert' : null,
+    'concert/light_and_magic' : null,
     'news' : null
+  },
+  home : {
+    'concert/light_and_magic' : false,
+    'news' : false
   }
 }
 
@@ -41,6 +45,22 @@ export default function(state = initialState, action = {}) {
           logPart: {
             ...state.logPart,
             [action.payload.type] : action.payload.logPart
+          }
+        }
+      case "SAVE_HOME":
+        return {
+          ...state,
+          home: {
+            ...state.home,
+            [action.payload.type] : true
+          }
+        }
+      case "DEL_HOME":
+        return {
+          ...state,
+          home:{
+            ...state.home,
+            [action.payload.type] : false
           }
         }
     default:

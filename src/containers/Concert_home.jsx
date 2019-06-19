@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
-import ConcertLogo from '../img/concert2019_logo.png';
-import ComingSoon from '../img/coming-soon.png';
 
 class Concert_home extends Component {
   constructor(props) {
@@ -11,24 +9,36 @@ class Concert_home extends Component {
   }
 
   render() {
+    const links = this.props.concerts.map(con => {
+      return (
+        <div key={con.title} className="concertLink col-xs-6 col-sm-12 col-md-12 col-lg-6">
+          <h5>{con.title}</h5>
+          <img
+            src={con.img}
+            alt={con.alt}
+            onClick={
+              con.link ?
+              () => this.props.linkToPage('Route',`/concert/${con.url}`) :
+              null
+            }
+            style={con.link ? null : {cursor:'auto'}}
+            />
+        </div>
+      )
+    })
     return (
       <div className='concert'>
         <h2 className='title'>Concerts</h2>
         <div className='concertLinks'>
-          <div className="concertLink concert2019 col-xs-6 col-sm-6 col-md-4 col-lg-4">
-            <h5>光と魔法のコンサート in 森のホール 21</h5>
-            <img src={ConcertLogo} alt="コンサートロゴ" onClick={() => this.props.linkToPage('Route','/concert/light_and_magic')} />
-          </div>
-          <div className="concertLink concert2019 col-xs-6 col-sm-6 col-md-4 col-lg-4">
-            <h5>Coming Soon!</h5>
-            <img src={ComingSoon} alt='Coming Soon' style={{cursor:'auto'}}/>
-          </div>
+          {links}
         </div>
       </div>)
   }
 }
 
-const mapStateToProps = (state) => ({});
+const mapStateToProps = ({concert}) => ({
+  concerts: concert.concerts
+});
 
 const mapDispatchToProps = (dispatch) => ({
   linkToPage(type,url){

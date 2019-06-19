@@ -36,20 +36,22 @@ $max: 1018px;
     flex: 1;
     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
     margin: 0 10px;
+    padding-bottom: 20px;
 
     @include mediaminmax($small,$middle){
-      padding: 0px 20px;
+      padding-left: 20px;
+      padding-right: 20px;
     }
 
     @include mediamin($middle){
-      padding: 0px 30px;
-      .aboutMain,.concertAbout{
-        width: 70%;
-        margin-left: auto;
-        margin-right: auto;
-      }
+      padding-left: 30px;
+      padding-right: 30px;
+
+      width: 70%;
+      margin-left: auto;
+      margin-right: auto;
+
       .about .title {
-        margin-left: 8%;
         margin-bottom: 10px;
       }
       .aboutMain h5{
@@ -57,7 +59,7 @@ $max: 1018px;
       }
     }
 
-    :not(.tiltle) > b, strong, .bold{
+    :not(&.concert) ,:not(.tiltle) > b, strong, .bold{
      font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック", "Yu Gothic",sans-serif;
     }
 
@@ -66,8 +68,22 @@ $max: 1018px;
       background: none;
       border: none;
       border-bottom: 1px solid;
+      outline: 0;
       &:hover {
         cursor: pointer;
+        outline: 0;
+      }
+    }
+
+    button.back-button{
+      color: #5f9dda !important;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #5f9dda !important;
+      outline: 0;
+      &:hover {
+        cursor: pointer;
+        outline: 0;
       }
     }
 
@@ -113,14 +129,18 @@ $max: 1018px;
       }
 
       @include mediamin($middle){
-        width: 580px;
-        margin-left: auto;
-        margin-right: auto;
         input,textarea {
           width : 400px;
           display: block;
           margin-left: auto;
           margin-right: auto;
+        }
+        @include mediamin($max){
+          p{
+            width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+          }
         }
       }
     }
@@ -135,6 +155,7 @@ $max: 1018px;
           margin-top: 20px;
         }
         input,textarea, select{
+          display: block;
           width: 90%;
           margin-left: auto;
           margin-right: auto;
@@ -157,13 +178,7 @@ $max: 1018px;
       }
 
       @include mediamin($middle){
-        margin-left: auto;
-        margin-right: auto;
-        & > * {
-          margin-left: auto;
-          margin-right: auto;
-        }
-        input,textarea,select,.title {
+        input,textarea,select {
           display: block;
           margin-left: auto;
           margin-right: auto;
@@ -171,59 +186,53 @@ $max: 1018px;
       }
 
       @include mediaminmax($middle,$max){
-        &> *{
-          width: 80%;
-        }
-        .title{
-          width: 90%
-        }
         input,textarea,select{
-          width : 72%;
+          width : 60%;
         }
       }
 
       @include mediamin($max){
-        &> *{
-          width: 680px;
-        }
-        .title{
-          width: 750px;
-        }
         input,textarea,select{
-          width : 580px;
+          width : 50%;
         }
       }
     }
 
-    .articleSec{
+    .article-content {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      & > button.back-button {
+          width: 74px;
+        }
       .article {
-        margin: 10px 0px
+        flex-grow:  1;
       }
+    }
 
-      @include mediamin($middle){
-        &.articleSec-news{
-          width: 750px;
-          margin-left: auto;
-          margin-right: auto;
+    .articleSec{
+
+      .article-list{
+        & :hover {
+          cursor: pointer !important;
         }
       }
+
       .tagSelector,.tagSearch {
         margin: 0 8px 3px 0;
         &:focus,&:hover, &:active {
           outline: 0;
-          background-color: #007bff;
-          border-color: #007bff;
         }
       }
 
-      .tagSearch {
-        float: right;
-        padding-bottom: 0px;
-        padding-top: 9px;
+      .tagSelector-main{
+        height: 39px;
       }
 
-      &> .tagSelector{
-        float: left;
+      .tagSearch {
+        padding: 6px 8px;
+        float: right;
       }
 
       .articleButton {
@@ -250,13 +259,14 @@ $max: 1018px;
       margin-left: auto;
       margin-right: auto;
       height: 520px;
+      max-width: 659px;
 
-      @include mediaminmax($small,$middle){
-        width: 400px;
-      }
-      @include mediamin($middle) {
-        width: 680px;
-      }
+      // @include mediaminmax($small,$middle){
+      //   width: 400px;
+      // }
+      // @include mediamin($middle) {
+      //   width: 680px;
+      // }
     }
   }
 }

@@ -22,14 +22,14 @@ const initialState = {
       text : 'Concert'
     },
     {
-      type:'Route',
-      url: '/members',
-      text : 'Join us'
-    },
-    {
       type: 'Route',
       url : '/tickets',
       text : 'Tickets'
+    },
+    {
+      type:'Route',
+      url: '/members',
+      text : 'Join us'
     },
     {
       type: 'Route',

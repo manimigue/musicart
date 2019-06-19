@@ -3,7 +3,7 @@ import routes from '../article';
 import components from './components'
 
 const newsRoutes = (props) => {
-  const routeList = routes(components, '/news')
+  const routeList = routes(components, 'news')
   return (
     <React.Fragment>
       {routeList}
