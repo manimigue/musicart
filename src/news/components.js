@@ -1,7 +1,17 @@
-
+import { default as Cnews_20190619news1 } from "./articles/news_20190619news1.jsx";
+import { default as Cnews_20190619news2 } from "./articles/news_20190619news2.jsx";
+import { default as Cnews_20190619news3 } from "./articles/news_20190619news3.jsx";
+import { default as Crelease } from "./articles/release.jsx";
 
 const news =
 [
+  {
+    title: "団員・スタッフ募集に関して",
+    url: "20190619news3",
+    date: "2019-06-20",
+    author: "三石ミゲール",
+    component: C20190619news3
+  },
   {
     title: "チケット予約開始（ホームページ予約第1次）",
     url: "20190619news2",

@@ -1,6 +1,5 @@
 .navbar {
   transition: .3s ease;
-  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
 }
 
 .navbar.hide {

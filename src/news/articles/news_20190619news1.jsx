@@ -1,7 +1,6 @@
 
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
-import Link from '../../components/Link'
 
 class C20190619news1 extends Component {
   componentDidMount() {
@@ -21,7 +20,7 @@ Orchestra Mµsicart（オーケストラ・ミュージカルト）公式ホー�
 
 早速ですが、第1回目となるコンサート「Orchestra Mµsicart 光と魔法のコンサート in 森のホール21」を2019 年11月3日（日祝）に森のホール21大ホールで予定しております。詳しくは [Concert](https://manimigue.github.io/musicart/concert/light_and_magic)をご覧ください。
 
-また、団員・スタッフを引き続き募集しております。こちらに関しては[Join Us](https://manimigue.github.io/musicart/members)をご覧ください。
+また、団員・スタッフを引き続き募集しております。こちらに関しては[Join Us](https://orchestramusicart.com/musicart/members)をご覧ください。
 
 
 

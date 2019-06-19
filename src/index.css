@@ -9,6 +9,8 @@
     font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
     .body .title > * {
       font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif; }
+  .body .navbar .navbar-nav .nav-link {
+    font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
   .body .main {
     flex: 1;
     font-family: "Avenir-Light","游ゴシック体", YuGothic, "游ゴシック Medium", "Yu Gothic Medium", "游ゴシック", "Yu Gothic",sans-serif;
@@ -91,6 +93,8 @@
     margin-left: auto;
     margin-right: auto; } }
 
+    .body .main .tickets .title h2 {
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
     .body .main .tickets .tickets-form button {
       margin: 3px;
       margin-top: 5px; }
@@ -163,6 +167,7 @@
       max-width: 659px; }
 
 footer {
+  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
   height: 312px;
   background-color: #000;
   align-items: flex-start;
@@ -180,10 +185,11 @@ footer {
   footer .footer-main {
     margin-left: 50px;
     width: auto; }
+    footer .footer-main .title h2 {
+      font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important; }
   footer .footer-links {
     width: 100%;
-    text-align: center;
-    font-family: 'Josefin Sans', sans-serif; }
+    text-align: center; }
     footer .footer-links img {
       margin-top: 20px;
       margin-left: auto;
@@ -204,6 +210,7 @@ footer {
       grid-auto-flow: row;
       padding-inline-start: 0px; }
       footer .footer-links ul > * {
+        font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
         cursor: pointer;
         display: inline-block;
         border-bottom: 1px solid white; }

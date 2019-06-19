@@ -26,9 +26,16 @@ $max: 1018px;
   .title {
     padding: 20px 0px 0px;
     font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
-
     & > *{
       font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif;
+    }
+  }
+
+  .navbar {
+    .navbar-nav{
+      .nav-link{
+        font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+      }
     }
   }
 
@@ -146,6 +153,11 @@ $max: 1018px;
     }
 
     .tickets{
+      .title {
+        h2{
+          font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+        }
+      }
       .tickets-form{
         button {
           margin: 3px;
@@ -276,6 +288,9 @@ footer {
   $links : 224px;
   $cr : 22px;
 
+  font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+
+
   @include setFooterHeight($main,$links,$cr);
 
   background-color: #000;
@@ -288,13 +303,17 @@ footer {
 
   .footer-main {
     margin-left: 50px;
+    .title{
+      h2{
+        font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
+      }
+    }
     width: auto;
   }
 
   .footer-links {
     width: 100%;
     text-align: center;
-    font-family: 'Josefin Sans', sans-serif;
 
     img {
       margin-top: 20px;
@@ -321,6 +340,7 @@ footer {
       padding-inline-start: 0px;
 
       &>*{
+        font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
         cursor: pointer;
         display: inline-block;
         border-bottom: 1px solid white;

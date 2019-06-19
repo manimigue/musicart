@@ -25,10 +25,18 @@ $home-title-breack-max: 992px;
       border-color: transparent;
     }
 
+    b {
+      font-family: "Sawarabi Mincho" !important;
+    }
+
     .article {
       display: block;
+      font-family: "Sawarabi Mincho" !important;
       &> :first-child {
         margin-top: 15px;
+      }
+      & > * {
+        font-family: "Sawarabi Mincho" !important;
       }
     }
 

@@ -15,10 +15,15 @@
     .body.concert .main textarea {
       color: #b8bfc6;
       border-color: transparent; }
+    .body.concert .main b {
+      font-family: "Sawarabi Mincho" !important; }
     .body.concert .main .article {
-      display: block; }
+      display: block;
+      font-family: "Sawarabi Mincho" !important; }
       .body.concert .main .article > :first-child {
         margin-top: 15px; }
+      .body.concert .main .article > * {
+        font-family: "Sawarabi Mincho" !important; }
     .body.concert .main .concertLinks {
       display: block;
       width: 100%;
