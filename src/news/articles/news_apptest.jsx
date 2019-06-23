@@ -1,5 +1,6 @@
 import I1 from './assets/微小弦.png'
 import I2 from './assets/振り子.png'
+import I3 from './assets/g.png'
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
 
@@ -21,23 +22,23 @@ class C_apptest extends Component {
 
 線密度が$\\rho$であるので質量は$\\rho \\Delta x$，弦の両端にかかる張力は$mg$となるので，運動方程式は
 $$
-\\rho \\Delta x\\frac{\\part^2 \\zeta}{\\part t^2}=mg\\sin\\theta_2-mg\\sin\\theta_1\\tag1
+\\rho \\Delta x\\frac{\\partial^2 \\zeta}{\\partial t^2}=mg\\sin\\theta_2-mg\\sin\\theta_1\\tag1
 $$
 となる。
 
 ここで，$z$軸方向の変位は微小であるので$\\theta_1,\\theta_2\\ll1$より
 $$
-\\sin\\theta_1\\approx\\tan\\theta_1=\\left.\\frac{\\part \\zeta}{\\part x}\\right|_{x-\\frac{\\Delta x}{2}}\\\\
-\\sin\\theta_2\\approx\\tan\\theta_2=\\left.\\frac{\\part \\zeta}{\\part x}\\right|_{x+\\frac{\\Delta x}{2}}
+\\sin\\theta_1\\approx\\tan\\theta_1=\\left.\\frac{\\partial \\zeta}{\\partial x}\\right|_{x-\\frac{\\Delta x}{2}}\\\\
+\\sin\\theta_2\\approx\\tan\\theta_2=\\left.\\frac{\\partial \\zeta}{\\partial x}\\right|_{x+\\frac{\\Delta x}{2}}
 $$
 と近似できる。(1)式に代入すると
 $$
-\\frac{\\part^2 \\zeta}{\\part t^2}=\\frac{mg}{\\rho}\\frac{\\left.\\frac{\\part \\zeta}{\\part x}\\right|_{x+\\frac{\\Delta x}{2}}-\\left.\\frac{\\part \\zeta}{\\part x}\\right|_{x-\\frac{\\Delta x}{2}}}{
+\\frac{\\partial^2 \\zeta}{\\partial t^2}=\\frac{mg}{\\rho}\\frac{\\left.\\frac{\\partial \\zeta}{\\partial x}\\right|_{x+\\frac{\\Delta x}{2}}-\\left.\\frac{\\partial \\zeta}{\\partial x}\\right|_{x-\\frac{\\Delta x}{2}}}{
 \\Delta x}
 $$
 $\\Delta x\\to 0$として
 $$
-\\frac{\\part^2 \\zeta}{\\part t^2}=\\frac{mg}{\\rho}\\frac{\\part^2\\zeta}{\\part x^2}\\tag2
+\\frac{\\partial^2 \\zeta}{\\partial t^2}=\\frac{mg}{\\rho}\\frac{\\partial^2\\zeta}{\\partial x^2}\\tag2
 $$
 ##### 1-2
 
@@ -81,7 +82,7 @@ $$
 
 1-1の考察において$mg\\to T(t)$と置き換えても同じ考察ができるので，
 $$
-\\frac{\\part^2 \\zeta}{\\part t^2}=\\frac{T(t)}{\\rho}\\frac{\\part^2\\zeta}{\\part x^2}\\tag{$2'$}
+\\frac{\\partial^2 \\zeta}{\\partial t^2}=\\frac{T(t)}{\\rho}\\frac{\\partial^2\\zeta}{\\partial x^2}\\tag{$2'$}
 $$
 が成り立つ。ここに
 $$
@@ -158,7 +159,7 @@ $$
 $$
 左辺を$g(x)$とすると，
 
-![g()グラフ](assets/g(x).png)
+![gグラフ](assets/g.png)
 
 よって，$\\alpha'$を徐々に大きくしていくと$\\alpha'^2<\\frac{4 x_d}{27}$までは$x<\\frac{x_d}{3}$で平衡状態になるような挙動を取れるが，$\\alpha'^2>\\frac{4 x_d}{27}$だと$x<x_d$で平衡状態になれる解が存在しなくなるため，授業で見たように$x$が大きくなり，$x=x_d$を表す電極については電荷を失い離れ，また大きくなるような振動を繰り返すようになる。よって，$\\alpha'$の閾値は$\\dfrac {2}{9}\\sqrt{3x_d}$。
 
@@ -176,6 +177,7 @@ $$
 `
 .replace('assets/微小弦.png',I1)
 .replace('assets/振り子.png',I2)
+.replace('assets/g.png',I3)
     return(
       <MarkdownRender className='article' source={source} escapeHtml={false}/>
     )
