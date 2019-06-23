@@ -2,17 +2,9 @@ import { default as news_20190619news1 } from "./articles/news_20190619news1.jsx
 import { default as news_20190619news2 } from "./articles/news_20190619news2.jsx";
 import { default as news_20190619news3 } from "./articles/news_20190619news3.jsx";
 import { default as news_20190619news4 } from "./articles/news_20190619news4.jsx";
-import { default as news_apptest } from "./articles/news_apptest.jsx";
 
 const news =
 [
-  {
-    title: "非線形",
-    url: "apptest",
-    date: "2019-06-23",
-    author: "三石ミゲール",
-    component: news_apptest
-  },
   {
     title: "第2回定期公演決定のお知らせ",
     url: "20190619news4",

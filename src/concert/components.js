@@ -1,6 +1,6 @@
-import { default as Danse_macabre } from "./articles/Danse_macabre.jsx";
-import { default as Les_Biches } from "./articles/Les_Biches.jsx";
-import { default as Symphonie_Fantastique } from "./articles/Symphonie_Fantastique.jsx";
+import { default as Danse_macabre } from "./articles/concert_Danse_macabre.jsx";
+import { default as Les_Biches } from "./articles/concert_Les_Biches.jsx";
+import { default as Symphonie_Fantastique } from "./articles/concert_Symphonie_Fantastique.jsx";
 
 const concert =
 [
