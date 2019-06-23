@@ -15,7 +15,7 @@
     .body.concert .main textarea {
       color: #b8bfc6;
       border-color: transparent; }
-    .body.concert .main b {
+    .body.concert .main b, .body.concert .main li {
       font-family: "Sawarabi Mincho" !important; }
     .body.concert .main .article {
       display: block;
@@ -232,9 +232,6 @@
       background: rgba(0, 0, 0, 0.05);
       font-size: 0.875rem;
       font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace; }
-    .body.concert .main ul, .body.concert .main ol {
-      padding-left: 20px;
-      overflow: scroll; }
     .body.concert .main kbd {
       padding: 2px 4px;
       font-size: 90%;

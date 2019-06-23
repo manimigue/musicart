@@ -1,5 +1,16 @@
 [
   {
+    "url": "test",
+    "title": "Test",
+    "date": "2019-06-23",
+    "file": "/Users/MANI/workspace/musicart_test/musicart/newsFolder/0.md",
+    "author": "三石ミゲール",
+    "copied": [],
+    "tag": [
+      "お知らせ"
+    ]
+  },
+  {
     "url": "20190619news4",
     "title": "第2回定期公演決定のお知らせ",
     "date": "2019-06-20",
@@ -37,17 +48,6 @@
     "title": "ホームページ開設のお知らせ",
     "date": "2019-06-19",
     "file": "繝帙�繝 繝壹�繧ｸ髢玖ｨｭ縺ｮ縺顔衍繧峨○.md",
-    "author": "三石ミゲール",
-    "copied": [],
-    "tag": [
-      "お知らせ"
-    ]
-  },
-  {
-    "url": "release",
-    "title": "ホームページリリース",
-    "date": "2019-05-02",
-    "file": "Home Page release Article.md",
     "author": "三石ミゲール",
     "copied": [],
     "tag": [

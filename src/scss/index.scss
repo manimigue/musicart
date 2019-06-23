@@ -32,6 +32,9 @@ $max: 1018px;
   }
 
   .navbar {
+    .navbar-brand :hover {
+      cursor: pointer;
+    }
     .navbar-nav{
       .nav-link{
         font-family: "Josefin Sans","游ゴシック体",Yu Gothic,YuGothic,"ヒラギノ角ゴ Pro",Hiragino Kaku Gothic Pro,"メイリオ",Meiryo,sans-serif !important;
@@ -164,7 +167,7 @@ $max: 1018px;
         h5{
           margin-top: 20px;
         }
-        input,textarea, select{
+        input,textarea{
           display: block;
           width: 90%;
           margin-left: auto;
@@ -196,14 +199,20 @@ $max: 1018px;
       }
 
       @include mediaminmax($middle,$max){
-        input,textarea,select{
+        input,textarea{
           width : 60%;
+        }
+        select{
+          width: 70%;
         }
       }
 
       @include mediamin($max){
-        input,textarea,select{
+        input,textarea{
           width : 50%;
+        }
+        select{
+          width: 60%;
         }
       }
     }
@@ -219,12 +228,17 @@ $max: 1018px;
       .article {
         flex-grow:  1;
         margin-top: 10px;
+        ol,ul {
+          padding-left: 20px;
+          overflow-x: scroll;
+        }
       }
     }
 
     .articleSec{
 
       .article-list{
+        padding-left: 10px;
         & :hover {
           cursor: pointer !important;
         }

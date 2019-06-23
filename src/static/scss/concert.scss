@@ -25,7 +25,7 @@ $home-title-breack-max: 992px;
       border-color: transparent;
     }
 
-    b {
+    b ,li {
       font-family: "Sawarabi Mincho" !important;
     }
 
@@ -325,11 +325,6 @@ $home-title-breack-max: 992px;
         background: rgba(0, 0, 0, 0.05);
         font-size: 0.875rem;
         font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-    }
-
-    ul,ol {
-      padding-left: 20px;
-      overflow: scroll;
     }
 
     kbd {
