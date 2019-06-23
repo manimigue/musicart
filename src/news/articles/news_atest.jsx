@@ -2,7 +2,7 @@
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
 
-class C_test extends Component {
+class C_atest extends Component {
   componentDidMount() {
     window.scrollTo(0, 0)
   }
@@ -97,4 +97,4 @@ deep is bette
   }
 }
 
-export default C_test;
+export default C_atest;
