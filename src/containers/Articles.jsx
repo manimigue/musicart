@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { push } from 'react-router-redux';
+import ReactGA from 'react-ga';
 import Fade from 'react-reveal/Fade';
 import { Search, Cancel } from '@material-ui/icons';
 import Button from 'react-bootstrap/Button';
@@ -111,6 +112,11 @@ class Articles extends Component {
     } else {
       this.toUrl(url, range, logPart)
     }
+
+    ReactGA.event({
+      category : 'Tag',
+      action : nTag
+    })
   }
 
   switchTagDisp = (tagDisp) => {

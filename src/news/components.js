@@ -2,16 +2,16 @@ import { default as news_20190619news1 } from "./articles/news_20190619news1.jsx
 import { default as news_20190619news2 } from "./articles/news_20190619news2.jsx";
 import { default as news_20190619news3 } from "./articles/news_20190619news3.jsx";
 import { default as news_20190619news4 } from "./articles/news_20190619news4.jsx";
-import { default as news_app } from "./articles/news_app.jsx";
+import { default as news_20190811news5 } from "./articles/news_20190811news5.jsx";
 
 const news =
 [
   {
-    title: "hu",
-    url: "app",
-    date: "2019-06-24",
+    title: "Ticket 追加予約開始",
+    url: "20190811news5",
+    date: "2019-08-10",
     author: "三石ミゲール",
-    component: news_app
+    component: news_20190811news5
   },
   {
     title: "第2回定期公演決定のお知らせ",

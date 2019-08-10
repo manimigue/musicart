@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 import { Route} from 'react-router-dom';
+import ReactGA from 'react-ga';
 import {Helmet} from 'react-helmet';
 
 import Header from './containers/Header';
@@ -31,6 +32,12 @@ class App extends Component {
     super(props);
     this.state= {
     }
+  }
+
+  componentDidMount() {
+    const { pathname } = this.props.history.location;
+    ReactGA.set({ page: pathname });
+    ReactGA.pageview(pathname);
   }
 
   render() {

@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
 import Link from '../components/Link'
 import Fade from 'react-reveal/Fade';
+import ReactGA from 'react-ga';
 import {Helmet} from 'react-helmet';
 import Info from '../components/ticketsInfo'
 
@@ -54,6 +55,13 @@ class Tickets extends Component {
     }
   }
 
+  gaSubmit = (action) => {
+    ReactGA.event({
+      category: 'User',
+      action: action
+    });
+  }
+
   render() {
     const mail = "orchestra.musicart.ticket@gmail.com";
     const ticketTypeNum = this.state.ticketTypeNum;
@@ -92,21 +100,8 @@ class Tickets extends Component {
           <input type="tel" name="返信先電話番号" placeholder="09012345678"/>
           <h5>その他お問い合わせ</h5>
           <textarea name='お問い合わせ内容'></textarea>
-          <input className='submit' type="submit" value='Send'/>
+          <input className='submit' type="submit" value='Send' onClick={() => this.gaSubmit('Tickets reservation (term 1)')}/>
         </form>
-      </React.Fragment>
-    )
-    const TicketPay = (url) => (
-      <React.Fragment>
-        <p></p>
-        <Link type="a" url={url}>チケットペイ</Link>
-      </React.Fragment>
-    )
-
-    const LivePocket = (url) => (
-      <React.Fragment>
-        <p></p>
-        <Link type="a" url={url}>livepocket</Link>
       </React.Fragment>
     )
 
@@ -120,13 +115,14 @@ class Tickets extends Component {
         <div className='tickets-how'>
           <h4>チケット予約方法</h4>
           <h5>ホームページでのチケット予約（第1次）</h5>
-          <p>6月20日より開始</p>
+          <p>6月20日より開始<br/>以下の予約フォームよりお申し込みください。</p>
           <h5>ホームページでのチケット予約（第2次）</h5>
           <p>9月上旬頃開始</p>
           <h5>チケットペイでのチケット予約</h5>
-          <p>8月上旬頃開始</p>
-          <h5>livepocketでのチケット予約</h5>
-          <p>8月上旬頃開始</p>
+          <p>8月11日より開始</p>
+          <p>お申し込みは<Link type={"a"} url={"https://www.ticketpay.jp/booking/?event_id=23753"}>こちら</Link></p>
+          <p>初めての方は会員登録（無料）が必要になります。<br/>また、システム手数料として別途324円（税込）がかかります。<br/>決済後のキャンセル、払い戻しはできませんので、予めご了承ください。</p>
+          <p>チケットペイに関して詳しくは<Link type={"a"} url={"https://www.ticketpay.jp/support_page.php?id=7"}>こちら</Link></p>
           <p>チケット予約が開始しましたら、ホームページ、SNS等でアナウンスさせて頂きます。<br/>各チケット予約方法にて、予約が定員に達し次第、受付を終了させていただきます。予めご了承ください。</p>
         </div>
         <div className='tickets-buy' >
@@ -138,14 +134,6 @@ class Tickets extends Component {
           <div className='tickets-form'>
             <h5>ホームページでのチケット予約(第 2 次)</h5>
             {this.onWhich(this.state.on.form2,ticketForm())}
-          </div>
-          <div className='ticketpay'>
-            <h5>チケットペイでのチケット予約</h5>
-            {this.onWhich(this.state.on.pay,TicketPay)}
-          </div>
-          <div className='livepocket'>
-            <h5>livepocketでのチケット予約</h5>
-            {this.onWhich(this.state.on.livepocket,LivePocket)}
           </div>
         </div>
       </div>
