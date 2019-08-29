@@ -3,9 +3,17 @@ import { default as news_20190619news2 } from "./articles/news_20190619news2.jsx
 import { default as news_20190619news3 } from "./articles/news_20190619news3.jsx";
 import { default as news_20190619news4 } from "./articles/news_20190619news4.jsx";
 import { default as news_20190811news5 } from "./articles/news_20190811news5.jsx";
+import { default as news_20190830news6 } from "./articles/news_20190830news6.jsx";
 
 const news =
 [
+  {
+    title: "消費税率変更について",
+    url: "20190830news6",
+    date: "2019-08-30",
+    author: "三石ミゲール",
+    component: news_20190830news6
+  },
   {
     title: "Ticket 追加予約開始",
     url: "20190811news5",
