@@ -14,7 +14,7 @@ class Tickets extends Component {
     this.state = {
       ticketTypeNum : 1,
       on : {
-        form1: "on",
+        form1: "end",
         form2: "commingSoon",
         pay: "commingSoon",
         livepocket : "commingSoon"
@@ -51,7 +51,7 @@ class Tickets extends Component {
       case "end":
         return <h5 style={{marginBottom:"30px"}}>販売終了しました。</h5>;
       default:
-        return component;
+        return ;
     }
   }
 
@@ -115,7 +115,7 @@ class Tickets extends Component {
         <div className='tickets-how'>
           <h4>チケット予約方法</h4>
           <h5>ホームページでのチケット予約（第1次）</h5>
-          <p>6月20日より開始<br/>以下の予約フォームよりお申し込みください。</p>
+          <p>販売終了しました。</p>
           <h5>ホームページでのチケット予約（第2次）</h5>
           <p>9月上旬頃開始</p>
           <h5>チケットペイでのチケット予約</h5>
