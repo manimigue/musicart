@@ -1,4 +1,4 @@
-import I1IMG20191014181112 from './assets/IMG_20191014_181112.jpg'
+import I1IMG20191014181112 from './assets/IMG_20191014_181112.png'
 import React, { Component } from 'react'
 import MarkdownRender from "@nteract/markdown";
 
@@ -16,7 +16,7 @@ class C_20191016news7 extends Component {
 
 昨日、10月14日は練馬文化センターでリハーサルがありました。台風の影響で延期になったリハーサルでしたが、本番の舞台を想定した練習ができました。
 
-![IMG_20191014_181112](assets/IMG_20191014_181112.jpg)
+![IMG_20191014_181112](assets/IMG_20191014_181112.png)
 
 ステージセッティングの様子
 
@@ -32,7 +32,7 @@ https://www.ticketpay.jp/booking/?event_id=23753
 
 Artistic Director K.M.
 `
-.replace('assets/IMG_20191014_181112.jpg',I1IMG20191014181112)
+.replace('assets/IMG_20191014_181112.png',I1IMG20191014181112)
     return(
       <MarkdownRender className='article' source={source} escapeHtml={false}/>
     )

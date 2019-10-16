@@ -232,6 +232,15 @@ $max: 1018px;
           padding-left: 20px;
           overflow-x: scroll;
         }
+        img {
+          display: block;
+          max-width: 100%;
+          margin-left: auto;
+          margin-right: auto;
+          @include mediamin($middle){
+            max-width: 80%;
+          }
+        }
       }
     }
 
