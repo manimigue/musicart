@@ -5,9 +5,17 @@ import { default as news_20190619news4 } from "./articles/news_20190619news4.jsx
 import { default as news_20190811news5 } from "./articles/news_20190811news5.jsx";
 import { default as news_20190830news6 } from "./articles/news_20190830news6.jsx";
 import { default as news_20191016news7 } from "./articles/news_20191016news7.jsx";
+import { default as news_20191101news8 } from "./articles/news_20191101news8.jsx";
 
 const news =
 [
+  {
+    title: "プログラムWeb公開",
+    url: "20191101news8",
+    date: "2019-11-02",
+    author: "三石ミゲール",
+    component: news_20191101news8
+  },
   {
     title: "練馬文化センターでのリハーサル",
     url: "20191016news7",
