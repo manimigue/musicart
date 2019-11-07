@@ -25,7 +25,7 @@ Orchestra Mµsicart 光と魔法のコンサート in 森のホール21に向け
 
 詳しくは [Join us](https://orchestramusicart.com/members) をご覧ください。
 
-また、当日のレセプション・ステージスタッフを募集いたします。こちらも詳しくは [Join us](https://orchestramusicart.com/members) をご覧ください。
+また、当日のレセプション・ステージスタッフを募集いたします。こちらも詳しくは [Join us](/members) をご覧ください。
 
 
 

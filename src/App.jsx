@@ -18,6 +18,7 @@ import Concert_home from './containers/Concert_home';
 import Concert_2019 from './containers/Concert_2019'
 import Error from './components/Error';
 import Footer from './containers/Footer';
+import Program_191103 from './programs/Program_191103'
 import './index.css';
 import './static/css/articles.css'
 import './static/css/about.css'
@@ -66,6 +67,7 @@ class App extends Component {
               <Route path='/concert' component={Concert} />
               <Route exact path='/concert/home' component={Concert_home}/>
               <Route exact path='/concert/light_and_magic' component={Concert_2019}/>
+              <Route exact path='/programs/191103' component={Program_191103}/>
               <Route path='/error' component={Error} />
               {newsRoutes()}
               {concertRoutes()}

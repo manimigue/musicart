@@ -6,9 +6,17 @@ import { default as news_20190811news5 } from "./articles/news_20190811news5.jsx
 import { default as news_20190830news6 } from "./articles/news_20190830news6.jsx";
 import { default as news_20191016news7 } from "./articles/news_20191016news7.jsx";
 import { default as news_20191101news8 } from "./articles/news_20191101news8.jsx";
+import { default as news_20191107news9 } from "./articles/news_20191107news9.jsx";
 
 const news =
 [
+  {
+    title: "光と魔法のコンサートレポート",
+    url: "20191107news9",
+    date: "2019-11-07",
+    author: "三石ミゲール",
+    component: news_20191107news9
+  },
   {
     title: "プログラムWeb公開",
     url: "20191101news8",

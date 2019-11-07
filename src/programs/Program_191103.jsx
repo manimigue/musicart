@@ -5,8 +5,8 @@ import '../static/css/carousel.css';
 import Pictures from '../components/Pictures'
 
 const mapStateToProps = ({homepic}) => ({
-  pictures: homepic.pictures.home,
-  interval : 5000
+  pictures: homepic.pictures.program_2019,
+  interval : null
 });
 
 const mapDispatchToProps = (dispatch) => {

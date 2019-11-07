@@ -1,5 +1,26 @@
 [
   {
+    "url": "20191107news9",
+    "title": "光と魔法のコンサートレポート",
+    "date": "2019-11-07",
+    "file": "/Users/MANI/workspace/musicart_test/musicart/newsFolder/光と魔法のコンサート_レポート.md",
+    "author": "三石ミゲール",
+    "copied": [
+      "./assets/R1.JPG",
+      "./assets/R2.JPG",
+      "./assets/R3.JPG",
+      "./assets/R4.JPG",
+      "./assets/R5.JPG",
+      "./assets/R6.jpg",
+      "./assets/R7.jpg",
+      "./assets/R8.jpg",
+      ""
+    ],
+    "tag": [
+      "コンサート"
+    ]
+  },
+  {
     "url": "20191101news8",
     "title": "プログラムWeb公開",
     "date": "2019-11-02",
