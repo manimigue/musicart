@@ -1,6 +1,7 @@
 {
   "short_name": "Mμsicart",
   "name": "Mμsicart Orchestra",
+  "oauth2AllowImplicitFlow" : true,
   "icons": [
     {
       "src": "mu-logo.png",
