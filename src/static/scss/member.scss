@@ -1,0 +1,53 @@
+@use '../../scss/mixin/media.scss';
+@use '../../scss/index.scss';
+
+$small : index.$small;
+
+.memberHeader {
+  .title {
+    display: inline-block;
+  }
+  .userContent {
+    float: right;
+    padding: 0;
+
+    & > .userName{
+      float: right;
+      display: inline-block;
+      text-align: center;
+      margin: 20px 12px 1px 10px ;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    & > button{
+      float: right;
+      text-align: center;
+      margin: 10px;
+      text-decoration: none;
+      font-size: 18px;
+    }
+
+    @include media.mediamin($small){
+      .br {
+        display: none;
+      }
+      & > .userName{
+        float: left;
+        display: inline;
+        text-align: center;
+        margin: 20px 12px 12px 10px ;
+        text-decoration: none;
+        font-size: 18px;
+      }
+
+      & > button{
+        float: left;
+        text-align: center;
+        margin: 12px;
+        text-decoration: none;
+        font-size: 18px;
+      }
+    }
+  }
+}

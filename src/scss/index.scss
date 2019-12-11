@@ -1,4 +1,4 @@
-@import './mixin/media.scss';
+@use './mixin/media';
 
 $small: 460px;
 $middle: 732px;
@@ -51,12 +51,12 @@ $max: 1018px;
     margin: 0 10px;
     padding-bottom: 20px;
 
-    @include mediaminmax($small,$middle){
+    @include media.mediaminmax($small,$middle){
       padding-left: 20px;
       padding-right: 20px;
     }
 
-    @include mediamin($middle){
+    @include media.mediamin($middle){
       padding-left: 30px;
       padding-right: 30px;
 
@@ -141,14 +141,14 @@ $max: 1018px;
         }
       }
 
-      @include mediamin($middle){
+      @include media.mediamin($middle){
         input,textarea {
           width : 400px;
           display: block;
           margin-left: auto;
           margin-right: auto;
         }
-        @include mediamin($max){
+        @include media.mediamin($max){
           p{
             width: 600px;
             margin-left: auto;
@@ -190,7 +190,7 @@ $max: 1018px;
         }
       }
 
-      @include mediamin($middle){
+      @include media.mediamin($middle){
         input,textarea,select {
           display: block;
           margin-left: auto;
@@ -198,7 +198,7 @@ $max: 1018px;
         }
       }
 
-      @include mediaminmax($middle,$max){
+      @include media.mediaminmax($middle,$max){
         input,textarea{
           width : 60%;
         }
@@ -207,7 +207,7 @@ $max: 1018px;
         }
       }
 
-      @include mediamin($max){
+      @include media.mediamin($max){
         input,textarea{
           width : 50%;
         }
@@ -237,7 +237,7 @@ $max: 1018px;
           max-width: 100%;
           margin-left: auto;
           margin-right: auto;
-          @include mediamin($middle){
+          @include media.mediamin($middle){
             max-width: 80%;
           }
         }
@@ -380,28 +380,28 @@ footer {
     }
   }
 
-  @include mediaminmax($small,$middle){
+  @include media.mediaminmax($small,$middle){
     $links: 185px;
     @include setFooterHeight($main,$links,$cr);
     .footer-links ul {
       grid-template-columns: repeat(3,100px);
     }
   }
-  @include mediaminmax($middle,$big){
+  @include media.mediaminmax($middle,$big){
     $links: 148px;
     @include setFooterHeight($main,$links,$cr);
     .footer-links ul {
       grid-template-columns: repeat(4, 100px);
     }
   }
-  @include mediaminmax($big,$max){
+  @include media.mediaminmax($big,$max){
     $links: 148px;
     @include setFooterHeight($main,$links,$cr);
     .footer-links ul {
       grid-template-columns: repeat(5, 100px);
     }
   }
-  @include mediamin($max){
+  @include media.mediamin($max){
     $links: 105px;
     @include setFooterHeight($main,$links,$cr);
     .footer-links ul{

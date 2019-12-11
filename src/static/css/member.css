@@ -391,4 +391,47 @@ footer .copyright p {
   }
 }
 
-/*# sourceMappingURL=index.css.map */
+.memberHeader .title {
+  display: inline-block;
+}
+.memberHeader .userContent {
+  float: right;
+  padding: 0;
+}
+.memberHeader .userContent > .userName {
+  float: right;
+  display: inline-block;
+  text-align: center;
+  margin: 20px 12px 1px 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+.memberHeader .userContent > button {
+  float: right;
+  text-align: center;
+  margin: 10px;
+  text-decoration: none;
+  font-size: 18px;
+}
+@media only screen and (min-width: 460px) {
+  .memberHeader .userContent .br {
+    display: none;
+  }
+  .memberHeader .userContent > .userName {
+    float: left;
+    display: inline;
+    text-align: center;
+    margin: 20px 12px 12px 10px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+  .memberHeader .userContent > button {
+    float: left;
+    text-align: center;
+    margin: 12px;
+    text-decoration: none;
+    font-size: 18px;
+  }
+}
+
+/*# sourceMappingURL=member.css.map */

@@ -23,9 +23,9 @@ Orchestra Mµsicart 光と魔法のコンサート in 森のホール21に向け
 - チェロ 2〜3名
 - コントラバス 2名
 
-詳しくは [Join us](https://orchestramusicart.com/members) をご覧ください。
+詳しくは [Join us](/join) をご覧ください。
 
-また、当日のレセプション・ステージスタッフを募集いたします。こちらも詳しくは [Join us](/members) をご覧ください。
+また、当日のレセプション・ステージスタッフを募集いたします。こちらも詳しくは [Join us](/join) をご覧ください。
 
 
 

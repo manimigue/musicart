@@ -28,13 +28,18 @@ const initialState = {
     },
     {
       type:'Route',
-      url: '/members',
+      url: '/join',
       text : 'Join us'
     },
     {
       type: 'Route',
       url : '/contact',
       text : 'Contact'
+    },
+    {
+      type: 'Route',
+      url : '/member',
+      text : 'Member'
     },
     {
       type: 'Route',

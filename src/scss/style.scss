@@ -1,2 +1,2 @@
-@import "./mixin/fonts";
-@include font-face("Avenir-Light","./static/css/fonts/AvenirLTStd-Light.otf",null,null,"otf");
+@use "./mixin/fonts";
+@include fonts.font-face("Avenir-Light","./static/css/fonts/AvenirLTStd-Light.otf",null,null,"otf");

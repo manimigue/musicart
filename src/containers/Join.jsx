@@ -9,7 +9,7 @@ import '../index.css';
 import '../static/css/members.css'
 
 
-class Members extends Component {
+class Join extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,4 +77,4 @@ const mapDispatchToProps = (dispatch) => {
   };
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Members);
+export default connect(mapStateToProps, mapDispatchToProps)(Join);
