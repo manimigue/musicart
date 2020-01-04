@@ -6,11 +6,19 @@ import { default as news_20190811news5 } from "./articles/news_20190811news5.jsx
 import { default as news_20190830news6 } from "./articles/news_20190830news6.jsx";
 import { default as news_20191016news7 } from "./articles/news_20191016news7.jsx";
 import { default as news_20191101news8 } from "./articles/news_20191101news8.jsx";
+import { default as news_20191104news11 } from "./articles/news_20191104news11.jsx";
 import { default as news_20191107news9 } from "./articles/news_20191107news9.jsx";
 import { default as news_20200104news10 } from "./articles/news_20200104news10.jsx";
 
 const news =
 [
+  {
+    title: "団員募集に関して",
+    url: "20191104news11",
+    date: "2020-01-05",
+    author: "三石ミゲール",
+    component: news_20191104news11
+  },
   {
     title: "新年のご挨拶",
     url: "20200104news10",
