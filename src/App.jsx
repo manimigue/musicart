@@ -35,6 +35,8 @@ function onAuthRequired({history}) {
   history.push('/login');
 }
 
+const dev = true;
+
 class App extends Component {
   constructor(props) {
     super(props);
@@ -54,7 +56,7 @@ class App extends Component {
         <ConnectedRouter history={this.props.history}>
           <Security
             issuer='https://dev-286685.okta.com/oauth2/default'
-            clientId='0oa25kr51tqo5ktJS357'
+            clientId={dev ? '0oa25kt18eDNpZkC0357' : '0oa25kr51tqo5ktJS357'}
             redirectUri={window.location.origin + '/implicit/callback'}
             onAuthRequired={onAuthRequired}
             pkce={true}

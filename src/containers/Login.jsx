@@ -26,11 +26,13 @@ export default withAuth(class Login extends Component {
   }
 
   onSuccess(res) {
+    console.log(res);
     if (res.status === 'SUCCESS') {
       return this.props.auth.redirect({
         sessionToken: res.session.token
       });
    } else {
+     console.log('succeed but the status is ', res.status);
     // The user can be in another authentication state that requires further action.
     // For more information about these states, see:
     //   https://github.com/okta/okta-signin-widget#rendereloptions-success-error

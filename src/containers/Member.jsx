@@ -3,6 +3,8 @@ import MemberHeader from '../components/MemberHeader'
 // import log from '../member/log.json';
 // import tags from '../member/tag.json';
 // import Articles from './Articles'
+import Kansa from '../components/memberContent/Kansa';
+import Attendance from '../components/memberContent/Attendance';
 
 import '../static/css/member.css';
 
@@ -25,9 +27,11 @@ class Member extends React.Component {
     console.log(this.state);
     console.log(JSON.parse(localStorage.getItem('okta-token-storage')));
     return(
-      <div>
+      <div className='member'>
          <MemberHeader userName={currentUserName} />
          <div className='memberContent'>
+           <Attendance />
+           <Kansa />
          </div>
       </div>
     )
