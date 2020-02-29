@@ -9,9 +9,17 @@ import { default as news_20191101news8 } from "./articles/news_20191101news8.jsx
 import { default as news_20191104news11 } from "./articles/news_20191104news11.jsx";
 import { default as news_20191107news9 } from "./articles/news_20191107news9.jsx";
 import { default as news_20200104news10 } from "./articles/news_20200104news10.jsx";
+import { default as news_20200229news12 } from "./articles/news_20200229news12.jsx";
 
 const news =
 [
+  {
+    title: "第2回公演に向けてホームページを更新しました",
+    url: "20200229news12",
+    date: "2020-02-29",
+    author: "三石ミゲール",
+    component: news_20200229news12
+  },
   {
     title: "団員募集に関して",
     url: "20191104news11",

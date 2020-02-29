@@ -1,4 +1,4 @@
-import Concert from '../img/concert2019_logo.png';
+import Concert from '../img/concert_wind_logo.png';
 import About from '../img/wide_logo01.png';
 import P1_1 from "../img/program_png_300dpi/musicart_program_1911031.png"
 import P1_2 from "../img/program_png_300dpi/musicart_program_1911032.png"
@@ -25,7 +25,7 @@ const initialState = {
         link : {
           text : 'concert logo',
           type : 'Route',
-          url : '/concert/light_and_magic'
+          url : '/concert/valley_of_the_wind'
         }
       },
       {

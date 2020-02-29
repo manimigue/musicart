@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Button from 'react-bootstrap/Button';
+// import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Link from '../components/Link'
-import Fade from 'react-reveal/Fade';
+// import Link from '../components/Link'
+// import Fade from 'react-reveal/Fade';
 import ReactGA from 'react-ga';
 import {Helmet} from 'react-helmet';
-import Info from '../components/ticketsInfo'
+import Info from '../components/ticketsInfo_2'
 
 class Tickets extends Component {
   constructor(props) {
@@ -14,10 +14,7 @@ class Tickets extends Component {
     this.state = {
       ticketTypeNum : 1,
       on : {
-        form1: "end",
-        form2: "commingSoon",
-        pay: "commingSoon",
-        livepocket : "commingSoon"
+        form1: "on",
       }
     };
   }
@@ -68,13 +65,13 @@ class Tickets extends Component {
     const {ticketTypes, ticketMax} = this.props;
     const ticketSelect = (type) => (
       <div className={"ticket-type type" + type.toString()}>
-        <h5>券種{type}</h5>
+        <h5>券種</h5>
         <Form.Control name={'券種' + type.toString()} as="select" disabled={type > ticketTypeNum}>
           {
             ticketTypes.map((t) => (<option key={t} value={t}>{t}</option>))
           }
         </Form.Control>
-        <h5>枚数{type}</h5>
+        <h5>枚数</h5>
         <Form.Control name={'枚数' + type.toString()} as="select" disabled={type > ticketTypeNum}>
           {
             Array.from(Array(ticketMax), (v, num) => (<option key={num} value={num + 1}>{num + 1}</option>))
@@ -83,15 +80,18 @@ class Tickets extends Component {
       </div>
     )
 
+    // for multiple ticket types
+    // <h5>券種{type}</h5>
+    // <Fade collapse when={2 <= ticketTypeNum}>{ ticketSelect(2) }</Fade>
+    // <Fade collapse when={3 <= ticketTypeNum}>{ ticketSelect(3) }</Fade>
+    // {this.state.ticketTypeNum < 3 ? <Button onClick={this.addTicket} className='add-ticketTypes'> + </Button> : null}
+    // {this.state.ticketTypeNum > 1 ? <Button onClick={this.reduceTicket} className='reduce-ticketTypes'> - </Button> : null}
+
     const ticketForm = () => (
       <React.Fragment>
         <p>下記のフォームに入力していただき、送信してください。<br/>1 週間以内に確認の連絡を送らせて頂きます。</p>
         <form method="POST" action={"https://formspree.io/" + mail} >
           { ticketSelect(1) }
-          <Fade collapse when={2 <= ticketTypeNum}>{ ticketSelect(2) }</Fade>
-          <Fade collapse when={3 <= ticketTypeNum}>{ ticketSelect(3) }</Fade>
-          {this.state.ticketTypeNum < 3 ? <Button onClick={this.addTicket} className='add-ticketTypes'> + </Button> : null}
-          {this.state.ticketTypeNum > 1 ? <Button onClick={this.reduceTicket} className='reduce-ticketTypes'> - </Button> : null}
           <h5>代表者名</h5>
           <input type='text' name='代表者名' placeholder="佐藤　太郎" />
           <h5>メールアドレス</h5>
@@ -100,7 +100,7 @@ class Tickets extends Component {
           <input type="tel" name="返信先電話番号" placeholder="09012345678"/>
           <h5>その他お問い合わせ</h5>
           <textarea name='お問い合わせ内容'></textarea>
-          <input className='submit' type="submit" value='Send' onClick={() => this.gaSubmit('Tickets reservation (term 1)')}/>
+          <input className='submit' type="submit" value='Send' onClick={() => this.gaSubmit('Tickets reservation')}/>
         </form>
       </React.Fragment>
     )
@@ -114,26 +114,14 @@ class Tickets extends Component {
         <Info />
         <div className='tickets-how'>
           <h4>チケット予約方法</h4>
-          <h5>ホームページでのチケット予約（第1次）</h5>
-          <p>販売終了しました。</p>
-          <h5>ホームページでのチケット予約（第2次）</h5>
-          <p>9月上旬頃開始</p>
-          <h5>チケットペイでのチケット予約</h5>
-          <p>8月11日より開始</p>
-          <p>お申し込みは<Link type={"a"} url={"https://www.ticketpay.jp/booking/?event_id=23753"}>こちら</Link></p>
-          <p>初めての方は会員登録（無料）が必要になります。<br/>また、システム手数料として別途324円（税込）がかかります。<br/>決済後のキャンセル、払い戻しはできませんので、予めご了承ください。</p>
-          <p>チケットペイに関して詳しくは<Link type={"a"} url={"https://www.ticketpay.jp/support_page.php?id=7"}>こちら</Link></p>
-          <p>チケット予約が開始しましたら、ホームページ、SNS等でアナウンスさせて頂きます。<br/>各チケット予約方法にて、予約が定員に達し次第、受付を終了させていただきます。予めご了承ください。</p>
+          <h5>ホームページでのチケット予約</h5>
+          <p>2月下旬より開始</p>
         </div>
         <div className='tickets-buy' >
           <h4>チケット予約</h4>
           <div className='tickets-form'>
-            <h5>ホームページでのチケット予約(第 1 次)</h5>
+            <h5>ホームページでのチケット予約</h5>
             {this.onWhich(this.state.on.form1,ticketForm())}
-          </div>
-          <div className='tickets-form'>
-            <h5>ホームページでのチケット予約(第 2 次)</h5>
-            {this.onWhich(this.state.on.form2,ticketForm())}
           </div>
         </div>
       </div>

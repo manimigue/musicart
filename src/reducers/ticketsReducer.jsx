@@ -1,8 +1,6 @@
 const initialState = {
   ticketTypes : [
-    "一般",
-    "学生",
-    "小人"
+    "自由席"
   ],
   ticketMax : 5
 };

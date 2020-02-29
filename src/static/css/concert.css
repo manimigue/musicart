@@ -301,4 +301,22 @@
 .concertAbout.concert2019 h4 {
   font-size: 1.5em !important; }
 
+.concertAbout.concertWind p,
+.concertAbout.concertWind h1, .concertAbout.concertWind h2, .concertAbout.concertWind h3, .concertAbout.concertWind h4, .concertAbout.concertWind h5 {
+  font-family: "Sawarabi Mincho" !important; }
+.concertAbout.concertWind img {
+  margin-bottom: 20px; }
+  .concertAbout.concertWind img.access {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    background: white; }
+    @media only screen and (min-width: 816px) {
+      .concertAbout.concertWind img.access {
+        width: 70%; } }
+.concertAbout.concertWind h4 {
+  font-size: 1.5em !important; }
+
+
+
 /*# sourceMappingURL=concert.css.map */

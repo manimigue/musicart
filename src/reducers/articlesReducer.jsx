@@ -1,22 +1,27 @@
 const initialState = {
   start :{
     'concert/light_and_magic': 0,
+    'concert/valley_of_the_wind': 0,
     'news': 0
   },
   selectedTag : {
     'concert/light_and_magic' : null,
+    'concert/valley_of_the_wind' : null,
     'news' : null
   },
   tagDisp : {
     'concert/light_and_magic' : false,
+    'concert/valley_of_the_wind' : false,
     'news' : false
   },
   logPart : {
     'concert/light_and_magic' : null,
+    'concert/valley_of_the_wind' : null,
     'news' : null
   },
   home : {
     'concert/light_and_magic' : false,
+    'concert/valley_of_the_wind' : false,
     'news' : false
   }
 }

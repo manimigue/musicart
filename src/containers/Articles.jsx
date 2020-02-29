@@ -135,8 +135,10 @@ class Articles extends Component {
   }
 
   linkToArticle = (url, type) => {
-    this.props.linkToPage('Route','/' +type +'/' + url);
-    this.props.saveHome(type)
+    if (url !== null){
+      this.props.linkToPage('Route','/' +type +'/' + url);
+      this.props.saveHome(type)
+    }
   }
 
   componentDidMount() {
