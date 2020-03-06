@@ -11,21 +11,8 @@ class Header extends Component {
   constructor(props){
     super(props);
     this.state = {
-      isHide: false,
       navExpanded: false
     }
-  }
-
-  hideBar = () => {
-     const isHide = this.state.isHide;
-     const expanded = this.state.navExpanded
-
-     window.scrollY > this.prev && expanded === false?
-     !isHide && this.setState({ isHide: true })
-     :
-     isHide && this.setState({ isHide: false });
-
-     this.prev = window.scrollY;
   }
 
   setNavExpanded = (expanded) => {
@@ -35,16 +22,7 @@ class Header extends Component {
     this.setState({ navExpanded: false });
   }
 
-  componentDidMount(){
-      window.addEventListener('scroll', this.hideBar);
-  }
-
-  componentWillUnmount(){
-       window.removeEventListener('scroll', this.hideBar);
-  }
-
   render() {
-    const classHide = this.state.isHide ? 'hide' : '';
     const lists = this.props.links.map(link => {
       return (
         <Nav.Link
@@ -56,12 +34,10 @@ class Header extends Component {
     });
     return (
       <Navbar
-        className={classHide}
         collapseOnSelect
         expand="md"
         bg='white'
         variant="light"
-        sticky='top'
         onToggle={this.setNavExpanded}
         expanded={this.state.navExpanded}
       >

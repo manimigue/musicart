@@ -1,7 +1,7 @@
 @use '../../scss/mixin/media.scss';
-@use '../../scss/index.scss';
+@use '../../scss/mixin/var';
 
-$small : index.$small;
+$small : var.$small;
 
 .member{
   .memberHeader {
@@ -14,7 +14,6 @@ $small : index.$small;
 
       & > .userName{
         float: right;
-        display: inline-block;
         text-align: center;
         margin: 20px 12px 1px 10px ;
         text-decoration: none;
@@ -34,7 +33,6 @@ $small : index.$small;
           display: none;
         }
         & > .userName{
-          float: left;
           display: inline;
           text-align: center;
           margin: 20px 12px 12px 10px ;
@@ -51,8 +49,5 @@ $small : index.$small;
         }
       }
     }
-  }
-  .memberContent {
-    
   }
 }

@@ -36,7 +36,7 @@ function onAuthRequired({history}) {
   history.push('/login');
 }
 
-const dev = true;
+const dev = false;
 
 class App extends Component {
   constructor(props) {

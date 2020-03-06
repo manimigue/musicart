@@ -1,9 +1,13 @@
 @use './mixin/media';
+@use './mixin/var';
 
-$small: 460px;
-$middle: 732px;
-$big: 850px;
-$max: 1018px;
+$small: var.$small;
+$middle: var.$middle;
+$big: var.$big;
+$max: var.$max;
+
+$sm: var.$sm;
+$md: var.$md;
 
 @mixin setFooterHeight($main,$links,$cr){
   height: $main + $links + $cr;
@@ -32,8 +36,11 @@ $max: 1018px;
   }
 
   .navbar {
-    .navbar-brand :hover {
-      cursor: pointer;
+    .navbar-brand {
+      box-sizing: content-box;
+      & :hover {
+        cursor: pointer;
+      }
     }
     .navbar-nav{
       .nav-link{
