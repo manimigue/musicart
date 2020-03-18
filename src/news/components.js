@@ -10,9 +10,17 @@ import { default as news_20191104news11 } from "./articles/news_20191104news11.j
 import { default as news_20191107news9 } from "./articles/news_20191107news9.jsx";
 import { default as news_20200104news10 } from "./articles/news_20200104news10.jsx";
 import { default as news_20200229news12 } from "./articles/news_20200229news12.jsx";
+import { default as news_20200319news13 } from "./articles/news_20200319news13.jsx";
 
 const news =
 [
+  {
+    title: "新型コロナウイルス感染予防・拡大防止策に関して",
+    url: "20200319news13",
+    date: "2020-03-19",
+    author: "三石ミゲール",
+    component: news_20200319news13
+  },
   {
     title: "第2回公演に向けてホームページを更新しました",
     url: "20200229news12",
