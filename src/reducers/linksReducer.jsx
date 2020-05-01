@@ -13,6 +13,11 @@ const initialState = {
     },
     {
       type: 'Route',
+      url: '/stayHome',
+      text: 'Stay Home'
+    },
+    {
+      type: 'Route',
       url : '/about',
       text : 'About'
     },

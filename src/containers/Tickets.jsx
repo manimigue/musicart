@@ -14,7 +14,7 @@ class Tickets extends Component {
     this.state = {
       ticketTypeNum : 1,
       on : {
-        form1: "on",
+        form1: "commingSoon",
       }
     };
   }
@@ -112,11 +112,11 @@ class Tickets extends Component {
         </Helmet>
         <div className="title"><h2 >Tickets</h2></div>
         <Info />
-        <div className='tickets-how'>
+        {/* <div className='tickets-how'>
           <h4>チケット予約方法</h4>
           <h5>ホームページでのチケット予約</h5>
           <p>2月下旬より開始</p>
-        </div>
+        </div> */}
         <div className='tickets-buy' >
           <h4>チケット予約</h4>
           <div className='tickets-form'>

@@ -2,27 +2,32 @@ const initialState = {
   start :{
     'concert/light_and_magic': 0,
     'concert/valley_of_the_wind': 0,
-    'news': 0
+    'news': 0,
+    'stayHome': 0
   },
   selectedTag : {
     'concert/light_and_magic' : null,
     'concert/valley_of_the_wind' : null,
-    'news' : null
+    'news' : null,
+    'stayHome': null
   },
   tagDisp : {
     'concert/light_and_magic' : false,
     'concert/valley_of_the_wind' : false,
-    'news' : false
+    'news' : false,
+    'stayHome': false
   },
   logPart : {
     'concert/light_and_magic' : null,
     'concert/valley_of_the_wind' : null,
-    'news' : null
+    'news' : null,
+    'stayHome': null
   },
   home : {
     'concert/light_and_magic' : false,
     'concert/valley_of_the_wind' : false,
-    'news' : false
+    'news' : false,
+    'stayHome': false
   }
 }
 

@@ -7,7 +7,7 @@ import log from '../concert_wind/log.json'
 import Link from '../components/Link'
 import Fade from 'react-reveal/Fade';
 import Zoom from 'react-reveal/Zoom';
-import Info from '../components/ticketsInfo_2'
+// import Info from '../components/ticketsInfo_2'
 import {Helmet} from 'react-helmet';
 
 export default class Concert_wind extends Component {

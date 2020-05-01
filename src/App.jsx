@@ -9,6 +9,7 @@ import { Security, SecureRoute, ImplicitCallback} from '@okta/okta-react';
 
 import Header from './containers/Header';
 import News from './containers/News';
+import StayHome from './containers/StayHome';
 import Pictures from './containers/Pictures'
 import Contact from './containers/Contact';
 import About from './containers/About';
@@ -31,6 +32,7 @@ import './static/css/concert.css'
 
 import concertRoutes from './concert';
 import newsRoutes from './news';
+import stayHomeRoutes from './stayHome'
 
 function onAuthRequired({history}) {
   history.push('/login');
@@ -77,6 +79,7 @@ class App extends Component {
               <div className={`main`}>
                 <Route exact path='/' component={News} />
                 <Route exact path='/news' component={News} />
+                <Route exact path='/stayHome' component={StayHome} />
                 <Route exact path='/about' component={About} />
                 <Route exact path='/contact' component={Contact} />
                 <Route exact path='/join' component={Join} />
@@ -92,6 +95,7 @@ class App extends Component {
                 <Route path='/error' component={Error} />
                 {newsRoutes()}
                 {concertRoutes()}
+                {stayHomeRoutes()}
               </div>
               <Footer />
             </div>
