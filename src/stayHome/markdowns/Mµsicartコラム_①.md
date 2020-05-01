@@ -18,7 +18,7 @@ STAY HOME 企画の一環として Orchestra Mµsicart の紹介や団員の紹�
 
 －これまでのクラシックコンサートではないような企画を実現していくという思いが込められています。クラシックコンサートに馴染みのないゲストの方々にも足を運んでもらいたいという考えから理念の1つに加えさせていただきました。
 
-![3test2](/Users/kosei/Desktop/assets/3test2.png)
+![3test2](./assets/3test2.png)
 
 Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による）
 
@@ -32,7 +32,7 @@ Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による
 
 
 
-![PB030107](/Users/kosei/Desktop/assets/PB030107-8245756.JPG)
+![PB030107](./assets/PB030107.JPG)
 
 コンサートホールでスモーク焚いている様子
 
@@ -72,11 +72,11 @@ Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による
 
 －《幻想交響曲》に関しては曲にストーリーが内在しているので、そのイメージは伝えました。ただ、自分は全く絵が描けないので、残りのイメージは全て演出チームのクリエイター陣によるものです。
 
-![1](/Users/kosei/Desktop/assets/1.png)
+![1](./assets/1.png)
 
 《幻想交響曲》（第1楽章）初期イメージ画（中村妟子氏による）
 
-![4](/Users/kosei/Desktop/assets/4.png)
+![4](./assets/4.png)
 
 《幻想交響曲》（第4楽章）初期イメージ画（中村妟子氏による）
 
@@ -88,7 +88,7 @@ Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による
 
 －そうですね。《幻想交響曲》はこのイメージ画をもとに完成に近づいていきます。一方で、《バレエ組曲「牝鹿」》は全く想像しない方向に進んでいきました。
 
-![1_psd](/Users/kosei/Desktop/assets/1_psd.jpeg)
+![1_psd](./assets/1_psd.jpeg)
 
 《幻想交響曲》（第1楽章）完成画（中村妟子氏による）
 
@@ -98,7 +98,7 @@ Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による
 
 －はい（笑）全く想像できなかったです。まさか、料理することになるとは思わなかったので。
 
-![10_牝鹿_1_colour](/Users/kosei/Desktop/assets/10_牝鹿_1_colour.jpg)
+![10_牝鹿_1_colour](./assets/10_牝鹿_1_colour.jpg)
 
 《バレエ組曲「牝鹿」》（Rondeau）写真より（長手彩夏氏による）
 
@@ -114,7 +114,7 @@ Orchestra Mµsicart 設立当初のイメージ図（仲田由希子氏による
 
 －そうですね、この音楽と映像の組み合わせは一番賛否を分けたと思います。この映像に関しては、ベースからクリエイターに投げたのですが、自分は非常に面白い作品だと思いました。
 
-<video src="/Users/kosei/Desktop/コラム①/12_牝鹿_2_mono.mp4"></video>
+<video src="./assets/12_牝鹿_2_mono.mp4"></video>
 
 《バレエ組曲「牝鹿」》（Adagietto）より（長手彩夏氏による）
 

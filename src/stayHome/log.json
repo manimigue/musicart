@@ -1,11 +1,19 @@
 [
   {
-    "url": "20200501stayHome1",
-    "title": "芸術監督インタビュー  前編",
+    "url": "interview1_20200501",
+    "title": "芸術監督インタビュー 前編",
     "date": "2020-05-01",
     "file": "Mµsicartコラム_①.md",
     "author": "三石ミゲール",
-    "copied": [],
+    "copied": [
+      "./assets/3test2.png",
+      "./assets/PB030107.JPG",
+      "./assets/1.png",
+      "./assets/4.png",
+      "./assets/1_psd.jpeg",
+      "./assets/10_牝鹿_1_colour.jpg",
+      ""
+    ],
     "tag": []
   }
 ]
